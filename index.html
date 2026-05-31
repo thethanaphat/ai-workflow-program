@@ -387,6 +387,22 @@
       font-size: 11px;
       color: var(--teal-bright);
     }
+    .hero-trust-item.trust-highlight {
+      align-items: flex-start;
+      padding: 10px 12px;
+      border: 1px solid rgba(201,168,76,0.35);
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(201,168,76,0.10), rgba(26,158,143,0.06));
+      box-shadow: 0 0 0 1px rgba(201,168,76,0.06) inset;
+    }
+    .deadline-highlight {
+      color: var(--gold-bright);
+      font-weight: 700;
+    }
+    .deadline-subtext {
+      color: var(--text-main);
+      font-size: 14px;
+    }
 
     .hero-cta-group {
       display: flex;
@@ -1732,7 +1748,7 @@
 
       <div class="hero-eyebrow fade-up" data-delay="1">
         <div class="hero-live-dot" aria-hidden="true"></div>
-        <div class="hero-badge">Live Workshop · 5 ก.ค. 2026 · ขยายรอบ Tier 1 ถึง 3 มิ.ย. 2026</div>
+        <div class="hero-badge">Live Workshop · 5 ก.ค. 2026 · ขยายเวลา Tier 1 ถึง 3 มิ.ย. 2026</div>
       </div>
 
       <!-- Pain Hook -->
@@ -1761,9 +1777,9 @@
           <span class="check" aria-hidden="true">✓</span>
           Resource Center + Bonus Stack มูลค่า 5,420 บาท
         </li>
-        <li class="hero-trust-item">
+        <li class="hero-trust-item trust-highlight">
           <span class="check" aria-hidden="true">✓</span>
-          ขยายราคา Tier 1 ฿990 ถึง 3 มิ.ย. 2026 — มีผู้สมัครแล้ว 40+ คน พร้อม Bonus ใหม่ AI 101 for Beginners สำหรับผู้เริ่มต้น
+          <span><span class="deadline-highlight">ขยายเวลา Tier 1 ถึง 3 มิ.ย. 2026</span><br><span class="deadline-subtext">ราคา 990 บาท · มีผู้สมัครแล้ว 40+ คน · พร้อม Bonus ใหม่ AI 101 for Beginners สำหรับผู้เริ่มต้น</span></span>
         </li>
       </ul>
 
@@ -1805,7 +1821,7 @@
         <!-- Countdown timer -->
         <div class="countdown-wrap">
           <div class="countdown-label">
-            🎁 ขยายราคา <span class="price-up">Tier 1 (฿990)</span> ถึง 3 มิ.ย. 2026 — ก่อนปรับเป็น Tier 2
+            🎁 <span class="deadline-highlight">ขยายเวลา Tier 1 (฿990) ถึง 3 มิ.ย. 2026</span> — ก่อนปรับเป็น Tier 2
           </div>
           <div class="countdown-timer" id="heroCountdown" aria-label="countdown timer">
             <div class="countdown-unit"><span class="countdown-num" id="cd-days">--</span><span class="countdown-unit-label">วัน</span></div>
@@ -2123,7 +2139,7 @@
           <span class="label-text">มูลค่ารวมทั้งหมด</span>
           <span class="price"><span class="strikethrough">฿5,420</span></span>
         </div>
-        <div class="founding-price">฿990 <span>ขยาย Tier 1 ถึง 3 มิ.ย. 2026</span></div>
+        <div class="founding-price">฿990 <span>ขยายเวลา Tier 1 ถึง 3 มิ.ย. 2026</span></div>
       </div>
 
     </div>
@@ -2229,9 +2245,9 @@
     <div class="container">
       <div class="cta-box">
         <h2>พร้อมเริ่มต้นแล้วหรือยัง?</h2>
-        <p>ขยาย Tier 1 พิเศษถึง 3 มิ.ย. 2026 · ราคา 990 บาท · Live 5 ก.ค. 2026</p>
+        <p>ขยายเวลา Tier 1 ถึง 3 มิ.ย. 2026 · ราคา 990 บาท · Live 5 ก.ค. 2026</p>
         <div class="cta-button-wrap">
-          <a href="./bump-a/" class="btn-primary cta-button" role="button">จอง Tier 1 รอบขยาย — 990 ฿</a>
+          <a href="./bump-a/" class="btn-primary cta-button" role="button">จองสิทธิ์ Tier 1 ถึง 3 มิ.ย. — 990 ฿</a>
         </div>
       </div>
     </div>
@@ -2448,7 +2464,7 @@
         <div class="label">ระบบ tier — ยิ่งสมัครเร็ว ยิ่งประหยัด</div>
         <h2 class="section-title">ทุก Tier ได้ของเหมือนกัน — ต่างเฉพาะราคา</h2>
         <p class="section-desc">
-          รุ่นเปิดตัวแบ่งราคาเป็น 3 ช่วงตามเวลาเปิดรับสมัคร — ทุก Tier ได้ Live Workshop, Recording และ Bonus ครบเหมือนกัน ต่างกันเฉพาะราคา<br><br><strong style="color:var(--gold-bright);">อัปเดต:</strong> เดิม Tier 1 สำหรับ 30 คนแรก แต่ตอนนี้มีผู้สมัครแล้วมากกว่า 40 คน จึงขยายรอบพิเศษถึง 3 มิ.ย. 2026 พร้อมเพิ่ม Bonus AI 101 for Beginners ให้ผู้เรียนรุ่นเปิดตัวทุก Tier
+          รุ่นเปิดตัวแบ่งราคาเป็น 3 ช่วงตามเวลาเปิดรับสมัคร — ทุก Tier ได้ Live Workshop, Recording และ Bonus ครบเหมือนกัน ต่างกันเฉพาะราคา<br><br><strong style="color:var(--gold-bright);">อัปเดต:</strong> เดิม Tier 1 สำหรับ 30 คนแรก แต่ตอนนี้มีผู้สมัครแล้วมากกว่า 40 คน จึงขยายเวลา Tier 1 ถึง 3 มิ.ย. 2026 พร้อมเพิ่ม Bonus AI 101 for Beginners ให้ผู้เรียนรุ่นเปิดตัวทุก Tier
         </p>
       </div>
 
@@ -2461,14 +2477,14 @@
             <span class="tier-price">฿990</span>
             <span class="tier-price-suffix">Standalone</span>
           </div>
-          <div class="tier-cap">เดิมสำหรับ 30 คนแรก · ขยายรอบพิเศษถึง 3 มิ.ย. 2026 หลังมีผู้สมัครเกิน 40 คน</div>
+          <div class="tier-cap">เดิมสำหรับ 30 คนแรก · ขยายเวลา Tier 1 ถึง 3 มิ.ย. 2026 หลังมีผู้สมัครเกิน 40 คน</div>
           <ul class="tier-bonus-list">
             <li>✅ Bonus #1-5 ครบทุกตัว</li>
             <li>✅ Bonus #6 (เฉพาะผู้เข้า Live สด)</li>
             <li class="tier-bonus-new">✅ Bonus #7: AI 101 for Beginners <span class="new-badge-inline">&lt; NEW &gt;</span></li>
             <li>✅ Live Workshop + Recording ตลอดชีวิต</li>
           </ul>
-          <div class="tier-deadline">⏰ ปิดรับรอบขยาย 3 มิ.ย. 2026 เวลา 23:59 น.</div>
+          <div class="tier-deadline">⏰ ปิดรับรอบขยายเวลา 3 มิ.ย. 2026 เวลา 23:59 น.</div>
         </div>
 
         <!-- Tier 2: Early Bird -->
@@ -2479,7 +2495,7 @@
             <span class="tier-price">฿1,090</span>
             <span class="tier-price-suffix">+100 จาก Tier 1</span>
           </div>
-          <div class="tier-cap">เริ่ม 4 มิ.ย. 2026 หลังรอบขยายพิเศษสิ้นสุด</div>
+          <div class="tier-cap">เริ่ม 4 มิ.ย. 2026 หลังรอบขยายเวลาสิ้นสุด</div>
           <ul class="tier-bonus-list">
             <li>✅ Bonus #1-5 ครบทุกตัว</li>
             <li>✅ Bonus #6 (เฉพาะผู้เข้า Live สด)</li>
@@ -2531,7 +2547,7 @@
 
       <div class="final-scarcity">
         <span class="dot" aria-hidden="true"></span>
-        ขยาย Tier 1 ฿990 ถึง 3 มิ.ย. 2026 — ก่อนปรับเป็น Tier 2
+        <span class="deadline-highlight">ขยายเวลา Tier 1 ฿990 ถึง 3 มิ.ย. 2026</span> — ก่อนปรับเป็น Tier 2
       </div>
 
       <h2 class="final-title">
@@ -2540,13 +2556,13 @@
       </h2>
 
       <p class="final-sub">
-        สมัครในรอบขยายนี้ — ได้ทั้ง framework, bonus stack มูลค่า 5,420 บาท<br>
+        สมัครในรอบขยายเวลานี้ — ได้ทั้ง framework, bonus stack มูลค่า 5,420 บาท<br>
         พร้อม Bonus ใหม่ AI 101 for Beginners สำหรับผู้เรียนรุ่นเปิดตัวทุก Tier ในราคา Tier 1 เพียง 990 บาท
       </p>
 
       <div class="final-cta-wrap">
         <a href="./bump-a/" class="btn-primary cta-button" role="button" style="font-size:19px; padding:20px 32px;">
-          จอง Tier 1 รอบขยาย — 990 บาท
+          จองสิทธิ์ Tier 1 ถึง 3 มิ.ย. — 990 บาท
         </a>
         <a href="./bump-b/" class="btn-secondary cta-button" role="button" style="margin-top:12px;">
           Bundle กับ eBook — 1,290 บาท
@@ -2596,7 +2612,7 @@
     <div class="sticky-cta-inner">
       <div class="sticky-info">
         <div class="sticky-name">AI Workflow Trader Program</div>
-        <div class="sticky-price">฿990 · ขยายถึง 3 มิ.ย. · Live 5 ก.ค. 2026</div>
+        <div class="sticky-price">฿990 · ขยายเวลาถึง 3 มิ.ย. · Live 5 ก.ค. 2026</div>
       </div>
       <a href="./bump-a/" class="sticky-btn cta-button" role="button">จองเลย</a>
     </div>
