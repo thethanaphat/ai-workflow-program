@@ -760,6 +760,11 @@
       border-color: rgba(26,158,143,0.4);
       background: rgba(26,158,143,0.06);
     }
+    .bonus-item.bonus-new {
+      border-color: rgba(201,168,76,0.65);
+      background: linear-gradient(180deg, rgba(201,168,76,0.10) 0%, rgba(26,158,143,0.08) 100%);
+      box-shadow: 0 0 0 1px rgba(201,168,76,0.10) inset;
+    }
     .bonus-left { flex: 1; }
     .bonus-emoji { font-size: 16px; margin-right: 6px; }
     .bonus-name {
@@ -778,6 +783,41 @@
       border-radius: 4px;
       margin-top: 4px;
       display: inline-block;
+    }
+    .bonus-tag.bonus-tag-new {
+      color: #0D1B2A;
+      background: linear-gradient(90deg, rgba(201,168,76,0.95) 0%, rgba(246,224,140,0.95) 100%);
+      font-weight: 700;
+    }
+    .new-badge {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      font-family: var(--font-mono);
+      color: #0D1B2A;
+      background: linear-gradient(90deg, rgba(201,168,76,0.95) 0%, rgba(246,224,140,0.95) 100%);
+      vertical-align: middle;
+      font-weight: 700;
+    }
+    .tier-bonus-new {
+      color: var(--gold-bright);
+      font-weight: 700;
+    }
+    .tier-bonus-new .new-badge-inline {
+      display: inline-block;
+      margin-left: 6px;
+      padding: 1px 6px;
+      border-radius: 999px;
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      font-family: var(--font-mono);
+      color: #0D1B2A;
+      background: linear-gradient(90deg, rgba(201,168,76,0.95) 0%, rgba(246,224,140,0.95) 100%);
+      vertical-align: middle;
+      font-weight: 700;
     }
     .bonus-value {
       font-family: var(--font-mono);
@@ -1692,7 +1732,7 @@
 
       <div class="hero-eyebrow fade-up" data-delay="1">
         <div class="hero-live-dot" aria-hidden="true"></div>
-        <div class="hero-badge">Live Workshop · 5 ก.ค. 2026 · เปิดรับ 30 คนแรก — รุ่นเปิดตัว</div>
+        <div class="hero-badge">Live Workshop · 5 ก.ค. 2026 · ขยายรอบ Tier 1 ถึง 3 มิ.ย. 2026</div>
       </div>
 
       <!-- Pain Hook -->
@@ -1719,11 +1759,11 @@
         </li>
         <li class="hero-trust-item">
           <span class="check" aria-hidden="true">✓</span>
-          Resource Center + Bonus Stack มูลค่า 4,830 บาท
+          Resource Center + Bonus Stack มูลค่า 5,420 บาท
         </li>
         <li class="hero-trust-item">
           <span class="check" aria-hidden="true">✓</span>
-          30 คนแรก — รับราคา Tier 1 (฿990) ก่อนปรับขึ้น
+          ขยายราคา Tier 1 ฿990 ถึง 3 มิ.ย. 2026 — มีผู้สมัครแล้ว 40+ คน พร้อม Bonus ใหม่ AI 101 สำหรับผู้เรียนรุ่นเปิดตัวทุก Tier
         </li>
       </ul>
 
@@ -1745,7 +1785,7 @@
             <div class="bundle-ebook-row">
               <div class="bundle-ebook-info">
                 <div class="bundle-ebook-title">📘 E-Book AI ช่วยลงทุน</div>
-                <div class="bundle-ebook-desc">คู่มือปั้นนักลงทุน ที่อยากใช้ AI ให้ได้ผลจริง ไม่ใช่แค่ทดลองเล่น</div>
+                <div class="bundle-ebook-desc">คู่มือสำหรับนักลงทุนที่อยากใช้ AI ให้ได้ผลจริง ไม่ใช่แค่ทดลองเล่น</div>
                 <div class="bundle-ebook-includes">
                   <span class="bundle-inc">✓ E-Book "อย่าใช้ AI ช่วยลงทุน ถ้ายังไม่อ่านเล่มนี้"</span>
                   <span class="bundle-inc">✓ 32 ชุด Prompt Pack พร้อมใช้</span>
@@ -1765,7 +1805,7 @@
         <!-- Countdown timer -->
         <div class="countdown-wrap">
           <div class="countdown-label">
-            🎁 ราคา <span class="price-up">Tier 1 (฿990)</span> สิ้นสุดใน — หรือเต็มก่อน (30 ที่นั่ง)
+            🎁 ขยายราคา <span class="price-up">Tier 1 (฿990)</span> ถึง 3 มิ.ย. 2026 — ก่อนปรับเป็น Tier 2
           </div>
           <div class="countdown-timer" id="heroCountdown" aria-label="countdown timer">
             <div class="countdown-unit"><span class="countdown-num" id="cd-days">--</span><span class="countdown-unit-label">วัน</span></div>
@@ -1862,7 +1902,7 @@
             <div class="level-tag">Level 2 — Sweet Spot ⭐</div>
             <div class="level-name">เพื่อนคู่คิดของเทรดเดอร์</div>
             <div class="level-desc">
-              ทบทวน trade plan ก่อนเปิดออเดอร์, วิเคราะห์ bias, คำนวณ position sizing — และวิเคราะห์ข้อมูลจาก trade journal หลังปิดออเดอร์ เพื่อหาจุดอ่อนที่ตัวเองมองไม่เห็น — <strong style="color:var(--text-main)">นี่คือระดับที่เปลี่ยนผลการเทรดได้จริง</strong>
+              ก่อนเปิดออเดอร์: ทบทวน trade plan, วิเคราะห์ bias, คำนวณ position sizing · หลังปิดออเดอร์: วิเคราะห์ trade journal เพื่อหาจุดอ่อนที่ตัวเองมองไม่เห็น — <strong style="color:var(--text-main)">นี่คือระดับที่เปลี่ยนผลการเทรดได้จริง</strong>
             </div>
             <span class="level-highlight">🔥 Core ของ Program</span>
           </div>
@@ -1996,6 +2036,9 @@
 
       <!-- Bonuses -->
       <div class="bonus-header">🎁 Bonus Stack</div>
+      <div style="margin:-8px 0 18px; padding:14px 18px; background:rgba(26,158,143,0.08); border:1px solid rgba(26,158,143,0.3); border-radius:10px; font-size:14px; color:var(--text-sub); line-height:1.65;">
+        <strong style="color:var(--teal-bright);">ข่าวดีสำหรับผู้เรียนรุ่นเปิดตัวทุก Tier:</strong> จาก feedback ของผู้สมัครรุ่นแรก หลายคนอยากให้ปูพื้นฐาน AI ก่อนเข้า Workshop หลัก จึงเพิ่ม <strong style="color:var(--white);">Bonus #7: AI 101 for Traders</strong> ให้ทุก Tier โดยไม่มีค่าใช้จ่ายเพิ่มเติม
+      </div>
       <div class="bonus-list" role="list" aria-label="course bonuses">
         <div class="bonus-item bonus-item--has-img" role="listitem">
           <div class="bonus-left">
@@ -2051,10 +2094,18 @@
         <div class="bonus-item featured" role="listitem">
           <div class="bonus-left">
             <div class="bonus-name"><span class="bonus-emoji">🔮</span>Bonus #6: Surprise Chart Analysis Tool</div>
-            <div class="bonus-sub">เครื่องมือลับช่วยวิเคราะห์กราฟ — ใช้คู่กับ Prompt Pack เพื่อให้ AI วิเคราะห์ได้แม่นขึ้น<br>รายละเอียดจะ reveal ในวัน Live · ส่งมอบเฉพาะผู้ที่เข้าเรียน Live สด (ไม่ครอบคลุมผู้ที่ดู recording เท่านั้น)</div>
+            <div class="bonus-sub">เครื่องมือลับช่วยวิเคราะห์กราฟ — ใช้คู่กับ Prompt Pack เพื่อให้ AI วิเคราะห์ได้แม่นขึ้น<br>รายละเอียดจะ reveal ในวัน Live · มอบเฉพาะผู้ที่เข้าเรียน Live สดเท่านั้น (ผู้ที่ดูย้อนหลังจะไม่ได้รับ Bonus นี้)</div>
             <span class="bonus-tag">🎁 เฉพาะผู้เข้า Live สด — 5 ก.ค. 2026</span>
           </div>
           <div class="bonus-value">฿490</div>
+        </div>
+        <div class="bonus-item featured bonus-new" role="listitem">
+          <div class="bonus-left">
+            <div class="bonus-name"><span class="bonus-emoji">🤖</span>Bonus #7: AI 101 for Traders <span class="new-badge">&lt; NEW &gt;</span></div>
+            <div class="bonus-sub">เพิ่มใหม่จาก feedback ของผู้สมัครรุ่นแรก — ปูพื้นฐาน ChatGPT / Gemini / Claude สำหรับเทรดเดอร์ที่ยังไม่ถนัด AI เข้าใจวิธีตั้งคำถาม ใช้ AI วิเคราะห์ข้อมูล และเตรียมตัวก่อนเข้า Workshop หลัก</div>
+            <span class="bonus-tag bonus-tag-new">เพิ่มใหม่สำหรับผู้เรียนรุ่นเปิดตัวทุก Tier · ไม่มีค่าใช้จ่ายเพิ่มเติม</span>
+          </div>
+          <div class="bonus-value">฿590</div>
         </div>
       </div>
 
@@ -2065,14 +2116,14 @@
           <span class="price">฿990</span>
         </div>
         <div class="value-row">
-          <span class="label-text">Bonus #1–6 รวม</span>
-          <span class="price">฿3,840</span>
+          <span class="label-text">Bonus #1–7 รวม</span>
+          <span class="price">฿4,430</span>
         </div>
         <div class="value-row total">
           <span class="label-text">มูลค่ารวมทั้งหมด</span>
-          <span class="price"><span class="strikethrough">฿4,830</span></span>
+          <span class="price"><span class="strikethrough">฿5,420</span></span>
         </div>
-        <div class="founding-price">฿990 <span>ราคา Tier 1 — Launch</span></div>
+        <div class="founding-price">฿990 <span>ขยาย Tier 1 ถึง 3 มิ.ย. 2026</span></div>
       </div>
 
     </div>
@@ -2178,9 +2229,9 @@
     <div class="container">
       <div class="cta-box">
         <h2>พร้อมเริ่มต้นแล้วหรือยัง?</h2>
-        <p>30 คนแรก — รุ่นเปิดตัว · ราคา 990 บาท · Live 5 ก.ค. 2026</p>
+        <p>ขยาย Tier 1 พิเศษถึง 3 มิ.ย. 2026 · ราคา 990 บาท · Live 5 ก.ค. 2026</p>
         <div class="cta-button-wrap">
-          <a href="./bump-a/" class="btn-primary cta-button" role="button">จองที่นั่ง 30 คนแรก — 990 ฿</a>
+          <a href="./bump-a/" class="btn-primary cta-button" role="button">จอง Tier 1 รอบขยาย — 990 ฿</a>
         </div>
       </div>
     </div>
@@ -2195,7 +2246,7 @@
         <div class="label">ระบบเทรดของอาจารย์ใหม่</div>
         <h2 class="section-title">3 ระดับ — เริ่มต้นที่ถูกที่</h2>
         <p class="section-desc ladder-intro">
-          เหมือนสร้างบ้าน — ต้องมีฐานก่อน ถึงจะตั้งผนังได้ เริ่มที่ framework ก่อน แล้วค่อยเพิ่มเครื่องมือ
+          เหมือนสร้างบ้าน — ต้องวางฐานรากก่อน ถึงจะตั้งผนังได้ · เริ่มที่ framework วิธีคิด แล้วค่อยเพิ่มเครื่องมือ
         </p>
       </div>
 
@@ -2219,7 +2270,7 @@
           <div class="stage-left">
             <div class="stage-number">Stage 2 — เครื่องมือ</div>
             <div class="stage-name">PTM Lite Indicator + คู่มือ</div>
-            <div class="stage-desc">Indicator ที่ถูกออกแบบมาสำหรับเทรดเดอร์ที่ต้องการระบบที่ง่ายและใช้งานได้จริง</div>
+            <div class="stage-desc">Indicator ที่ออกแบบมาเพื่อเทรดเดอร์ที่อยากได้ระบบเรียบง่าย ใช้งานได้จริง</div>
             <button class="stage-detail-toggle" id="ptmLiteToggle" aria-expanded="false">
               ดูรายละเอียด PTM Lite <span class="sdchev">▼</span>
             </button>
@@ -2268,7 +2319,7 @@
           <div class="stage-left">
             <div class="stage-number">Stage 1 — ✨ เริ่มที่นี่</div>
             <div class="stage-name">AI Workflow Trader Program</div>
-            <div class="stage-desc">Framework สมอง — ที่จะทำให้ทุก tool ที่ใช้ต่อไปมีความหมาย</div>
+            <div class="stage-desc">Framework วิธีคิด — ที่ทำให้ทุกเครื่องมือที่ใช้ต่อจากนี้มีความหมาย</div>
           </div>
           <div class="stage-right">
             <div class="stage-price">฿990</div>
@@ -2301,7 +2352,7 @@
           </button>
           <div class="faq-a">
             <div class="faq-a-inner">
-              ได้เลย — <strong>เริ่มจาก Level 1</strong> ซึ่งไม่ต้องมีพื้นฐานใดเลย แค่มีมือถือหรือคอมก็พอ เพราะเราใช้ ChatGPT หรือ Claude free tier ซึ่งใช้งานได้ฟรีสำหรับ Level 1-2
+              ได้เลย — <strong>เริ่มจาก AI 101 for Traders และ Level 1</strong> ซึ่งไม่ต้องมีพื้นฐานใดเลย แค่มีมือถือหรือคอมก็พอ เพราะเราใช้ ChatGPT, Gemini หรือ Claude free tier ซึ่งใช้งานได้ฟรีสำหรับ Level 1-2
             </div>
           </div>
         </div>
@@ -2351,7 +2402,7 @@
           </button>
           <div class="faq-a">
             <div class="faq-a-inner">
-              PTM Lite คือ <strong>Indicator ที่ถูกออกแบบมาสำหรับเทรดเดอร์ที่ต้องการระบบที่ง่ายและใช้งานได้จริง</strong> พร้อมคู่มือ — เป็น Stage 2 ของระบบ ซื้อแยกปกติ 1,290 บาท แต่สมัครเพิ่มได้ตอน checkout ในราคาพิเศษ 990 บาท ไม่บังคับซื้อ
+              PTM Lite คือ <strong>Indicator ที่ออกแบบมาเพื่อเทรดเดอร์ที่อยากได้ระบบเรียบง่าย ใช้งานได้จริง</strong> พร้อมคู่มือ — เป็น Stage 2 ของระบบ ซื้อแยกปกติ 1,290 บาท แต่สมัครเพิ่มได้ตอน checkout ในราคาพิเศษ 990 บาท ไม่บังคับซื้อ
             </div>
           </div>
         </div>
@@ -2363,7 +2414,7 @@
           </button>
           <div class="faq-a">
             <div class="faq-a-inner">
-              ดู <strong>Recording ย้อนหลังได้ตลอดชีพ</strong> — ไม่พลาดเนื้อหาหลัก<br><br>
+              ดู <strong>Recording ย้อนหลังได้ตลอดชีวิต</strong> — ไม่พลาดเนื้อหาหลัก<br><br>
               <strong>Bonus ที่ได้รับ:</strong><br>
               · Bonus #1-4 ได้รับทันทีหลังสมัคร (ใช้เตรียมตัวก่อน Live ได้)<br>
               · Bonus #5 (Q&amp;A Recording) ส่งให้ทาง email หลังจบคลาส<br><br>
@@ -2397,65 +2448,72 @@
         <div class="label">ระบบ tier — ยิ่งสมัครเร็ว ยิ่งประหยัด</div>
         <h2 class="section-title">ทุก Tier ได้ของเหมือนกัน — ต่างเฉพาะราคา</h2>
         <p class="section-desc">
-          รุ่นเปิดตัวรับสูงสุด 100 คน — แบ่ง 3 ระดับ ตามลำดับการสมัคร · Bonus + Live Workshop ครบเหมือนกันทุก Tier
+          รุ่นเปิดตัวแบ่งราคาเป็น 3 ช่วงตามเวลาเปิดรับสมัคร — ทุก Tier ได้ Live Workshop, Recording และ Bonus ครบเหมือนกัน ต่างกันเฉพาะราคา<br><br><strong style="color:var(--gold-bright);">อัปเดต:</strong> เดิม Tier 1 สำหรับ 30 คนแรก แต่ตอนนี้มีผู้สมัครแล้วมากกว่า 40 คน จึงขยายรอบพิเศษถึง 3 มิ.ย. 2026 พร้อมเพิ่ม Bonus AI 101 for Traders ให้ผู้เรียนรุ่นเปิดตัวทุก Tier
         </p>
       </div>
 
       <div class="tier-grid">
         <!-- Tier 1: Launch -->
         <div class="tier-card tier-active">
-          <div class="tier-label">Tier 1 · Launch</div>
-          <div class="tier-name">30 คนแรก</div>
+          <div class="tier-label">Tier 1 · Extended Launch</div>
+          <div class="tier-name">40+ คนสมัครแล้ว</div>
           <div class="tier-price-row">
             <span class="tier-price">฿990</span>
             <span class="tier-price-suffix">Standalone</span>
           </div>
-          <div class="tier-cap">เปิดรับ 30 ที่นั่ง</div>
+          <div class="tier-cap">เดิมสำหรับ 30 คนแรก · ขยายรอบพิเศษถึง 3 มิ.ย. 2026 หลังมีผู้สมัครเกิน 40 คน</div>
           <ul class="tier-bonus-list">
             <li>✅ Bonus #1-5 ครบทุกตัว</li>
             <li>✅ Bonus #6 (เฉพาะผู้เข้า Live สด)</li>
-            <li>✅ Live Workshop + Recording ตลอดชีพ</li>
+            <li class="tier-bonus-new">✅ Bonus #7: AI 101 for Traders <span class="new-badge-inline">&lt; NEW &gt;</span></li>
+            <li>✅ Live Workshop + Recording ตลอดชีวิต</li>
           </ul>
-          <div class="tier-deadline">⏰ ปิดรับ 31 พ.ค. 2026 หรือเต็มก่อน</div>
+          <div class="tier-deadline">⏰ ปิดรับรอบขยาย 3 มิ.ย. 2026 เวลา 23:59 น.</div>
         </div>
 
         <!-- Tier 2: Early Bird -->
         <div class="tier-card tier-future">
           <div class="tier-label">Tier 2 · Early Bird</div>
-          <div class="tier-name">คนที่ 31–60</div>
+          <div class="tier-name">รอบ Early Bird</div>
           <div class="tier-price-row">
             <span class="tier-price">฿1,090</span>
             <span class="tier-price-suffix">+100 จาก Tier 1</span>
           </div>
-          <div class="tier-cap">เปิดรับ 30 ที่นั่ง</div>
+          <div class="tier-cap">เริ่ม 4 มิ.ย. 2026 หลังรอบขยายพิเศษสิ้นสุด</div>
           <ul class="tier-bonus-list">
             <li>✅ Bonus #1-5 ครบทุกตัว</li>
             <li>✅ Bonus #6 (เฉพาะผู้เข้า Live สด)</li>
-            <li>✅ Live Workshop + Recording ตลอดชีพ</li>
+            <li class="tier-bonus-new">✅ Bonus #7: AI 101 for Traders <span class="new-badge-inline">&lt; NEW &gt;</span></li>
+            <li>✅ Live Workshop + Recording ตลอดชีวิต</li>
           </ul>
-          <div class="tier-deadline">⏰ ปิดรับ 21 มิ.ย. 2026 หรือเต็มก่อน</div>
+          <div class="tier-deadline">⏰ เปิดหลัง 3 มิ.ย. 2026 · ปิดก่อนเข้าสู่รอบ Standard</div>
         </div>
 
         <!-- Tier 3: Standard -->
         <div class="tier-card tier-future">
           <div class="tier-label">Tier 3 · Standard</div>
-          <div class="tier-name">คนที่ 61–100</div>
+          <div class="tier-name">รอบ Standard</div>
           <div class="tier-price-row">
             <span class="tier-price">฿1,190</span>
             <span class="tier-price-suffix">+200 จาก Tier 1</span>
           </div>
-          <div class="tier-cap">เปิดรับ 40 ที่นั่ง</div>
+          <div class="tier-cap">ราคาปกติก่อนปิดรับรุ่น Live</div>
           <ul class="tier-bonus-list">
             <li>✅ Bonus #1-5 ครบทุกตัว</li>
             <li>✅ Bonus #6 (เฉพาะผู้เข้า Live สด)</li>
-            <li>✅ Live Workshop + Recording ตลอดชีพ</li>
+            <li class="tier-bonus-new">✅ Bonus #7: AI 101 for Traders <span class="new-badge-inline">&lt; NEW &gt;</span></li>
+            <li>✅ Live Workshop + Recording ตลอดชีวิต</li>
           </ul>
-          <div class="tier-deadline">⏰ ปิดรับ 4 ก.ค. 2026 หรือเต็มก่อน</div>
+          <div class="tier-deadline">⏰ รอบสุดท้ายก่อน Live Workshop · 5 ก.ค. 2026</div>
         </div>
       </div>
 
       <p class="ladder-note" style="margin-top:24px; text-align:center; font-size:14px; color:var(--text-sub);">
-        💡 <strong>ทุก Tier ได้ของเหมือนกัน</strong> — ต่างเฉพาะราคาตามจังหวะการสมัคร · ยิ่งสมัครเร็ว ยิ่งประหยัด
+        💡 <strong>ทุก Tier ได้ของเหมือนกัน</strong> — ต่างเฉพาะราคาตามช่วงเวลาสมัคร · ยิ่งสมัครเร็ว ยิ่งประหยัด
+      </p>
+
+      <p class="ladder-note" style="margin-top:12px; text-align:center; font-size:13px; color:var(--text-sub); padding:14px 18px; background:rgba(26,158,143,0.07); border:1px solid rgba(26,158,143,0.3); border-radius:10px;">
+        🎓 <strong style="color:var(--teal-bright);">Bonus #7 (AI 101 for Traders)</strong> — เป็น Bonus สำหรับผู้เรียนรุ่นเปิดตัวทุก Tier ไม่จำกัดเฉพาะ Tier 1 · ต่างกันเฉพาะราคาในแต่ละช่วงเวลา
       </p>
 
       <p class="ladder-note" style="margin-top:12px; text-align:center; font-size:13px; color:var(--text-sub); padding:14px 18px; background:rgba(201,168,76,0.07); border:1px solid var(--border-gold); border-radius:10px;">
@@ -2473,7 +2531,7 @@
 
       <div class="final-scarcity">
         <span class="dot" aria-hidden="true"></span>
-        30 คนแรก — ราคา Tier 1 (฿990) สิ้นสุด 31 พ.ค. หรือเต็มก่อน
+        ขยาย Tier 1 ฿990 ถึง 3 มิ.ย. 2026 — ก่อนปรับเป็น Tier 2
       </div>
 
       <h2 class="final-title">
@@ -2482,13 +2540,13 @@
       </h2>
 
       <p class="final-sub">
-        สมัครวันนี้ — ได้ทั้ง framework, bonus stack มูลค่า 5,330 บาท<br>
-        และสิทธิ์พิเศษเฉพาะรุ่นแรกที่รุ่นถัดไปไม่มี ในราคาเพียง 990 บาท
+        สมัครในรอบขยายนี้ — ได้ทั้ง framework, bonus stack มูลค่า 5,420 บาท<br>
+        พร้อม Bonus ใหม่ AI 101 for Traders สำหรับผู้เรียนรุ่นเปิดตัวทุก Tier ในราคา Tier 1 เพียง 990 บาท
       </p>
 
       <div class="final-cta-wrap">
         <a href="./bump-a/" class="btn-primary cta-button" role="button" style="font-size:19px; padding:20px 32px;">
-          จองที่นั่ง 30 คนแรก — 990 บาท
+          จอง Tier 1 รอบขยาย — 990 บาท
         </a>
         <a href="./bump-b/" class="btn-secondary cta-button" role="button" style="margin-top:12px;">
           Bundle กับ eBook — 1,290 บาท
@@ -2538,7 +2596,7 @@
     <div class="sticky-cta-inner">
       <div class="sticky-info">
         <div class="sticky-name">AI Workflow Trader Program</div>
-        <div class="sticky-price">฿990 · 30 คนแรก · Live 5 ก.ค. 2026</div>
+        <div class="sticky-price">฿990 · ขยายถึง 3 มิ.ย. · Live 5 ก.ค. 2026</div>
       </div>
       <a href="./bump-a/" class="sticky-btn cta-button" role="button">จองเลย</a>
     </div>
@@ -2630,10 +2688,10 @@
       });
     }
 
-    // ── Countdown Timer (ถึง 31 พ.ค. 2026 เที่ยงคืน เวลาไทย) ──
+    // ── Countdown Timer (ถึง 3 มิ.ย. 2026 เที่ยงคืน เวลาไทย) ──
     function runCountdown() {
-      // 31 พ.ค. 2026 23:59:59 เวลาไทย (UTC+7)
-      const deadline = new Date('2026-05-31T23:59:59+07:00');
+      // 3 มิ.ย. 2026 23:59:59 เวลาไทย (UTC+7)
+      const deadline = new Date('2026-06-03T23:59:59+07:00');
 
       function update() {
         const now = new Date();
