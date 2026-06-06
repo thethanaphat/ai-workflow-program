@@ -166,12 +166,14 @@
       content: '🔥 เปิดรับตอนนี้';
       position: absolute;
       top: -10px;
-      left: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      white-space: nowrap;
       background: var(--gold);
       color: var(--navy);
-      padding: 3px 10px;
+      padding: 3px 14px;
       border-radius: 100px;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 700;
       letter-spacing: 0.03em;
     }
@@ -2519,7 +2521,13 @@
         <div class="label">ระบบ tier — ยิ่งสมัครเร็ว ยิ่งประหยัด</div>
         <h2 class="section-title">ทุก Tier ได้ของเหมือนกัน — ต่างเฉพาะราคา</h2>
         <p class="section-desc">
-          รุ่นเปิดตัวแบ่งราคาเป็น 3 ช่วงตามเวลาเปิดรับสมัคร — ทุก Tier ได้ 2 Live Sessions, Recording และ Bonus ครบเหมือนกัน ต่างกันเฉพาะราคา<br><br><strong style="color:var(--gold-bright);">อัปเดต:</strong> Tier 1 (฿990) ปิดแล้ว — ตอนนี้เข้าสู่ <strong style="color:var(--teal-bright);">Tier 2 Early Bird (฿1,090)</strong> พร้อม Live Session 1 AI 101 for Beginners รวมอยู่ใน Program แล้ว มีผู้สมัครแล้ว 50+ คน
+          รุ่นเปิดตัวแบ่งราคาเป็น 3 ช่วงตามเวลาเปิดรับสมัคร<br>
+          ทุก Tier ได้ 2 Live Sessions, Recording และ Bonus ครบเหมือนกัน
+        </p>
+        <p class="section-desc" style="margin-top:14px;">
+          <strong style="color:var(--gold-bright);">อัปเดต:</strong> Tier 1 ปิดรับแล้ว หลังมีผู้สมัคร 50+ รายในรอบเปิดตัว<br>
+          ตอนนี้เข้าสู่ <strong style="color:var(--teal-bright);">Tier 2 Early Bird ราคา 1,090 บาท</strong><br>
+          พร้อม Live Session 1: AI 101 for Beginners รวมอยู่ใน Program แล้ว
         </p>
       </div>
 
@@ -2527,25 +2535,25 @@
         <!-- Tier 1: Sold Out -->
         <div class="tier-card tier-sold-out">
           <div class="tier-label">Tier 1 · Launch</div>
-          <div class="tier-name"><span style="font-weight:800; font-size:1.15em;">50+</span> คนสมัครแล้ว</div>
+          <div class="tier-name"><span style="font-weight:800; font-size:1.15em;">50+</span> รายในรอบเปิดตัว</div>
           <div class="tier-price-row">
             <span class="tier-price" style="text-decoration:line-through; color:var(--silver); font-size:24px;">฿990</span>
           </div>
-          <div class="tier-cap">ปิดรับแล้ว — ราคานี้ไม่มีแล้ว</div>
+          <div class="tier-cap">รอบเปิดตัวปิดรับแล้ว</div>
           <ul class="tier-bonus-list">
             <li>✅ Bonus #1-6 ครบทุกตัว</li>
             <li>✅ 2 Live Sessions + Recording ตลอดชีวิต</li>
           </ul>
-          <div class="tier-deadline" style="color:var(--text-dim);">— ปิดรับแล้ว —</div>
+          <div class="tier-deadline" style="color:var(--text-dim);">SOLD OUT</div>
         </div>
 
         <!-- Tier 2: Early Bird — ACTIVE -->
         <div class="tier-card tier-active">
-          <div class="tier-label">Tier 2 · Early Bird <span style="color:var(--teal-bright); font-size:11px; margin-left:6px;">รอบปัจจุบัน</span></div>
+          <div class="tier-label">Tier 2 · Early Bird</div>
           <div class="tier-name">เปิดรับสมัครอยู่ตอนนี้</div>
-          <div class="tier-price-row">
+          <div class="tier-price-row" style="flex-direction:column; align-items:flex-start; gap:2px;">
             <span class="tier-price">฿1,090</span>
-            <span class="tier-price-suffix">รอบปัจจุบัน</span>
+            <span class="tier-price-suffix" style="color:var(--teal-bright); font-weight:600;">รอบปัจจุบัน</span>
           </div>
           <div class="tier-cap">ปิด 21 มิ.ย. 2026 เวลา 23:59 น.</div>
           <ul class="tier-bonus-list">
@@ -2559,12 +2567,12 @@
         <!-- Tier 3: Standard -->
         <div class="tier-card tier-future">
           <div class="tier-label">Tier 3 · Standard</div>
-          <div class="tier-name">รอบ Standard</div>
-          <div class="tier-price-row">
+          <div class="tier-name">รอบถัดไป</div>
+          <div class="tier-price-row" style="flex-direction:column; align-items:flex-start; gap:2px;">
             <span class="tier-price">฿1,190</span>
-            <span class="tier-price-suffix">+100 จาก Tier 2</span>
+            <span class="tier-price-suffix">หลัง Tier 2 ปิด</span>
           </div>
-          <div class="tier-cap">ราคาปกติก่อนปิดรับรุ่น Live</div>
+          <div class="tier-cap">รอบสุดท้ายก่อน Live</div>
           <ul class="tier-bonus-list">
             <li>✅ Bonus #1-6 ครบทุกตัว</li>
             <li>✅ Bonus #6 (เฉพาะผู้เข้า Live สด · 12 ก.ค.)</li>
