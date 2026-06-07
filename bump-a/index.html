@@ -7,6 +7,7 @@
 <title>เพิ่ม PTM Lite ในออเดอร์? — AI Workflow Trader</title>
 <meta name="description" content="ขั้นตอนสุดท้าย: เพิ่ม PTM Lite Indicator (ปกติ 1,290 บาท) ลดเหลือ 990 บาท เฉพาะนักเรียน AI Workflow Trader รุ่นที่ 1">
 
+<script src="../config.js"></script>
 <!-- Meta Pixel Code -->
 <script>
   !function(f,b,e,v,n,t,s)
@@ -673,7 +674,7 @@ body > * { position: relative; z-index: 1; }
       ในออเดอร์นี้ไหม?
     </h1>
     <p class="hero-sub">
-      ปกติขายแยก <strong>1,290 บาท</strong> — สำหรับนักเรียน AI Workflow Trader รุ่นที่ 1
+      ปกติขายแยก <strong>1,290 บาท</strong> — สำหรับนักเรียน AI Workflow Trader
       <strong>ลดเหลือ 990 บาท</strong> เพิ่มในออเดอร์เดียว · พร้อม Zoom สด 19 ก.ค. 2026
     </p>
   </div>
@@ -787,14 +788,14 @@ body > * { position: relative; z-index: 1; }
       <!-- Primary: PTM Lite Add-on -->
       <a href="https://buy.stripe.com/cNi00j6gT2J02Ve7NM5EY0g" class="cta-btn cta-primary"
          onclick="fbq('track','InitiateCheckout',{value:2080,currency:'THB',content_ids:['ai_workflow_ptm'],content_type:'product',content_name:'AI Workflow Trader + PTM Lite'})">
-        <span class="cta-main">เพิ่ม PTM Lite — รวม 2,080 บาท</span>
+        <span class="cta-main">เพิ่ม PTM Lite — รวม <span data-cfg="ptm-pl1-total">2,080</span> บาท</span>
         <span class="cta-detail">AI Workflow Trader + PTM Lite Indicator + คู่มือ + Zoom สด 19 ก.ค.</span>
       </a>
 
       <!-- Secondary: Course only -->
       <a href="https://buy.stripe.com/cNifZheNp0AS3Zi3xw5EY0e" class="cta-btn cta-secondary"
          onclick="fbq('track','InitiateCheckout',{value:1090,currency:'THB',content_ids:['ai_workflow_only'],content_type:'product',content_name:'AI Workflow Trader Program'})">
-        <span class="cta-main">รับเฉพาะคอร์ส — 1,090 บาท</span>
+        <span class="cta-main">รับเฉพาะคอร์ส — <span data-cfg="pl1-price">1,090</span> บาท</span>
         <span class="cta-detail">AI Workflow Trader Program อย่างเดียว</span>
       </a>
 
@@ -833,5 +834,20 @@ body > * { position: relative; z-index: 1; }
   AI Workflow Trader Program · รุ่นที่ 1 · 2569
 </div>
 
+
+<script>
+// Apply config prices
+(function() {
+  if (typeof PHASE === 'undefined') return;
+  const pl1   = fmtPrice(PHASE.pl1);
+  const total = fmtPrice(PHASE.pl1 + PTM_ADDON);
+  document.querySelectorAll('[data-cfg="pl1-price"]').forEach(el  => { el.textContent = pl1; });
+  document.querySelectorAll('[data-cfg="ptm-pl1-total"]').forEach(el => { el.textContent = total; });
+  document.querySelectorAll('[data-cfg-href="pl1"]').forEach(el    => { el.href = PHASE.pl1Url; });
+  document.querySelectorAll('[data-cfg-href="pl1-ptm"]').forEach(el => {
+    // For PTM add-on link, keep existing hardcoded Stripe URL (managed separately)
+  });
+})();
+</script>
 </body>
 </html>
