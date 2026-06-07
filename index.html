@@ -313,9 +313,9 @@
       color: var(--gold-bright);
     }
     .hero-proof {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+      display: inline-block;
+      line-height: 1.6;
+      max-width: 100%;
       background: rgba(34,197,179,0.12);
       border: 1px solid rgba(34,197,179,0.4);
       color: var(--teal-bright);
@@ -419,7 +419,7 @@
     }
     .hero-trust-item {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 10px;
       font-size: 15px;
       color: var(--text-main);
@@ -1061,6 +1061,10 @@
     .stage-name { font-size: 17px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
     .stage-desc { font-size: 13px; color: var(--text-sub); }
     .stage-right { text-align: right; flex-shrink: 0; }
+    @media (max-width: 600px) {
+      .stage-card { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .stage-right { text-align: left; }
+    }
     .stage-price {
       font-family: var(--font-mono);
       font-size: 20px;
@@ -1188,9 +1192,9 @@
       pointer-events: none;
     }
     .final-scarcity {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+      display: inline-block;
+      line-height: 1.7;
+      max-width: 100%;
       background: rgba(192,57,43,0.12);
       border: 1px solid rgba(192,57,43,0.35);
       padding: 8px 18px;
@@ -1202,6 +1206,9 @@
       margin-bottom: 24px;
     }
     .final-scarcity .dot {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 6px;
       width: 6px; height: 6px;
       border-radius: 50%;
       background: #E74C3C;
@@ -1833,7 +1840,7 @@
         </li>
         <li class="hero-trust-item">
           <span class="check" aria-hidden="true">✓</span>
-          <span class="deadline-highlight"><span data-cfg="phase-label">Early Bird</span></span> เปิดรับอยู่ตอนนี้ — <span data-cfg="pl1-price">1,090</span> บาท · จำกัด <span data-cfg="seats">30</span> ที่นั่ง หรือถึง <span data-cfg="deadline">15 มิ.ย. 2026</span> · อันไหนถึงก่อน
+          <span><span class="deadline-highlight"><span data-cfg="phase-label">Early Bird</span></span> เปิดรับอยู่ตอนนี้ — <span data-cfg="pl1-price">1,090</span> บาท · จำกัด <span data-cfg="seats">30</span> ที่นั่ง หรือถึง <span data-cfg="deadline">15 มิ.ย. 2026</span> · อันไหนถึงก่อน</span>
         </li>
       </ul>
 
@@ -2533,7 +2540,7 @@
       <div class="section-header">
         <div class="label">ราคาขึ้นตามรอบ — รับจำนวนจำกัด</div>
         <h2 class="section-title">ได้ของเหมือนกันทุกคน — ยิ่งสมัครเร็ว ยิ่งได้ราคาดี</h2>
-        <div style="display:inline-flex;align-items:center;gap:8px;margin:14px 0 10px;padding:7px 18px;border-radius:100px;background:rgba(34,197,179,0.12);border:1px solid rgba(34,197,179,0.4);color:var(--teal-bright);font-weight:600;font-size:15px;">
+        <div style="display:inline-block;line-height:1.6;max-width:100%;margin:14px 0 10px;padding:7px 18px;border-radius:100px;background:rgba(34,197,179,0.12);border:1px solid rgba(34,197,179,0.4);color:var(--teal-bright);font-weight:600;font-size:15px;">
           👥 มีผู้สมัครแล้ว <span style="color:var(--white);">50+ ราย</span> ในรอบเปิดตัว
         </div>
         <p class="section-desc">ทุกคนได้ 2 Live Sessions, Recording และ Bonus ครบเหมือนกัน</p>
