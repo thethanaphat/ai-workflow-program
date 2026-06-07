@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Workflow Trader Program — เทรดเดอร์ยุคใหม่ ใช้ AI เป็นเพื่อนคู่คิด ทุกขั้นตอนของการเทรด</title>
-  <meta name="description" content="กรอบ 4 ระดับการใช้ AI ที่เทรดเดอร์จริงๆ ใช้ — ก่อนวางแผน · ระหว่างเทรด · หลังจบวัน Live Workshop 4 ชั่วโมง 5 กรกฎาคม 2026">
+  <meta name="description" content="กรอบ 4 ระดับการใช้ AI ที่เทรดเดอร์จริงๆ ใช้ — สอนสด 2 วัน: AI 101 for Beginners และ Workshop หลัก พร้อม Recording ดูซ้ำตลอดชีวิต">
 
   <!-- Meta Pixel Code -->
   <script>
@@ -136,7 +136,7 @@
     }
     .topbar-cta:hover { background: var(--teal-bright); }
 
-    /* ===== TIER SCARCITY SECTION ===== */
+    /* ===== PHASE PRICING SECTION ===== */
     #tiers { padding: 64px 0; background: linear-gradient(180deg, transparent, rgba(30,51,82,0.25), transparent); }
     .tier-grid {
       display: grid;
@@ -295,28 +295,41 @@
 
     /* ===== HERO PAIN HOOK ===== */
     .hero-pain-hook {
+      display: block;
+      margin-bottom: 18px;
+    }
+    .hero-pain-hook .ph-setup {
+      display: block;
+      font-size: 19px;
+      font-weight: 500;
+      color: var(--text-sub);
+      margin-bottom: 2px;
+    }
+    .hero-pain-hook .ph-punch {
+      display: block;
+      font-size: 27px;
+      line-height: 1.25;
+      font-weight: 700;
+      color: var(--gold-bright);
+    }
+    .hero-proof {
       display: inline-flex;
       align-items: center;
-      gap: 10px;
-      background: rgba(192,57,43,0.08);
-      border: 1px solid rgba(192,57,43,0.25);
-      padding: 10px 18px;
+      gap: 8px;
+      background: rgba(34,197,179,0.12);
+      border: 1px solid rgba(34,197,179,0.4);
+      color: var(--teal-bright);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 7px 16px;
       border-radius: 100px;
-      font-size: 14px;
-      color: var(--mist);
-      margin-bottom: 20px;
-      font-style: italic;
+      margin-bottom: 18px;
     }
-    .hero-pain-hook .pain-icon {
-      color: var(--red-warn);
-      font-size: 16px;
-      flex-shrink: 0;
-    }
+    .hero-proof strong { color: var(--white); }
     @media (max-width: 600px) {
-      .hero-pain-hook {
-        font-size: 13px;
-        padding: 8px 14px;
-      }
+      .hero-pain-hook .ph-setup { font-size: 16px; }
+      .hero-pain-hook .ph-punch { font-size: 22px; }
+      .hero-proof { font-size: 14px; }
     }
 
     /* ===== HERO SECTION ===== */
@@ -914,7 +927,8 @@
       text-align: center;
       margin-top: 16px;
     }
-    .founding-price span { font-size: 16px; color: var(--text-dim); font-weight: 400; }
+    .founding-price .founding-amount { font-size: 36px; color: var(--gold); font-weight: 700; }
+    .founding-price .founding-meta { font-size: 16px; color: var(--text-dim); font-weight: 400; }
 
     /* ===== AUTHORITY ===== */
     #authority { background: rgba(21,35,56,0.2); }
@@ -1775,7 +1789,7 @@
   <!-- TOP NAV -->
   <nav class="topbar" role="navigation" aria-label="top navigation">
     <div class="topbar-logo">AI Workflow Trader</div>
-    <a href="./bump-a/" class="topbar-cta cta-button">จองที่นั่ง — 1,090 ฿</a>
+    <a href="./bump-a/" class="topbar-cta cta-button" data-cfg-href="pl1">จองที่นั่ง — <span data-cfg="pl1-price">1,090</span> ฿</a>
   </nav>
 
   <!-- ===== SECTION 1: HERO ===== -->
@@ -1787,15 +1801,14 @@
         <img src="assets/ai-workflow-trader-cover.png" alt="AI Workflow Trader Program — กรอบ 4 ระดับการใช้ AI ของเทรดเดอร์ยุคใหม่">
       </div>
 
-      <div class="hero-eyebrow fade-up" data-delay="1">
-        <div class="hero-live-dot" aria-hidden="true"></div>
-        <div class="hero-badge">2 Live Sessions · 5 + 12 ก.ค. 2026 · Tier 2 Early Bird</div>
+      <div class="hero-proof fade-up" data-delay="1">
+        👥 รอบ Early Bird · มีผู้สมัครแล้ว <strong>50+ ราย</strong> · รับเพิ่มอีก <strong>30 ที่นั่ง</strong>
       </div>
 
       <!-- Pain Hook -->
       <div class="hero-pain-hook fade-up" data-delay="2">
-        <span class="pain-icon" aria-hidden="true">⚠</span>
-        <span>ใช้ ChatGPT/Gemini มาเป็นปี... แต่ผลเทรดยังเหมือนเดิม?</span>
+        <span class="ph-setup">ใช้ ChatGPT / Gemini มาเป็นปี…</span>
+        <span class="ph-punch">แต่ผลเทรดยังเหมือนเดิม?</span>
       </div>
 
       <h1 class="hero-title fade-up" data-delay="2">
@@ -1805,7 +1818,7 @@
       </h1>
       <p class="hero-sub fade-up" data-delay="3">
         AI ไม่ใช่หมอดู ไม่ใช่ Holy Grail —<br>
-        แต่เป็น<strong>"เพื่อนคู่คิด"</strong>ที่ช่วยให้คุณ<strong>วางแผน · ตรวจ bias · ทบทวนการเทรด</strong>ได้เป็นระบบมากขึ้น<br><br>
+        แต่เป็น <strong>“เพื่อนคู่คิด”</strong> ที่ช่วยให้คุณ <strong>วางแผน • ทบทวนมุมมองเทรด • ทบทวนการเทรด</strong> ได้อย่างเป็นระบบมากขึ้น<br><br>
         เรียน <strong>Framework 4 ระดับ</strong> ที่เทรดเดอร์ใช้ได้จริง ใน 2 Live Sessions
       </p>
 
@@ -1816,20 +1829,20 @@
         </li>
         <li class="hero-trust-item">
           <span class="check" aria-hidden="true">✓</span>
-          Resource Center + Bonus Stack มูลค่า 5,520 บาท
+          คลังเครื่องมือช่วยเทรด + โบนัสพิเศษ รวมมูลค่า 5,520 บาท
         </li>
         <li class="hero-trust-item">
           <span class="check" aria-hidden="true">✓</span>
-          <span class="deadline-highlight">Tier 2 · Early Bird</span> เปิดรับอยู่ตอนนี้ — มีผู้สมัครแล้ว 50+ คน
+          <span class="deadline-highlight"><span data-cfg="phase-label">Early Bird</span></span> เปิดรับอยู่ตอนนี้ — <span data-cfg="pl1-price">1,090</span> บาท · จำกัด <span data-cfg="seats">30</span> ที่นั่ง หรือถึง <span data-cfg="deadline">15 มิ.ย. 2026</span> · อันไหนถึงก่อน
         </li>
       </ul>
 
       <div class="hero-cta-group fade-up" data-delay="4">
-        <a href="./bump-a/" class="btn-primary cta-button" role="button">
-          เข้าสู่ Tier 2 — 1,090 บาท
+        <a href="./bump-a/" class="btn-primary cta-button" role="button" data-cfg-href="pl1">
+          สมัคร <span data-cfg="phase-label">Early Bird</span> — <span data-cfg="pl1-price">1,090</span> บาท
         </a>
-        <a href="./bump-b/" class="btn-secondary cta-button" role="button">
-          Bundle กับ eBook — 1,390 บาท
+        <a href="./bump-b/" class="btn-secondary cta-button" role="button" data-cfg-href="bundle">
+          Bundle กับ eBook — <span data-cfg="bundle-price">1,390</span> บาท
         </a>
 
         <!-- Bundle collapsible explanation -->
@@ -1854,7 +1867,7 @@
               <img src="assets/ebook-x2.png" alt="E-Book AI ช่วยลงทุน + Wall Street" class="bundle-ebook-img" loading="lazy">
             </div>
             <div class="bundle-price-line">
-              ปกติ <span class="bundle-sep-price">490 บาท</span> · Bundle รวมกัน <strong>1,390 บาท</strong> <span class="bundle-save">(ประหยัด 190 บาท)</span>
+              ปกติ <span class="bundle-sep-price">490 บาท</span> · Bundle รวมกัน <strong><span data-cfg="bundle-price">1,390</span> บาท</strong> <span class="bundle-save">(ประหยัด 190 บาท)</span>
             </div>
           </div>
         </div>
@@ -1862,8 +1875,8 @@
         <!-- Countdown timer -->
         <div class="countdown-wrap">
           <div class="countdown-label">
-            🎁 <span class="deadline-highlight">Tier 2 · Early Bird · ฿1,090</span><br>
-            ปิด 21 มิ.ย. 2026 — ก่อนปรับ Tier 3
+            🎁 <span class="deadline-highlight"><span data-cfg="phase-label">Early Bird</span> · ฿<span data-cfg="pl1-price">1,090</span></span><br>
+            ปิด <span data-cfg="deadline">15 มิ.ย. 2026</span> — ก่อนขึ้นรอบถัดไป
           </div>
           <div class="countdown-timer" id="heroCountdown" aria-label="countdown timer">
             <div class="countdown-unit"><span class="countdown-num" id="cd-days">--</span><span class="countdown-unit-label">วัน</span></div>
@@ -1921,7 +1934,7 @@
       <div class="pain-punch">
         ทุกเดือนที่ผ่านไปโดยไม่มีกรอบความคิดที่ถูกต้อง <br>
         คุณกำลัง <strong>จ่ายค่าเรียนตลาดในรูปของการขาดทุน</strong> — <br>
-        ซึ่งแพงกว่า 1,090 บาทมากนัก
+        ซึ่งแพงกว่า <span data-cfg="pl1-price">1,090</span> บาทมากนัก
       </div>
     </div>
   </section>
@@ -1962,7 +1975,7 @@
             <div class="level-tag">Level 2 — Sweet Spot ⭐</div>
             <div class="level-name">เพื่อนคู่คิดของเทรดเดอร์</div>
             <div class="level-desc">
-              ก่อนเปิดออเดอร์: ทบทวน trade plan, วิเคราะห์ bias, คำนวณ position sizing · หลังปิดออเดอร์: วิเคราะห์ trade journal เพื่อหาจุดอ่อนที่ตัวเองมองไม่เห็น — <strong style="color:var(--text-main)">นี่คือระดับที่เปลี่ยนผลการเทรดได้จริง</strong>
+              ก่อนเปิดออเดอร์: ทบทวน trade plan, ทบทวนมุมมองเทรด, คำนวณ position sizing · หลังปิดออเดอร์: วิเคราะห์ trade journal เพื่อหาจุดอ่อนที่ตัวเองมองไม่เห็น — <strong style="color:var(--text-main)">นี่คือระดับที่เปลี่ยนผลการเทรดได้จริง</strong>
             </div>
             <span class="level-highlight">🔥 Core ของ Program</span>
           </div>
@@ -2069,7 +2082,7 @@
         <div class="hour-block" role="listitem" style="background:rgba(26,158,143,0.06); border-left:3px solid var(--teal); margin-bottom:4px;">
           <div class="hour-content">
             <div class="hour-title" style="color:var(--teal-bright);">🎓 Live Session 1 — AI 101 for Beginners · อาทิตย์ 5 ก.ค. 2026</div>
-            <div class="hour-desc">ปูพื้นฐาน ChatGPT / Gemini / Claude สำหรับผู้เริ่มต้น · วิธีตั้งคำถามให้ได้ผล · Garbage In / Out · ใช้ AI ช่วยคิด สรุป วิเคราะห์ · ต่อยอดได้ทั้งการเทรด งาน และชีวิตประจำวัน</div>
+            <div class="hour-desc">ปูพื้นฐาน ChatGPT / Gemini / Claude สำหรับผู้เริ่มต้น · ต่อยอดได้ทั้งการเทรด งาน และชีวิตประจำวัน</div>
             <div class="hour-outcome">→ มูลค่า ฿690 · รวมอยู่ใน Program โดยไม่มีค่าใช้จ่ายเพิ่มเติม</div>
           </div>
         </div>
@@ -2077,7 +2090,7 @@
         <!-- Live Session 2 header -->
         <div class="hour-block" role="listitem" style="background:rgba(201,168,76,0.06); border-left:3px solid var(--gold); margin-bottom:4px;">
           <div class="hour-content">
-            <div class="hour-title" style="color:var(--gold-bright);">⚡ Live Session 2 — AI Workflow Trader Program · อาทิตย์ 12 ก.ค. 2026 · 4 ชม. (13:30–17:30)</div>
+            <div class="hour-title" style="color:var(--gold-bright);">⚡ Live Session 2 — AI Workflow Trader Program · อาทิตย์ 12 ก.ค. 2026</div>
             <div class="hour-desc">Framework 4 ระดับ — ใช้ AI เป็นเพื่อนคู่คิดในทุกขั้นตอนของการเทรด ตั้งแต่ Level 1 (ผู้ช่วย) ถึง Level 4 (Agentic)</div>
           </div>
         </div>
@@ -2094,7 +2107,7 @@
           <div class="hour-block" role="listitem">
             <div class="hour-content">
               <div class="hour-title">Level 2 — เพื่อนคู่คิดของเทรดเดอร์ 🔥</div>
-              <div class="hour-desc">Deep-dive Level 2 — ถาม AI ก่อนกดเทรด, วิเคราะห์ trade journal หาจุดอ่อน, ตรวจ bias, คำนวณ position sizing</div>
+              <div class="hour-desc">Deep-dive Level 2 — ถาม AI ก่อนกดเทรด, วิเคราะห์ trade journal หาจุดอ่อน, ทบทวนมุมมองเทรด, คำนวณ position sizing</div>
               <div class="hour-outcome">→ จบแล้ว: มี workflow AI ที่ใช้ได้จริงทั้งก่อนและหลังการเทรด</div>
             </div>
           </div>
@@ -2118,7 +2131,7 @@
       <!-- Bonuses -->
       <div class="bonus-header">🎁 Bonus Stack</div>
       <div style="margin:-8px 0 18px; padding:14px 18px; background:rgba(26,158,143,0.08); border:1px solid rgba(26,158,143,0.3); border-radius:10px; font-size:14px; color:var(--text-sub); line-height:1.65;">
-        <strong style="color:var(--teal-bright);">จาก feedback ของผู้สมัครรุ่นแรก:</strong> หลายคนอยากได้พื้นฐาน AI ก่อนเข้า Workshop หลัก — จึงเพิ่ม <strong style="color:var(--white);">Live Session 1: AI 101 for Beginners</strong> เป็น Session แรก (5 ก.ค.) รวมอยู่ใน Program ทุก Tier โดยไม่มีค่าใช้จ่ายเพิ่มเติม
+        <strong style="color:var(--teal-bright);">จาก feedback ของผู้สมัครรอบเปิดตัว:</strong> หลายคนอยากได้พื้นฐาน AI ก่อนเข้า Workshop หลัก — จึงเพิ่ม <strong style="color:var(--white);">Live Session 1: AI 101 for Beginners</strong> เป็น Session แรก (5 ก.ค.) รวมอยู่ใน Program ทุกรอบโดยไม่มีค่าใช้จ่ายเพิ่มเติม
       </div>
       <div class="bonus-list" role="list" aria-label="course bonuses">
         <div class="bonus-item bonus-item--has-img" role="listitem">
@@ -2175,7 +2188,7 @@
         <div class="bonus-item featured" role="listitem">
           <div class="bonus-left">
             <div class="bonus-name"><span class="bonus-emoji">🔮</span>Bonus #6: Surprise Chart Analysis Tool</div>
-            <div class="bonus-sub">เครื่องมือลับช่วยวิเคราะห์กราฟ — ใช้คู่กับ Prompt Pack เพื่อให้ AI วิเคราะห์ได้แม่นขึ้น<br>รายละเอียดจะ reveal ในวัน Live · มอบเฉพาะผู้ที่เข้าเรียน Live สดเท่านั้น (ผู้ที่ดูย้อนหลังจะไม่ได้รับ Bonus นี้)</div>
+            <div class="bonus-sub">เครื่องมือลับช่วยวิเคราะห์กราฟ — ใช้คู่กับ Prompt Pack เพื่อให้ AI วิเคราะห์ได้แม่นขึ้น<br>รายละเอียดจะ reveal ในวัน Live · มอบเฉพาะผู้ที่เข้าเรียน Live สดเท่านั้น</div>
             <span class="bonus-tag">🎁 เฉพาะผู้เข้า Live สด — 12 ก.ค. 2026</span>
           </div>
           <div class="bonus-value">฿490</div>
@@ -2196,7 +2209,7 @@
           <span class="label-text">มูลค่ารวมทั้งหมด</span>
           <span class="price"><span class="strikethrough">฿5,520</span></span>
         </div>
-        <div class="founding-price">฿1,090 <span>Tier 2 · Early Bird · ถึง 21 มิ.ย. 2026</span></div>
+        <div class="founding-price">฿<span class="founding-amount" data-cfg="pl1-price">1,090</span> <span class="founding-meta"><span data-cfg="phase-label">Early Bird</span> · ถึง <span data-cfg="deadline">15 มิ.ย. 2026</span></span></div>
       </div>
 
     </div>
@@ -2268,7 +2281,7 @@
       <div class="risk-grid" role="list" aria-label="reasons to join">
         <div class="risk-item" role="listitem">
           <div class="risk-icon" aria-hidden="true">💰</div>
-          <div class="risk-label">1,090 บาท</div>
+          <div class="risk-label"><span data-cfg="pl1-price">1,090</span> บาท</div>
           <div class="risk-desc">เท่ากับอาหาร 2-3 มื้อ — ถ้าได้ระบบคิดที่ดีขึ้นแม้แค่ trade เดียว คุ้มแล้ว</div>
         </div>
         <div class="risk-item" role="listitem">
@@ -2302,9 +2315,9 @@
     <div class="container">
       <div class="cta-box">
         <h2>พร้อมเริ่มต้นแล้วหรือยัง?</h2>
-        <p>Tier 2 · Early Bird · 1,090 บาท · 2 Live Sessions: 5 + 12 ก.ค. 2026</p>
+        <p><span data-cfg="phase-label">Early Bird</span> · <span data-cfg="pl1-price">1,090</span> บาท · จำกัด <span data-cfg="seats">30</span> ที่นั่ง · 2 Live Sessions: 5 + 12 ก.ค. 2026</p>
         <div class="cta-button-wrap">
-          <a href="./bump-a/" class="btn-primary cta-button" role="button">เข้าสู่ Tier 2 — 1,090 บาท</a>
+          <a href="./bump-a/" class="btn-primary cta-button" role="button" data-cfg-href="pl1">สมัคร <span data-cfg="phase-label">Early Bird</span> — <span data-cfg="pl1-price">1,090</span> บาท</a>
         </div>
       </div>
     </div>
@@ -2316,8 +2329,8 @@
   <section id="pricing">
     <div class="container">
       <div class="section-header">
-        <div class="label">ระบบเทรดของอาจารย์ใหม่</div>
-        <h2 class="section-title">3 ระดับ — เริ่มต้นที่ถูกที่</h2>
+        <div class="label">เส้นทางการเรียนรู้</div>
+        <h2 class="section-title">เริ่มจาก Workflow ก่อน แล้วค่อยต่อยอดด้วยเครื่องมือ</h2>
         <p class="section-desc ladder-intro">
           เหมือนสร้างบ้าน — ต้องวางฐานรากก่อน ถึงจะตั้งผนังได้ · เริ่มที่ framework วิธีคิด แล้วค่อยเพิ่มเครื่องมือ
         </p>
@@ -2380,7 +2393,7 @@
             <ul class="ptm-features">
               <li><span class="ptm-check">✓</span> PTM Lite Indicator (TradingView, ใช้งาน 1 ปี · ต่ออายุได้)</li>
               <li><span class="ptm-check">✓</span> คู่มือ + Mini Ebook สอน HA จากศูนย์</li>
-              <li><span class="ptm-check">✓</span> Zoom สอนสด รุ่นแรก · 19 ก.ค. 2026 + Q&amp;A (record ดูซ้ำได้ไม่จำกัด) — เฉพาะผู้สมัคร PTM Lite</li>
+              <li><span class="ptm-check">✓</span> Zoom สอนสดรอบแรก · 19 ก.ค. 2026 + Q&amp;A (record ดูซ้ำได้ไม่จำกัด) — เฉพาะผู้สมัคร PTM Lite</li>
             </ul>
             <div class="ptm-cta-note">เพิ่มในออเดอร์ได้ตอน checkout — ไม่บังคับ</div>
           </div>
@@ -2395,7 +2408,7 @@
             <div class="stage-desc">Framework วิธีคิด — ที่ทำให้ทุกเครื่องมือที่ใช้ต่อจากนี้มีความหมาย</div>
           </div>
           <div class="stage-right">
-            <div class="stage-price">฿1,090</div>
+            <div class="stage-price">฿<span data-cfg="pl1-price">1,090</span></div>
             <div class="stage-status">เปิดรับสมัครอยู่ตอนนี้ →</div>
           </div>
         </div>
@@ -2514,84 +2527,33 @@
 
   <div class="section-divider"></div>
 
-  <!-- ===== SECTION 9.5: TIER SCARCITY ===== -->
+  <!-- ===== SECTION 9.5: PHASE PRICING ===== -->
   <section id="tiers">
     <div class="container">
       <div class="section-header">
-        <div class="label">ระบบ tier — ยิ่งสมัครเร็ว ยิ่งประหยัด</div>
-        <h2 class="section-title">ทุก Tier ได้ของเหมือนกัน — ต่างเฉพาะราคา</h2>
-        <p class="section-desc">
-          รุ่นเปิดตัวแบ่งราคาเป็น 3 ช่วงตามเวลาเปิดรับสมัคร<br>
-          ทุก Tier ได้ 2 Live Sessions, Recording และ Bonus ครบเหมือนกัน
-        </p>
-        <p class="section-desc" style="margin-top:14px;">
-          <strong style="color:var(--gold-bright);">อัปเดต:</strong> Tier 1 ปิดรับแล้ว หลังมีผู้สมัคร 50+ รายในรอบเปิดตัว<br>
-          ตอนนี้เข้าสู่ <strong style="color:var(--teal-bright);">Tier 2 Early Bird ราคา 1,090 บาท</strong><br>
-          พร้อม Live Session 1: AI 101 for Beginners รวมอยู่ใน Program แล้ว
-        </p>
+        <div class="label">ราคาขึ้นตามรอบ — รับจำนวนจำกัด</div>
+        <h2 class="section-title">ได้ของเหมือนกันทุกคน — ยิ่งสมัครเร็ว ยิ่งได้ราคาดี</h2>
+        <div style="display:inline-flex;align-items:center;gap:8px;margin:14px 0 10px;padding:7px 18px;border-radius:100px;background:rgba(34,197,179,0.12);border:1px solid rgba(34,197,179,0.4);color:var(--teal-bright);font-weight:600;font-size:15px;">
+          👥 มีผู้สมัครแล้ว <span style="color:var(--white);">50+ ราย</span> ในรอบเปิดตัว
+        </div>
+        <p class="section-desc">ทุกคนได้ 2 Live Sessions, Recording และ Bonus ครบเหมือนกัน</p>
       </div>
 
-      <div class="tier-grid">
-        <!-- Tier 1: Sold Out -->
-        <div class="tier-card tier-sold-out">
-          <div class="tier-label">Tier 1 · Launch</div>
-          <div class="tier-name"><span style="font-weight:800; font-size:1.15em;">50+</span> รายในรอบเปิดตัว</div>
-          <div class="tier-price-row">
-            <span class="tier-price" style="text-decoration:line-through; color:var(--silver); font-size:24px;">฿990</span>
-          </div>
-          <div class="tier-cap">รอบเปิดตัวปิดรับแล้ว</div>
-          <ul class="tier-bonus-list">
-            <li>✅ Bonus #1-6 ครบทุกตัว</li>
-            <li>✅ 2 Live Sessions + Recording ตลอดชีวิต</li>
-          </ul>
-          <div class="tier-deadline" style="color:var(--text-dim);">SOLD OUT</div>
-        </div>
-
-        <!-- Tier 2: Early Bird — ACTIVE -->
-        <div class="tier-card tier-active">
-          <div class="tier-label">Tier 2 · Early Bird</div>
-          <div class="tier-name">เปิดรับสมัครอยู่ตอนนี้</div>
-          <div class="tier-price-row" style="flex-direction:column; align-items:flex-start; gap:2px;">
-            <span class="tier-price">฿1,090</span>
-            <span class="tier-price-suffix" style="color:var(--teal-bright); font-weight:600;">รอบปัจจุบัน</span>
-          </div>
-          <div class="tier-cap">ปิด 21 มิ.ย. 2026 เวลา 23:59 น.</div>
-          <ul class="tier-bonus-list">
-            <li>✅ Bonus #1-6 ครบทุกตัว</li>
-            <li>✅ Bonus #6 (เฉพาะผู้เข้า Live สด · 12 ก.ค.)</li>
-            <li>✅ 2 Live Sessions + Recording ตลอดชีวิต</li>
-          </ul>
-          <div class="tier-deadline">⏰ ปิดรับ 21 มิ.ย. 2026 · ก่อนปรับ Tier 3</div>
-        </div>
-
-        <!-- Tier 3: Standard -->
-        <div class="tier-card tier-future">
-          <div class="tier-label">Tier 3 · Standard</div>
-          <div class="tier-name">รอบถัดไป</div>
-          <div class="tier-price-row" style="flex-direction:column; align-items:flex-start; gap:2px;">
-            <span class="tier-price">฿1,190</span>
-            <span class="tier-price-suffix">หลัง Tier 2 ปิด</span>
-          </div>
-          <div class="tier-cap">รอบสุดท้ายก่อน Live</div>
-          <ul class="tier-bonus-list">
-            <li>✅ Bonus #1-6 ครบทุกตัว</li>
-            <li>✅ Bonus #6 (เฉพาะผู้เข้า Live สด · 12 ก.ค.)</li>
-            <li>✅ 2 Live Sessions + Recording ตลอดชีวิต</li>
-          </ul>
-          <div class="tier-deadline">⏰ รอบสุดท้ายก่อน Live · 12 ก.ค. 2026</div>
-        </div>
+      <div class="tier-grid" id="phaseGrid">
+        <!-- JS renders phase cards -->
       </div>
 
-      <p class="ladder-note" style="margin-top:24px; text-align:center; font-size:14px; color:var(--text-sub);">
-        💡 <strong>ทุก Tier ได้ของเหมือนกัน</strong> — ต่างเฉพาะราคาตามช่วงเวลาสมัคร · ยิ่งสมัครเร็ว ยิ่งประหยัด
-      </p>
+      <div class="ladder-note" style="margin-top:24px; padding:16px 18px; text-align:center; font-size:14px; color:var(--text-sub); background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:10px;">
+        <strong style="color:var(--white);">ทุกรอบได้เหมือนกัน</strong> — ต่างเฉพาะราคาตามช่วงที่สมัคร<br>
+        <span style="display:inline-block;margin-top:8px;color:var(--teal-bright);">✓ 2 Live Sessions + Recording ตลอดชีวิต &nbsp;·&nbsp; ✓ Bonus #1–5 ครบทุกตัว</span>
+      </div>
 
       <p class="ladder-note" style="margin-top:12px; text-align:center; font-size:13px; color:var(--text-sub); padding:14px 18px; background:rgba(201,168,76,0.07); border:1px solid var(--border-gold); border-radius:10px;">
-        🔮 <strong style="color:var(--gold-bright);">Bonus #6 (Surprise Chart Analysis Tool)</strong> — มอบเฉพาะผู้ที่เข้าเรียน Live สดในวันที่ 12 ก.ค. 2026<br>ทุก Tier ที่เข้าเรียนสดได้รับเหมือนกัน
+        🔮 <strong style="color:var(--gold-bright);">Bonus #6 (Surprise Chart Analysis Tool)</strong> — มอบเฉพาะผู้ที่เข้าเรียน Live สดในวันที่ 12 ก.ค. 2026<br>ผู้สมัครทุกรอบที่เข้าเรียนสดได้รับเหมือนกัน
       </p>
 
       <p class="ladder-note" style="margin-top:12px; text-align:center; font-size:13px; color:var(--text-sub); padding:14px 18px; background:rgba(26,158,143,0.07); border:1px solid rgba(26,158,143,0.3); border-radius:10px;">
-        🎓 <strong style="color:var(--teal-bright);">Live Session 1 — AI 101 for Beginners</strong> — เป็น Session แรก (5 ก.ค.) รวมอยู่ใน Program ทุก Tier<br>ปูพื้นฐาน AI ที่ต่อยอดได้ทั้งการเทรด งาน และชีวิตประจำวัน
+        🎓 <strong style="color:var(--teal-bright);">Live Session 1 — AI 101 for Beginners</strong> — เป็น Session แรก (5 ก.ค.) รวมอยู่ใน Program ทุกรอบ<br>ปูพื้นฐาน AI ที่ต่อยอดได้ทั้งการเทรด งาน และชีวิตประจำวัน
       </p>
 
     </div>
@@ -2605,7 +2567,7 @@
 
       <div class="final-scarcity">
         <span class="dot" aria-hidden="true"></span>
-        <span class="deadline-highlight">Tier 2 · Early Bird · ฿1,090 · ถึง 21 มิ.ย. 2026</span> — ก่อนปรับ Tier 3
+        <span class="deadline-highlight"><span data-cfg="phase-label">Early Bird</span> · ฿<span data-cfg="pl1-price">1,090</span> · ถึง <span data-cfg="deadline">15 มิ.ย. 2026</span></span> — จำกัด <span data-cfg="seats">30</span> ที่นั่ง · อันไหนถึงก่อน
       </div>
 
       <h2 class="final-title">
@@ -2614,17 +2576,17 @@
       </h2>
 
       <p class="final-sub">
-        สมัคร Tier 2 Early Bird — ได้ทั้ง framework, bonus stack มูลค่า 5,520 บาท<br>
+        สมัคร <span data-cfg="phase-label">Early Bird</span> — ได้ทั้ง framework, bonus stack มูลค่า 5,520 บาท<br>
         พร้อม 2 Live Sessions (AI 101 + Workshop หลัก)<br>
-        ในราคา Tier 2 เพียง 1,090 บาท
+        ในราคาเพียง <span data-cfg="pl1-price">1,090</span> บาท
       </p>
 
       <div class="final-cta-wrap">
-        <a href="./bump-a/" class="btn-primary cta-button" role="button" style="font-size:19px; padding:20px 32px;">
-          เข้าสู่ Tier 2 — 1,090 บาท
+        <a href="./bump-a/" class="btn-primary cta-button" role="button" style="font-size:19px; padding:20px 32px;" data-cfg-href="pl1">
+          สมัคร <span data-cfg="phase-label">Early Bird</span> — <span data-cfg="pl1-price">1,090</span> บาท
         </a>
-        <a href="./bump-b/" class="btn-secondary cta-button" role="button" style="margin-top:12px;">
-          Bundle กับ eBook — 1,390 บาท
+        <a href="./bump-b/" class="btn-secondary cta-button" role="button" style="margin-top:12px;" data-cfg-href="bundle">
+          Bundle กับ eBook — <span data-cfg="bundle-price">1,390</span> บาท
         </a>
       </div>
 
@@ -2646,7 +2608,7 @@
   <!-- ===== FOOTER ===== -->
   <footer>
     <div class="footer-inner">
-      <p>AI Workflow Trader Program · รุ่นเปิดตัว 2026</p>
+      <p>AI Workflow Trader Program · รอบเปิดตัว 2026</p>
       <p style="margin-top:6px">
         สอบถามเพิ่มเติม: <a href="https://lin.ee/Wp36lIA" target="_blank" rel="noopener">Line OA @516ipohw</a> · อาจารย์ใหม่ · Investment Planner & Trader
       </p>
@@ -2671,12 +2633,13 @@
     <div class="sticky-cta-inner">
       <div class="sticky-info">
         <div class="sticky-name">AI Workflow Trader Program</div>
-        <div class="sticky-price">฿1,090 · Tier 2 · ถึง 21 มิ.ย. · Live: 5 + 12 ก.ค.</div>
+        <div class="sticky-price">฿<span data-cfg="pl1-price">1,090</span> · <span data-cfg="phase-label">Early Bird</span> · ถึง <span data-cfg="deadline">15 มิ.ย.</span> · Live: 5 + 12 ก.ค.</div>
       </div>
-      <a href="./bump-a/" class="sticky-btn cta-button" role="button">จองเลย</a>
+      <a href="./bump-a/" class="sticky-btn cta-button" role="button" data-cfg-href="pl1">จองเลย</a>
     </div>
   </div>
 
+  <script src="config.js"></script>
   <!-- ===== JAVASCRIPT ===== -->
   <script>
     // ── Lightbox ───────────────────────────────────────────
@@ -2763,10 +2726,10 @@
       });
     }
 
-    // ── Countdown Timer (ถึง 21 มิ.ย. 2026 เที่ยงคืน เวลาไทย) ──
+    // ── Countdown Timer ──────────────────────────────────────
     function runCountdown() {
-      // 21 มิ.ย. 2026 23:59:00 เวลาไทย (UTC+7) — Tier 2 ปิด
-      const deadline = new Date('2026-06-21T23:59:00+07:00');
+      // deadline จาก config.js (activePhase)
+      const deadline = new Date(PHASE.deadlineISO);
 
       function update() {
         const now = new Date();
@@ -2781,9 +2744,9 @@
         if (!elDays) return;
 
         if (diff <= 0) {
-          // หมดเวลา — แสดงข้อความสิทธิ์ Tier 1 หมด ขึ้น Tier 2
+          // หมดเวลา — แสดงข้อความรอบถัดไป
           if (wrap) {
-            wrap.innerHTML = '<span class="countdown-expired">⚠️ ราคา Tier 1 (฿990) สิ้นสุดแล้ว — ราคาปัจจุบัน Tier 2 ฿1,090</span>';
+            wrap.innerHTML = '<span class="countdown-expired">⚠️ รอบ ' + PHASE.label + ' สิ้นสุดแล้ว — รอบถัดไปกำลังจะมา</span>';
           }
           return;
         }
@@ -2804,6 +2767,64 @@
     }
     runCountdown();
 
+    // ── Apply Pricing Config ───────────────────────────────────
+    function applyConfig() {
+      const p = PHASE;
+      const pl1Fmt    = fmtPrice(p.pl1);
+      const bundleFmt = fmtPrice(p.bundle);
+
+      // Prices
+      document.querySelectorAll('[data-cfg="pl1-price"]').forEach(el  => { el.textContent = pl1Fmt; });
+      document.querySelectorAll('[data-cfg="bundle-price"]').forEach(el => { el.textContent = bundleFmt; });
+      document.querySelectorAll('[data-cfg="deadline"]').forEach(el   => { el.textContent = p.deadlineText; });
+      document.querySelectorAll('[data-cfg="seats"]').forEach(el      => { el.textContent = p.seats; });
+      document.querySelectorAll('[data-cfg="phase-label"]').forEach(el => { el.textContent = p.label; });
+      document.querySelectorAll('[data-cfg="ptm-pl1-total"]').forEach(el  => { el.textContent = fmtPrice(p.pl1 + PTM_ADDON); });
+      document.querySelectorAll('[data-cfg="ptm-bnd-total"]').forEach(el  => { el.textContent = fmtPrice(p.bundle + PTM_ADDON); });
+
+      // Button hrefs
+      document.querySelectorAll('[data-cfg-href="pl1"]').forEach(el    => { el.href = p.pl1Url; });
+      document.querySelectorAll('[data-cfg-href="bundle"]').forEach(el => { el.href = p.bundleUrl; });
+
+      // FB pixel — update ViewContent value
+      window.__cfgPl1    = p.pl1;
+      window.__cfgBundle = p.bundle;
+    }
+    applyConfig();
+
+    // ── Render Phase Cards ─────────────────────────────────────
+    (function renderPhaseCards() {
+      const grid = document.getElementById('phaseGrid');
+      if (!grid) return;
+
+      const phaseOrder = ['earlyBird', 'standard', 'lastCall'];
+      const phaseNext = { earlyBird: 'รอบถัดไป', standard: 'รอบถัดไป', lastCall: 'รอบสุดท้าย' };
+
+      phaseOrder.forEach(key => {
+        const ph   = PHASES[key];
+        const isActive = key === ACTIVE_PHASE;
+        const card = document.createElement('div');
+        card.className = 'tier-card' + (isActive ? ' tier-active' : ' tier-future');
+
+        let deadlineNote = '';
+        if (key === 'earlyBird') deadlineNote = `รับ ~${ph.seats} ที่นั่ง หรือถึง ${ph.deadlineText}`;
+        else if (key === 'standard') deadlineNote = `ถึง ${ph.deadlineText} หรือเต็มก่อน`;
+        else deadlineNote = `ปิดรับก่อน Live · ${ph.deadlineText}`;
+
+        card.innerHTML = `
+      <div class="tier-label">${ph.label}</div>
+      <div class="tier-name">${isActive ? 'เปิดรับสมัครอยู่ตอนนี้' : phaseNext[key]}</div>
+      <div class="tier-price-row" style="flex-direction:column;align-items:flex-start;gap:2px;">
+        <span class="tier-price">฿${fmtPrice(ph.pl1)}</span>
+        <span class="tier-price-suffix">${isActive ? 'รอบปัจจุบัน' : 'หลังรอบก่อนปิด'}</span>
+      </div>
+      <div class="tier-cap">${deadlineNote}</div>
+      <div class="tier-deadline">${isActive ? `⏰ ปิดรับ ${ph.deadlineText} · ก่อนขึ้นรอบถัดไป` : (key === 'standard' ? '⏰ เปิดหลังรอบ Early Bird ปิด' : '⏰ เปิดหลังรอบ Standard ปิด')}</div>
+    `;
+        grid.appendChild(card);
+      });
+    })();
+
     // ── FB Pixel: ViewContent ──────────────────────────────
     document.addEventListener('DOMContentLoaded', () => {
       const hero = document.querySelector('#hero');
@@ -2815,7 +2836,7 @@
               content_ids: ['ai_workflow_only'],
               content_type: 'product',
               content_category: 'course',
-              value: 1090,
+              value: window.__cfgPl1 || PHASE.pl1,
               currency: 'THB'
             });
             heroObserver.disconnect();
@@ -2826,13 +2847,13 @@
     });
 
     // ── FB Pixel: InitiateCheckout ─────────────────────────
-    // ปุ่มที่ไป bump-b (Bundle) → 1,390 / ปุ่มอื่นๆ (bump-a) → 1,090
+    // ปุ่มที่ไป bump-b (Bundle) → PHASE.bundle / ปุ่มอื่นๆ (bump-a) → PHASE.pl1
     document.querySelectorAll('.cta-button').forEach(btn => {
       btn.addEventListener('click', () => {
         if (typeof fbq !== 'function') return;
         const href = btn.getAttribute('href') || '';
         const isBundle = href.includes('bump-b');
-        const value = isBundle ? 1390 : 1090;
+        const value = isBundle ? PHASE.bundle : PHASE.pl1;
         const contentId = isBundle ? 'ai_workflow_bundle' : 'ai_workflow_only';
         const contentName = isBundle
           ? 'AI Workflow Trader + eBook Bundle'
