@@ -139,13 +139,15 @@
     /* ===== PHASE PRICING SECTION ===== */
     #tiers { padding: 64px 0; background: linear-gradient(180deg, transparent, rgba(30,51,82,0.25), transparent); }
     .tier-grid {
-      display: grid;
-      grid-template-columns: 1fr;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
       gap: 16px;
       margin-top: 28px;
     }
+    .tier-grid > .tier-card { flex: 1 1 300px; max-width: 380px; }
     @media (min-width: 720px) {
-      .tier-grid { grid-template-columns: 1fr 1fr 1fr; }
+      .tier-grid > .tier-card { flex-basis: 320px; }
     }
     .tier-card {
       background: rgba(30,51,82,0.4);
@@ -1809,7 +1811,7 @@
       </div>
 
       <div class="hero-proof fade-up" data-delay="1">
-        👥 รอบ Early Bird · มีผู้สมัครแล้ว <strong>50+ ราย</strong> · รับเพิ่มอีก <strong>30 ที่นั่ง</strong>
+        👥 รอบ <span data-cfg="phase-label">Early Bird</span> · มีผู้สมัครแล้ว <strong>90+ ราย</strong> · รับเพิ่มอีก <strong>30 ที่นั่ง</strong>
       </div>
 
       <!-- Pain Hook -->
@@ -2541,7 +2543,7 @@
         <div class="label">ราคาขึ้นตามรอบ — รับจำนวนจำกัด</div>
         <h2 class="section-title">ได้ของเหมือนกันทุกคน — ยิ่งสมัครเร็ว ยิ่งได้ราคาดี</h2>
         <div style="display:inline-block;line-height:1.6;max-width:100%;margin:14px 0 10px;padding:7px 18px;border-radius:100px;background:rgba(34,197,179,0.12);border:1px solid rgba(34,197,179,0.4);color:var(--teal-bright);font-weight:600;font-size:15px;">
-          👥 มีผู้สมัครแล้ว <span style="color:var(--white);">50+ ราย</span> ในรอบเปิดตัว
+          👥 มีผู้สมัครแล้ว <span style="color:var(--white);">90+ ราย</span> ในรอบเปิดตัว
         </div>
         <p class="section-desc">ทุกคนได้ 2 Live Sessions, Recording และ Bonus ครบเหมือนกัน</p>
       </div>
@@ -2805,28 +2807,47 @@
       if (!grid) return;
 
       const phaseOrder = ['earlyBird', 'standard', 'lastCall'];
-      const phaseNext = { earlyBird: 'รอบถัดไป', standard: 'รอบถัดไป', lastCall: 'รอบสุดท้าย' };
+      const activeIdx = phaseOrder.indexOf(ACTIVE_PHASE);
 
-      phaseOrder.forEach(key => {
+      phaseOrder.forEach((key, i) => {
+        if (i < activeIdx) return;   // ซ่อนรอบที่ปิดไปแล้ว — ไม่ให้คนเห็นราคาเก่าที่ถูกกว่า
         const ph   = PHASES[key];
-        const isActive = key === ACTIVE_PHASE;
+        const isActive = i === activeIdx;
+        const isPast   = i < activeIdx;
+        const isLast   = i === phaseOrder.length - 1;
         const card = document.createElement('div');
-        card.className = 'tier-card' + (isActive ? ' tier-active' : ' tier-future');
+        card.className = 'tier-card' + (isActive ? ' tier-active' : (isPast ? ' tier-sold-out' : ' tier-future'));
 
-        let deadlineNote = '';
-        if (key === 'earlyBird') deadlineNote = `รับ ~${ph.seats} ที่นั่ง หรือถึง ${ph.deadlineText}`;
-        else if (key === 'standard') deadlineNote = `ถึง ${ph.deadlineText} หรือเต็มก่อน`;
-        else deadlineNote = `ปิดรับก่อน Live · ${ph.deadlineText}`;
+        let statusName;
+        if (isActive)    statusName = 'เปิดรับสมัครอยู่ตอนนี้';
+        else if (isPast) statusName = 'ปิดแล้ว';
+        else             statusName = isLast ? 'รอบสุดท้าย' : 'รอบถัดไป';
+
+        let priceSuffix;
+        if (isActive)    priceSuffix = 'รอบปัจจุบัน';
+        else if (isPast) priceSuffix = 'รอบที่ปิดไปแล้ว';
+        else             priceSuffix = 'รอบถัดไป · ราคาขึ้น';
+
+        let deadlineNote;
+        if (isPast)                   deadlineNote = 'รอบนี้ปิดรับแล้ว';
+        else if (key === 'earlyBird') deadlineNote = `รับ ~${ph.seats} ที่นั่ง หรือถึง ${ph.deadlineText}`;
+        else if (key === 'standard')  deadlineNote = `ถึง ${ph.deadlineText} หรือเต็มก่อน`;
+        else                          deadlineNote = `ปิดรับก่อน Live · ${ph.deadlineText}`;
+
+        let deadlineLine;
+        if (isActive)    deadlineLine = `⏰ ปิดรับ ${ph.deadlineText} · ก่อนขึ้นรอบถัดไป`;
+        else if (isPast) deadlineLine = `✓ ปิดรับแล้ว`;
+        else             deadlineLine = `⏰ เปิดหลังรอบปัจจุบันปิด`;
 
         card.innerHTML = `
       <div class="tier-label">${ph.label}</div>
-      <div class="tier-name">${isActive ? 'เปิดรับสมัครอยู่ตอนนี้' : phaseNext[key]}</div>
+      <div class="tier-name">${statusName}</div>
       <div class="tier-price-row" style="flex-direction:column;align-items:flex-start;gap:2px;">
         <span class="tier-price">฿${fmtPrice(ph.pl1)}</span>
-        <span class="tier-price-suffix">${isActive ? 'รอบปัจจุบัน' : 'หลังรอบก่อนปิด'}</span>
+        <span class="tier-price-suffix">${priceSuffix}</span>
       </div>
       <div class="tier-cap">${deadlineNote}</div>
-      <div class="tier-deadline">${isActive ? `⏰ ปิดรับ ${ph.deadlineText} · ก่อนขึ้นรอบถัดไป` : (key === 'standard' ? '⏰ เปิดหลังรอบ Early Bird ปิด' : '⏰ เปิดหลังรอบ Standard ปิด')}</div>
+      <div class="tier-deadline">${deadlineLine}</div>
     `;
         grid.appendChild(card);
       });
