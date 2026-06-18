@@ -15,29 +15,29 @@ const PHASES = {
     bundleUrl:    "./bump-b/"           // → ผ่าน bump page
   },
   standard: {
-    label:        "Standard",
+    label:        "Pre-Sale",
     pl1:          1190,
     bundle:       1490,
-    seats:        40,
-    deadlineText: "24 มิ.ย. 2026",
-    deadlineISO:  "2026-06-24T23:59:00+07:00",
-    pl1Url:       "PLACEHOLDER_STD_PL1_STRIPE_URL",
-    bundleUrl:    "PLACEHOLDER_STD_BUNDLE_STRIPE_URL"
+    seats:        30,
+    deadlineText: "30 มิ.ย. 2026",
+    deadlineISO:  "2026-06-30T23:59:00+07:00",
+    pl1Url:       "./bump-a/",
+    bundleUrl:    "./bump-b/"
   },
   lastCall: {
     label:        "Last Call",
     pl1:          1290,
     bundle:       1590,
     seats:        30,
-    deadlineText: "3 ก.ค. 2026",
-    deadlineISO:  "2026-07-03T23:59:00+07:00",
+    deadlineText: "11 ก.ค. 2026",
+    deadlineISO:  "2026-07-11T23:59:00+07:00",
     pl1Url:       "PLACEHOLDER_LC_PL1_STRIPE_URL",
     bundleUrl:    "PLACEHOLDER_LC_BUNDLE_STRIPE_URL"
   }
 };
 
 // ← แก้แค่บรรทัดนี้เมื่อเปลี่ยน phase (earlyBird | standard | lastCall)
-const ACTIVE_PHASE = "earlyBird";
+const ACTIVE_PHASE = "standard";
 const PTM_ADDON    = 990;            // คงที่ทุก phase
 const PHASE        = PHASES[ACTIVE_PHASE];
 
