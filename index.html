@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Workflow Trader Program — เทรดเดอร์ยุคใหม่ ใช้ AI เป็นเพื่อนคู่คิด ทุกขั้นตอนของการเทรด</title>
-  <meta name="description" content="กรอบ 4 ระดับการใช้ AI ที่เทรดเดอร์จริงๆ ใช้ — สอนสด 2 วัน: AI 101 for Beginners และ Workshop หลัก พร้อม Recording ดูซ้ำตลอดชีวิต">
+  <title>AI Workflow Trader Program — Workflow + PTM Lite + eBook</title>
+  <meta name="description" content="AI Workflow Trader Program สำหรับเทรดเดอร์ที่อยากใช้ AI เป็นเพื่อนคู่คิด พร้อมแพ็กเสริม PTM Lite และ eBook สำหรับนักลงทุน">
 
   <!-- Meta Pixel Code -->
   <script>
@@ -18,10 +18,13 @@
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '936259682502763');
     fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {
+      content_ids: ['ai_workflow_trader_v2'],
+      content_type: 'product',
+      content_name: 'AI Workflow Trader Program'
+    });
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=936259682502763&ev=PageView&noscript=1"
-  /></noscript>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=936259682502763&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,2887 +32,495 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
-    /* ===== CSS VARIABLES ===== */
     :root {
-      --navy:        #0D1B2A;
-      --navy-mid:    #152338;
-      --navy-light:  #1E3352;
-      --steel:       #2C4A6E;
-      --slate:       #4A6FA5;
-      --silver:      #8FA8C8;
-      --mist:        #C8D8EA;
-      --white:       #F5F8FC;
-      --gold:        #C9A84C;
-      --gold-bright: #E8C96B;
-      --gold-pale:   #F7E8B0;
-      --teal:        #1A9E8F;
-      --teal-bright: #22C5B3;
-      --red-warn:    #C0392B;
-      --text-main:   #E8EFF8;
-      --text-sub:    #9BAFCA;
-      --text-dim:    #5A7A9C;
-      --border:      rgba(100,150,200,0.15);
-      --border-gold: rgba(201,168,76,0.3);
-      --glow-teal:   0 0 40px rgba(26,158,143,0.3);
-      --glow-gold:   0 0 40px rgba(201,168,76,0.25);
-      --font-th:     'IBM Plex Sans Thai', sans-serif;
-      --font-mono:   'IBM Plex Mono', monospace;
-      --font-display:'IBM Plex Sans Thai', sans-serif;
-      --max-w:       760px;
-      --radius:      12px;
-      --radius-lg:   20px;
+      --navy:#0D1B2A; --navy-mid:#152338; --navy-light:#1E3352; --steel:#2C4A6E;
+      --slate:#4A6FA5; --silver:#8FA8C8; --mist:#C8D8EA; --white:#F5F8FC;
+      --gold:#C9A84C; --gold-bright:#E8C96B; --teal:#1A9E8F; --teal-bright:#22C5B3;
+      --text-main:#E8EFF8; --text-sub:#9BAFCA; --text-dim:#5A7A9C;
+      --border:rgba(100,150,200,0.15); --border-gold:rgba(201,168,76,0.35);
+      --font-th:'IBM Plex Sans Thai', sans-serif; --font-mono:'IBM Plex Mono', monospace;
+      --max-w:820px; --radius:12px; --radius-lg:20px;
     }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{font-family:var(--font-th);background:var(--navy);color:var(--text-main);line-height:1.7;font-size:17px;overflow-x:hidden}
+    img{max-width:100%;display:block} a{color:inherit;text-decoration:none} button{font-family:var(--font-th)}
+    body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(100,150,200,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(100,150,200,.04) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0}
+    body>*{position:relative;z-index:1}.container{max-width:var(--max-w);margin:0 auto;padding:0 20px}.section{padding:58px 0}.section-divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:0 20px}.label{font-family:var(--font-mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--teal-bright);display:inline-block;margin-bottom:12px}.section-head{margin-bottom:28px}.section-title{font-size:clamp(26px,5vw,38px);font-weight:700;line-height:1.25;color:var(--white);letter-spacing:-.015em}.section-title span{color:var(--gold-bright)}.section-desc{margin-top:12px;color:var(--text-sub);font-size:16px;line-height:1.65;max-width:680px}.topbar{position:sticky;top:0;z-index:100;background:rgba(13,27,42,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);padding:12px 20px}.topbar-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px}.topbar-logo{font-family:var(--font-mono);font-size:13px;font-weight:600;color:var(--gold);letter-spacing:.05em}.topbar-cta{background:var(--teal);color:var(--white);padding:8px 18px;border-radius:10px;font-size:14px;font-weight:700}.hero{padding:44px 0 68px;overflow:hidden}.hero::before{content:'';position:absolute;top:-130px;right:-160px;width:540px;height:540px;background:radial-gradient(circle,rgba(26,158,143,.12) 0%,transparent 70%);pointer-events:none}.hero-cover{border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--border-gold);box-shadow:0 22px 70px rgba(0,0,0,.45);margin-bottom:32px}.hero-proof{display:inline-block;background:rgba(34,197,179,.12);border:1px solid rgba(34,197,179,.42);color:var(--teal-bright);font-weight:700;padding:7px 16px;border-radius:100px;font-size:15px;margin-bottom:18px}.hero-proof strong{color:var(--white)}.hero-kicker{font-family:var(--font-mono);font-size:12px;letter-spacing:.13em;color:var(--gold-bright);text-transform:uppercase;margin-bottom:14px}.hero-title{font-size:clamp(34px,7vw,56px);font-weight:700;line-height:1.15;color:var(--white);letter-spacing:-.02em;margin-bottom:18px}.hero-title span{color:var(--gold)}.hero-sub{font-size:clamp(16px,3vw,20px);color:var(--text-sub);line-height:1.65;max-width:720px;margin-bottom:30px}.hero-sub strong{color:var(--text-main);font-weight:700}.hero-actions{display:flex;flex-direction:column;gap:12px;max-width:460px}.btn{display:block;text-align:center;padding:17px 26px;border-radius:var(--radius);font-weight:700;transition:transform .15s,box-shadow .2s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:linear-gradient(135deg,var(--gold),var(--gold-bright));color:var(--navy);box-shadow:0 8px 32px rgba(201,168,76,.35)}.btn-secondary{background:transparent;border:1px solid rgba(201,168,76,.45);color:var(--gold-bright)}.chat-note{margin-top:14px;padding:12px 16px;border:1px solid rgba(34,197,179,.28);background:rgba(34,197,179,.07);border-radius:10px;color:var(--text-sub);font-size:14px;line-height:1.6}.chat-note a{color:var(--teal-bright);font-weight:700}.session-head{display:flex;align-items:center;gap:14px;margin-bottom:24px;border-bottom:1px solid var(--border-gold);padding-bottom:16px}.session-num{font-family:var(--font-mono);font-size:14px;font-weight:700;color:var(--navy);background:linear-gradient(135deg,var(--gold),var(--gold-bright));width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}.session-kicker{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--teal-bright)}.session-title{font-size:clamp(22px,4vw,30px);font-weight:700;color:var(--white);line-height:1.25}.content-card{background:linear-gradient(180deg,rgba(30,51,82,.46),rgba(30,51,82,.22));border:1px solid var(--border);border-radius:var(--radius-lg);padding:24px;box-shadow:0 12px 40px rgba(0,0,0,.22)}.content-card.gold{border-color:var(--border-gold);background:linear-gradient(180deg,rgba(201,168,76,.09),rgba(30,51,82,.24))}.visual-img{border-radius:14px;overflow:hidden;border:1px solid var(--border);box-shadow:0 14px 34px rgba(0,0,0,.33);margin-bottom:16px}.caption{font-family:var(--font-mono);font-size:12px;color:var(--text-dim);text-align:center;letter-spacing:.03em}.integrity{margin-top:18px;background:rgba(26,158,143,.08);border:1px solid rgba(26,158,143,.3);border-left:3px solid var(--teal);padding:14px 18px;border-radius:0 8px 8px 0;font-size:15px;line-height:1.65;color:var(--mist)}.integrity strong{color:var(--white)}.benefits{display:grid;grid-template-columns:1fr;gap:14px;margin-top:20px}@media(min-width:680px){.benefits{grid-template-columns:1fr 1fr}}.benefit{display:flex;gap:14px;background:rgba(21,35,56,.42);border:1px solid var(--border);border-radius:12px;padding:16px 18px}.benefit-icon{width:38px;height:38px;border-radius:9px;background:linear-gradient(135deg,var(--gold),var(--gold-bright));color:var(--navy);font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}.benefit-text{font-size:14.5px;color:var(--text-sub);line-height:1.55}.benefit-text strong{display:block;color:var(--white);font-weight:700;margin-bottom:2px}.visual-stack{display:flex;flex-direction:column;gap:20px;margin-top:26px}.visual-title{font-size:18px;font-weight:700;color:var(--white);margin-bottom:4px}.visual-tag{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--teal-bright);margin-bottom:8px}.visual-desc{font-size:14.5px;color:var(--text-sub);line-height:1.65}.visual-desc strong{color:var(--mist)}.sessions{display:grid;grid-template-columns:1fr;gap:12px;margin:18px 0 24px}@media(min-width:600px){.sessions{grid-template-columns:1fr 1fr}}.class-card{background:rgba(21,35,56,.45);border:1px solid var(--border);border-radius:12px;padding:18px}.class-card.main{border-color:var(--gold);background:linear-gradient(135deg,rgba(201,168,76,.12),rgba(30,51,82,.28))}.class-step{font-family:var(--font-mono);font-size:10px;letter-spacing:.09em;text-transform:uppercase;color:var(--teal-bright);margin-bottom:8px}.class-card.main .class-step{color:var(--gold-bright)}.class-date{font-family:var(--font-mono);font-size:20px;font-weight:700;color:var(--white)}.class-name{font-size:15px;font-weight:700;color:var(--gold-bright);margin:3px 0 6px}.class-desc{font-size:13.5px;color:var(--text-sub);line-height:1.55}.levels{margin-top:16px}.acc{background:rgba(30,51,82,.35);border:1px solid var(--border);border-radius:10px;margin-bottom:10px}.acc summary{list-style:none;cursor:pointer;padding:15px 18px;display:flex;align-items:center;gap:12px}.acc summary::-webkit-details-marker{display:none}.acc summary::after{content:'+';margin-left:auto;font-family:var(--font-mono);font-size:22px;color:var(--gold-bright)}.acc[open] summary::after{content:'−'}.level-num{font-family:var(--font-mono);font-size:14px;font-weight:700;color:var(--gold-bright);width:30px;flex-shrink:0}.level-head{display:flex;flex-direction:column;gap:2px}.level-name{font-size:15px;font-weight:700;color:var(--white)}.level-headline{font-size:13px;color:var(--text-sub);line-height:1.45}.level-detail{padding:0 18px 16px 60px;font-size:14px;color:var(--text-sub);line-height:1.65}.level.core{border-color:var(--border-gold)}.level.core .level-name::after{content:'แกนหลัก';font-family:var(--font-mono);font-size:9.5px;letter-spacing:.04em;color:var(--navy);background:var(--gold-bright);padding:2px 7px;border-radius:100px;margin-left:8px}.bonus{margin-top:26px;background:rgba(201,168,76,.06);border:1px solid var(--border-gold);border-radius:var(--radius);padding:22px}.bonus-label{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-bright);text-align:center;margin-bottom:14px}.bonus-item{display:flex;align-items:baseline;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-size:14px}.bonus-item:last-of-type{border-bottom:none}.bonus-hash{font-family:var(--font-mono);font-size:12px;color:var(--teal-bright);flex-shrink:0}.bonus-name{color:var(--text-sub);flex:1;line-height:1.4}.bonus-val{font-family:var(--font-mono);font-size:13px;color:var(--text-dim);flex-shrink:0}.bonus-total{text-align:center;margin-top:14px;padding-top:14px;border-top:1px dashed var(--border-gold);font-size:14px;color:var(--mist);line-height:1.5}.bonus-total strong{color:var(--gold-bright);font-family:var(--font-mono)}.ebook-grid{display:grid;grid-template-columns:1fr;gap:22px}@media(min-width:720px){.ebook-grid{grid-template-columns:1.08fr .92fr;align-items:center}}.ebook-img{border-radius:14px;overflow:hidden;border:1px solid var(--border);box-shadow:0 14px 34px rgba(0,0,0,.33)}.ebook-copy h3{font-size:22px;color:var(--white);margin-bottom:8px}.ebook-copy p{font-size:15px;color:var(--text-sub);line-height:1.65}.ebook-list{list-style:none;margin:16px 0}.ebook-list li{font-size:14.5px;color:var(--text-sub);padding:6px 0 6px 28px;position:relative}.ebook-list li::before{content:'✓';position:absolute;left:0;color:var(--teal-bright);font-weight:700}.ebook-list li.free{color:var(--gold-bright)}.ebook-list li.free::before{content:'🎁';top:6px}.plans{display:grid;grid-template-columns:1fr;gap:16px;margin-top:26px}@media(min-width:760px){.plans{grid-template-columns:1fr;max-width:640px;margin-left:auto;margin-right:auto}}.plan{background:linear-gradient(180deg,rgba(30,51,82,.42),rgba(30,51,82,.2));border:1px solid var(--border);border-radius:var(--radius-lg);padding:26px 24px;position:relative}.plan-featured{border-color:var(--gold);box-shadow:0 16px 48px rgba(0,0,0,.4),0 0 0 1px var(--border-gold);margin-top:12px}.plan-featured::before{content:'⭐ แนะนำ · ได้ทั้ง Workflow + เครื่องมือ';position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--teal);color:var(--white);padding:5px 16px;border-radius:100px;font-family:var(--font-mono);font-size:10.5px;font-weight:700;letter-spacing:.04em;white-space:nowrap}.plan-name{font-size:19px;color:var(--white);font-weight:700;margin-bottom:6px}.plan-name .plus{color:var(--gold-bright)}.plan-price-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:12px}.plan-price{font-family:var(--font-mono);font-size:36px;font-weight:700;color:var(--gold-bright);letter-spacing:-.02em}.plan-unit{font-size:14px;color:var(--text-sub)}.plan-list{list-style:none;margin:14px 0 22px}.plan-list li{font-size:14.5px;color:var(--text-sub);line-height:1.5;padding:6px 0 6px 26px;position:relative}.plan-list li::before{content:'✓';position:absolute;left:0;top:6px;color:var(--teal-bright);font-weight:700}.plan-list li.add{color:var(--mist)}.plan-list li.add::before{content:'＋';color:var(--gold-bright)}.plan-cta{display:block;text-align:center;padding:17px 24px;border-radius:var(--radius);font-weight:700}.cta-gold{background:linear-gradient(135deg,var(--gold),var(--gold-bright));color:var(--navy);box-shadow:0 8px 32px rgba(201,168,76,.35)}.cta-outline{background:transparent;border:1px solid rgba(201,168,76,.45);color:var(--gold-bright)}.plan-note{font-size:12.5px;color:var(--text-dim);font-family:var(--font-mono);line-height:1.5;margin-bottom:12px}.instructor{display:flex;align-items:center;gap:20px;padding:22px;background:rgba(30,51,82,.32);border:1px solid var(--border);border-radius:var(--radius);max-width:620px;margin:0 auto}.instructor-photo{width:86px;height:86px;border-radius:50%;object-fit:cover;object-position:center top;border:2px solid var(--border-gold);flex-shrink:0}.instructor-txt{font-size:14px;color:var(--text-sub);line-height:1.6}.instructor-txt strong{display:block;color:var(--white);font-weight:700;margin-bottom:4px}.faq{max-width:680px;margin:0 auto}.faq .acc summary{font-size:15.5px;color:var(--white);font-weight:700;line-height:1.45}.faq-a{padding:0 18px 16px 18px;font-size:14.5px;color:var(--text-sub);line-height:1.65}.faq-a strong{color:var(--mist)}.footer{padding:34px 20px 44px;border-top:1px solid var(--border);text-align:center;color:var(--text-dim);font-size:13px}.footer a{color:var(--teal-bright)}.sticky{position:fixed;bottom:0;left:0;right:0;background:rgba(13,27,42,.97);border-top:1px solid var(--border-gold);padding:12px 18px;display:none;z-index:200;backdrop-filter:blur(12px)}.sticky-inner{max-width:var(--max-w);margin:0 auto;display:flex;align-items:center;gap:12px}.sticky-info{flex:1}.sticky-name{font-size:13px;font-weight:700;color:var(--white)}.sticky-price{font-size:12px;color:var(--gold-bright);font-family:var(--font-mono)}.sticky-btn{background:linear-gradient(135deg,var(--gold),var(--gold-bright));color:var(--navy);padding:11px 20px;border-radius:10px;font-size:14px;font-weight:700;flex-shrink:0}@media(max-width:640px){body{font-size:16px}.topbar-logo{font-size:12px}.topbar-cta{font-size:13px;padding:8px 12px}.hero{padding:32px 0 48px}.content-card{padding:18px}.hero-actions{max-width:none}.level-detail{padding-left:18px}.bonus-item{align-items:flex-start}.bonus-val{display:none}.instructor{flex-direction:column;text-align:center}.sticky{display:block}.section{padding:46px 0}}
+  
+.subhead{font-size:clamp(21px,4vw,28px);font-weight:700;color:var(--white);line-height:1.3;text-align:center;margin:26px 0 18px}.subhead span{color:var(--gold-bright)}
 
-    /* ===== RESET ===== */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
-    body {
-      font-family: var(--font-th);
-      background: var(--navy);
-      color: var(--text-main);
-      line-height: 1.7;
-      font-size: 17px;
-      overflow-x: hidden;
-    }
-    img { max-width: 100%; display: block; }
-    a { color: inherit; text-decoration: none; }
-    button { font-family: var(--font-th); cursor: pointer; border: none; outline: none; }
-
-    /* ===== TYPOGRAPHY ===== */
-    h1, h2, h3 { line-height: 1.25; }
-    .label {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--teal-bright);
-      display: inline-block;
-      margin-bottom: 12px;
-    }
-
-    /* ===== LAYOUT ===== */
-    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 20px; }
-    section { padding: 64px 0; }
-
-    /* ===== BACKGROUND GRID TEXTURE ===== */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(100,150,200,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(100,150,200,0.04) 1px, transparent 1px);
-      background-size: 48px 48px;
-      pointer-events: none;
-      z-index: 0;
-    }
-    body > * { position: relative; z-index: 1; }
-
-    /* ===== TOP NAV BAR ===== */
-    .topbar {
-      background: rgba(13,27,42,0.95);
-      border-bottom: 1px solid var(--border);
-      padding: 12px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      backdrop-filter: blur(12px);
-    }
-    .topbar-logo {
-      font-family: var(--font-mono);
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--gold);
-      letter-spacing: 0.05em;
-    }
-    .topbar-cta {
-      background: var(--teal);
-      color: var(--white);
-      padding: 8px 20px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 600;
-      transition: background 0.2s;
-    }
-    .topbar-cta:hover { background: var(--teal-bright); }
-
-    /* ===== PHASE PRICING SECTION ===== */
-    #tiers { padding: 64px 0; background: linear-gradient(180deg, transparent, rgba(30,51,82,0.25), transparent); }
-    .tier-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 16px;
-      margin-top: 28px;
-    }
-    .tier-grid > .tier-card { flex: 1 1 300px; max-width: 380px; }
-    @media (min-width: 720px) {
-      .tier-grid > .tier-card { flex-basis: 320px; }
-    }
-    .tier-card {
-      background: rgba(30,51,82,0.4);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 22px 20px;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .tier-card.tier-active {
-      border-color: var(--gold);
-      background: linear-gradient(180deg, rgba(201,168,76,0.12), rgba(201,168,76,0.04));
-      box-shadow: 0 8px 32px rgba(201,168,76,0.15);
-    }
-    .tier-card.tier-active::before {
-      content: '🔥 เปิดรับตอนนี้';
-      position: absolute;
-      top: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      white-space: nowrap;
-      background: var(--gold);
-      color: var(--navy);
-      padding: 3px 14px;
-      border-radius: 100px;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.03em;
-    }
-    .tier-card.tier-future { opacity: 0.65; }
-    .tier-card.tier-sold-out {
-      border-color: rgba(100,150,200,0.1);
-      background: rgba(30,51,82,0.18);
-    }
-    .tier-card.tier-sold-out .tier-label,
-    .tier-card.tier-sold-out .tier-price,
-    .tier-card.tier-sold-out .tier-cap,
-    .tier-card.tier-sold-out .tier-bonus-list,
-    .tier-card.tier-sold-out .tier-deadline { opacity: 0.35; }
-    .tier-card.tier-sold-out .tier-name {
-      color: var(--silver);
-      opacity: 0.75;
-    }
-    .tier-card.tier-sold-out::before {
-      content: 'SOLD OUT';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) rotate(-18deg);
-      font-size: 22px;
-      font-weight: 900;
-      color: rgba(220,50,40,0.82);
-      border: 3px solid rgba(220,50,40,0.72);
-      padding: 6px 16px;
-      border-radius: 4px;
-      letter-spacing: 0.12em;
-      pointer-events: none;
-      white-space: nowrap;
-      font-family: var(--font-mono);
-      text-transform: uppercase;
-      z-index: 1;
-    }
-    .tier-label {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--silver);
-    }
-    .tier-card.tier-active .tier-label { color: var(--gold-bright); }
-    .tier-name {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--white);
-    }
-    .tier-price-row {
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
-    }
-    .tier-price {
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--white);
-      font-family: var(--font-mono);
-    }
-    .tier-card.tier-active .tier-price { color: var(--gold-bright); }
-    .tier-price-suffix {
-      font-size: 13px;
-      color: var(--text-sub);
-    }
-    .tier-cap {
-      font-size: 13px;
-      color: var(--text-sub);
-      padding: 6px 0;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-    .tier-bonus-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      font-size: 13px;
-      color: var(--text-sub);
-    }
-    .tier-bonus-list li::before {
-      content: '✓ ';
-      color: var(--teal-bright);
-      font-weight: 700;
-    }
-    .tier-bonus-list li.tier-no::before {
-      content: '✗ ';
-      color: var(--text-dim);
-    }
-    .tier-bonus-list li.tier-no { color: var(--text-dim); }
-    .tier-deadline {
-      margin-top: auto;
-      padding-top: 8px;
-      font-family: var(--font-mono);
-      font-size: 12px;
-      color: var(--text-dim);
-    }
-    .tier-card.tier-active .tier-deadline { color: var(--teal-bright); }
-    .hero-cover {
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto 40px;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 0 1px var(--border-gold);
-      position: relative;
-    }
-    .hero-cover img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    @media (max-width: 768px) {
-      .hero-cover {
-        margin-bottom: 28px;
-        border-radius: var(--radius);
-      }
-    }
-
-    /* ===== HERO PAIN HOOK ===== */
-    .hero-pain-hook {
-      display: block;
-      margin-bottom: 18px;
-    }
-    .hero-pain-hook .ph-setup {
-      display: block;
-      font-size: 19px;
-      font-weight: 500;
-      color: var(--text-sub);
-      margin-bottom: 2px;
-    }
-    .hero-pain-hook .ph-punch {
-      display: block;
-      font-size: 27px;
-      line-height: 1.25;
-      font-weight: 700;
-      color: var(--gold-bright);
-    }
-    .hero-proof {
-      display: inline-block;
-      line-height: 1.6;
-      max-width: 100%;
-      background: rgba(34,197,179,0.12);
-      border: 1px solid rgba(34,197,179,0.4);
-      color: var(--teal-bright);
-      font-size: 15px;
-      font-weight: 600;
-      padding: 7px 16px;
-      border-radius: 100px;
-      margin-bottom: 18px;
-    }
-    .hero-proof strong { color: var(--white); }
-    @media (max-width: 600px) {
-      .hero-pain-hook .ph-setup { font-size: 16px; }
-      .hero-pain-hook .ph-punch { font-size: 22px; }
-      .hero-proof { font-size: 14px; }
-    }
-
-    /* ===== HERO SECTION ===== */
-    #hero {
-      padding: 40px 0 64px;
-      position: relative;
-      overflow: hidden;
-    }
-    #hero::before {
-      content: '';
-      position: absolute;
-      top: -100px;
-      right: -200px;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(26,158,143,0.12) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    #hero::after {
-      content: '';
-      position: absolute;
-      bottom: -80px;
-      left: -150px;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .hero-eyebrow {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 24px;
-    }
-    .hero-badge {
-      background: linear-gradient(135deg, rgba(26,158,143,0.2), rgba(26,158,143,0.05));
-      border: 1px solid rgba(26,158,143,0.4);
-      padding: 5px 14px;
-      border-radius: 100px;
-      font-size: 12px;
-      font-family: var(--font-mono);
-      color: var(--teal-bright);
-      letter-spacing: 0.08em;
-    }
-    .hero-live-dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: var(--teal-bright);
-      animation: pulse 2s infinite;
-      flex-shrink: 0;
-    }
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(0.8); }
-    }
-
-    .hero-title {
-      font-size: clamp(32px, 7vw, 52px);
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1.15;
-      margin-bottom: 8px;
-      letter-spacing: -0.02em;
-    }
-    .hero-title span {
-      color: var(--gold);
-      display: block;
-    }
-    .hero-sub {
-      font-size: clamp(16px, 3vw, 19px);
-      color: var(--text-sub);
-      max-width: 580px;
-      line-height: 1.55;
-      margin-bottom: 36px;
-    }
-    .hero-sub strong {
-      color: var(--text-main);
-      font-weight: 600;
-    }
-
-    .hero-trust {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-bottom: 36px;
-    }
-    .hero-trust-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 15px;
-      color: var(--text-main);
-    }
-    .hero-trust-item .check {
-      width: 20px; height: 20px;
-      border-radius: 50%;
-      background: rgba(26,158,143,0.2);
-      border: 1px solid var(--teal);
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
-      font-size: 11px;
-      color: var(--teal-bright);
-    }
-    .hero-trust-item.trust-highlight {
-      align-items: center;
-      padding: 14px 20px;
-      border: 1px solid rgba(201,168,76,0.35);
-      border-radius: 10px;
-      background: linear-gradient(135deg, rgba(201,168,76,0.10), rgba(26,158,143,0.06));
-      box-shadow: 0 0 0 1px rgba(201,168,76,0.06) inset;
-      margin-top: 10px;
-      text-align: center;
-    }
-    .deadline-highlight {
-      color: var(--gold-bright);
-      font-weight: 700;
-    }
-    .deadline-subtext {
-      color: var(--text-main);
-      font-size: 14px;
-    }
-
-    .hero-cta-group {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      max-width: 560px;
-      margin: 0 auto;
-    }
-    .btn-primary {
-      display: block;
-      background: linear-gradient(135deg, var(--gold), var(--gold-bright));
-      color: var(--navy);
-      text-align: center;
-      padding: 18px 32px;
-      border-radius: var(--radius);
-      font-size: 18px;
-      font-weight: 700;
-      letter-spacing: 0.01em;
-      transition: transform 0.15s, box-shadow 0.2s;
-      box-shadow: 0 8px 32px rgba(201,168,76,0.35);
-    }
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 12px 40px rgba(201,168,76,0.5);
-    }
-    .btn-secondary {
-      display: block;
-      background: transparent;
-      border: 1px solid rgba(201,168,76,0.4);
-      color: var(--gold);
-      text-align: center;
-      padding: 14px 32px;
-      border-radius: var(--radius);
-      font-size: 16px;
-      font-weight: 600;
-      transition: all 0.2s;
-    }
-    .btn-secondary:hover {
-      background: rgba(201,168,76,0.08);
-      border-color: var(--gold);
-    }
-
-    .hero-counter {
-      margin-top: 16px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--font-mono);
-      font-size: 13px;
-      color: var(--text-sub);
-    }
-    .counter-bar {
-      flex: 1;
-      height: 4px;
-      background: var(--border);
-      border-radius: 2px;
-      overflow: hidden;
-      max-width: 160px;
-    }
-    .counter-fill {
-      height: 100%;
-      background: linear-gradient(90deg, var(--teal), var(--gold));
-      border-radius: 2px;
-      width: 23%; /* 7/30 founding filled */
-    }
-    .counter-text { color: var(--gold); font-weight: 600; }
-
-    .hero-date {
-      margin-top: 12px;
-      font-size: 13.5px;
-      color: var(--text-dim);
-      font-family: var(--font-mono);
-      letter-spacing: 0.02em;
-      line-height: 1.85;
-      text-align: center;
-    }
-    .hero-date strong { color: var(--teal-bright); }
-
-    /* ===== DIVIDER ===== */
-    .section-divider {
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--border), transparent);
-      margin: 0 20px;
-    }
-
-    /* ===== SECTION HEADERS ===== */
-    .section-header { margin-bottom: 40px; }
-    .section-title {
-      font-size: clamp(24px, 5vw, 36px);
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1.25;
-    }
-    .section-desc {
-      margin-top: 12px;
-      font-size: 16px;
-      color: var(--text-sub);
-      line-height: 1.65;
-    }
-
-    /* ===== PAIN SECTION ===== */
-    #pain { background: linear-gradient(180deg, transparent, rgba(30,51,82,0.3), transparent); }
-    .pain-intro {
-      font-size: clamp(18px, 4vw, 26px);
-      font-weight: 600;
-      color: var(--white);
-      margin-bottom: 28px;
-    }
-    .pain-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 32px;
-    }
-    .pain-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      background: rgba(30,51,82,0.4);
-      border: 1px solid var(--border);
-      border-left: 3px solid rgba(192,57,43,0.6);
-      padding: 14px 16px;
-      border-radius: 8px;
-      font-size: 15px;
-      color: var(--text-sub);
-    }
-    .pain-item .x { color: var(--red-warn); font-weight: 700; flex-shrink: 0; }
-    .pain-punch {
-      background: rgba(201,168,76,0.08);
-      border: 1px solid var(--border-gold);
-      padding: 20px 24px;
-      border-radius: var(--radius);
-      font-size: 16px;
-      color: var(--text-main);
-      line-height: 1.65;
-    }
-    .pain-punch strong { color: var(--gold); }
-
-    /* ===== 4 LEVELS SECTION ===== */
-    #levels { padding: 72px 0; }
-    .instructor-quote {
-      border-left: 3px solid var(--teal);
-      padding: 16px 20px;
-      background: rgba(26,158,143,0.07);
-      border-radius: 0 8px 8px 0;
-      font-size: 16px;
-      color: var(--text-main);
-      font-style: italic;
-      margin-bottom: 40px;
-    }
-    .instructor-sig {
-      display: block;
-      margin-top: 10px;
-      font-size: 13px;
-      color: var(--teal-bright);
-      font-style: normal;
-      font-family: var(--font-mono);
-      font-weight: 600;
-    }
-
-    .levels-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      position: relative;
-    }
-    .levels-stack::before {
-      content: '';
-      position: absolute;
-      left: 28px;
-      top: 40px;
-      bottom: 40px;
-      width: 2px;
-      background: linear-gradient(180deg, var(--teal), var(--gold));
-      opacity: 0.3;
-    }
-    .level-card {
-      display: flex;
-      gap: 16px;
-      padding: 20px 0;
-      position: relative;
-    }
-    .level-num {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--font-mono);
-      font-weight: 700;
-      font-size: 18px;
-      flex-shrink: 0;
-      border: 2px solid;
-      position: relative;
-      z-index: 1;
-      background: var(--navy);
-    }
-    .level-card[data-level="1"] .level-num { border-color: var(--slate); color: var(--slate); }
-    .level-card[data-level="2"] .level-num {
-      border-color: var(--teal-bright);
-      color: var(--teal-bright);
-      background: rgba(34,197,179,0.1);
-      box-shadow: 0 0 20px rgba(34,197,179,0.3);
-    }
-    .level-card[data-level="3"] .level-num { border-color: var(--gold); color: var(--gold); }
-    .level-card[data-level="4"] .level-num { border-color: var(--silver); color: var(--silver); }
-
-    .level-content { flex: 1; padding-top: 10px; }
-    .level-tag {
-      font-size: 11px;
-      font-family: var(--font-mono);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
-    .level-card[data-level="1"] .level-tag { color: var(--slate); }
-    .level-card[data-level="2"] .level-tag { color: var(--teal-bright); }
-    .level-card[data-level="3"] .level-tag { color: var(--gold); }
-    .level-card[data-level="4"] .level-tag { color: var(--silver); }
-
-    .level-name {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 6px;
-    }
-    .level-desc {
-      font-size: 14px;
-      color: var(--text-sub);
-      line-height: 1.6;
-    }
-    .level-highlight {
-      display: inline-block;
-      margin-top: 8px;
-      background: rgba(34,197,179,0.12);
-      border: 1px solid rgba(34,197,179,0.3);
-      color: var(--teal-bright);
-      padding: 4px 12px;
-      border-radius: 100px;
-      font-size: 12px;
-      font-weight: 600;
-    }
-    .levels-key-msg {
-      margin-top: 32px;
-      background: linear-gradient(135deg, rgba(26,158,143,0.12), rgba(201,168,76,0.08));
-      border: 1px solid var(--border-gold);
-      padding: 22px 24px;
-      border-radius: var(--radius);
-      font-size: 17px;
-      color: var(--text-main);
-      font-weight: 600;
-      line-height: 1.55;
-    }
-    .levels-key-msg em { color: var(--gold); font-style: normal; }
-
-    /* ===== DIFFERENTIATOR ===== */
-    #diff { background: linear-gradient(180deg, transparent, rgba(30,51,82,0.25), transparent); }
-    .diff-table {
-      width: 100%;
-      border-collapse: separate;
-      border-spacing: 0;
-      border-radius: var(--radius);
-      overflow: hidden;
-      border: 1px solid var(--border);
-    }
-    .diff-table thead th {
-      padding: 14px 18px;
-      font-size: 13px;
-      font-family: var(--font-mono);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      text-align: left;
-    }
-    .diff-table thead th:first-child { background: var(--navy-light); color: var(--text-dim); }
-    .diff-table thead th:nth-child(2) { background: rgba(30,51,82,0.5); color: var(--text-dim); }
-    .diff-table thead th:nth-child(3) { background: rgba(26,158,143,0.15); color: var(--teal-bright); }
-    .diff-table tbody tr:not(:last-child) td { border-bottom: 1px solid var(--border); }
-    .diff-table tbody td {
-      padding: 14px 18px;
-      font-size: 14px;
-      vertical-align: top;
-      line-height: 1.5;
-    }
-    .diff-table tbody td:first-child {
-      background: rgba(21,35,56,0.3);
-      color: var(--text-dim);
-      font-family: var(--font-mono);
-      font-size: 12px;
-      letter-spacing: 0.05em;
-      width: 24%;
-    }
-    .diff-table tbody td:nth-child(2) {
-      background: rgba(21,35,56,0.2);
-      color: var(--text-sub);
-    }
-    .diff-table tbody td:nth-child(3) {
-      background: rgba(26,158,143,0.07);
-      color: var(--text-main);
-      font-weight: 500;
-    }
-    .diff-checkmark { color: var(--teal-bright); margin-right: 4px; }
-
-    /* ===== CURRICULUM / WHAT YOU GET ===== */
-    .curriculum-timeline {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      margin-bottom: 40px;
-    }
-    .hour-block {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-      background: rgba(21,35,56,0.4);
-      border: 1px solid var(--border);
-      padding: 18px 20px;
-      border-radius: 10px;
-      transition: border-color 0.2s;
-    }
-    .hour-block:hover { border-color: rgba(26,158,143,0.3); }
-    .hour-label {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--teal);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      flex-shrink: 0;
-      width: 56px;
-      padding-top: 2px;
-    }
-    .hour-content { flex: 1; }
-    .hour-title {
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 4px;
-    }
-    .hour-desc {
-      font-size: 14px;
-      color: var(--text-sub);
-      line-height: 1.5;
-    }
-    .hour-outcome {
-      margin-top: 8px;
-      font-size: 13px;
-      color: var(--teal-bright);
-      font-family: var(--font-mono);
-    }
-
-    /* BONUSES */
-    .bonus-header {
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 20px;
-      padding-top: 32px;
-    }
-    .bonus-list { display: flex; flex-direction: column; gap: 10px; }
-    .bonus-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 12px;
-      padding: 14px 18px;
-      background: rgba(21,35,56,0.35);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      transition: border-color 0.2s;
-    }
-    .bonus-item:hover { border-color: rgba(201,168,76,0.25); }
-    .bonus-item.featured {
-      border-color: rgba(26,158,143,0.4);
-      background: rgba(26,158,143,0.06);
-    }
-    .bonus-item.bonus-new {
-      border-color: rgba(201,168,76,0.65);
-      background: linear-gradient(180deg, rgba(201,168,76,0.10) 0%, rgba(26,158,143,0.08) 100%);
-      box-shadow: 0 0 0 1px rgba(201,168,76,0.10) inset;
-    }
-    .bonus-left { flex: 1; }
-    .bonus-emoji { font-size: 16px; margin-right: 6px; }
-    .bonus-name {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--white);
-      margin-bottom: 2px;
-    }
-    .bonus-sub { font-size: 13px; color: var(--text-sub); }
-    .bonus-tag {
-      font-size: 11px;
-      font-family: var(--font-mono);
-      color: var(--teal-bright);
-      background: rgba(26,158,143,0.12);
-      padding: 2px 8px;
-      border-radius: 4px;
-      margin-top: 4px;
-      display: inline-block;
-    }
-    .bonus-tag.bonus-tag-new {
-      color: #0D1B2A;
-      background: linear-gradient(90deg, rgba(201,168,76,0.95) 0%, rgba(246,224,140,0.95) 100%);
-      font-weight: 700;
-    }
-    .new-badge {
-      display: inline-block;
-      margin-left: 8px;
-      padding: 2px 8px;
-      border-radius: 999px;
-      font-size: 10px;
-      letter-spacing: 0.08em;
-      font-family: var(--font-mono);
-      color: #0D1B2A;
-      background: linear-gradient(90deg, rgba(201,168,76,0.95) 0%, rgba(246,224,140,0.95) 100%);
-      vertical-align: middle;
-      font-weight: 700;
-    }
-    .tier-bonus-new {
-      color: var(--gold-bright);
-      font-weight: 700;
-    }
-    .tier-bonus-new .new-badge-inline {
-      display: inline-block;
-      margin-left: 6px;
-      padding: 1px 6px;
-      border-radius: 999px;
-      font-size: 10px;
-      letter-spacing: 0.08em;
-      font-family: var(--font-mono);
-      color: #0D1B2A;
-      background: linear-gradient(90deg, rgba(201,168,76,0.95) 0%, rgba(246,224,140,0.95) 100%);
-      vertical-align: middle;
-      font-weight: 700;
-    }
-    .bonus-value {
-      font-family: var(--font-mono);
-      font-size: 13px;
-      color: var(--text-dim);
-      flex-shrink: 0;
-      text-align: right;
-    }
-
-    .value-summary {
-      margin-top: 24px;
-      padding: 22px 24px;
-      background: linear-gradient(135deg, rgba(201,168,76,0.1), rgba(201,168,76,0.04));
-      border: 1px solid var(--border-gold);
-      border-radius: var(--radius);
-    }
-    .value-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 6px 0;
-      font-size: 15px;
-    }
-    .value-row.total {
-      border-top: 1px solid var(--border-gold);
-      margin-top: 8px;
-      padding-top: 14px;
-    }
-    .value-row .label-text { color: var(--text-sub); }
-    .value-row .price { font-family: var(--font-mono); font-weight: 600; }
-    .value-row.total .label-text { color: var(--text-main); font-weight: 700; font-size: 17px; }
-    .value-row.total .price { color: var(--gold); font-size: 20px; }
-    .value-row .strikethrough { text-decoration: line-through; color: var(--text-dim); }
-    .founding-price {
-      font-size: 36px;
-      font-weight: 700;
-      color: var(--gold);
-      font-family: var(--font-mono);
-      text-align: center;
-      margin-top: 16px;
-    }
-    .founding-price .founding-amount { font-size: 36px; color: var(--gold); font-weight: 700; }
-    .founding-price .founding-meta { font-size: 16px; color: var(--text-dim); font-weight: 400; }
-
-    /* ===== AUTHORITY ===== */
-    #authority { background: rgba(21,35,56,0.2); }
-    .authority-card {
-      background: rgba(30,51,82,0.3);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-lg);
-      padding: 32px;
-    }
-    .authority-name {
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 4px;
-    }
-    .authority-title {
-      font-size: 14px;
-      color: var(--teal-bright);
-      font-family: var(--font-mono);
-      letter-spacing: 0.05em;
-      margin-bottom: 24px;
-    }
-    .authority-creds {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: 28px;
-    }
-    .auth-cred {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      font-size: 15px;
-      color: var(--text-main);
-      line-height: 1.55;
-    }
-    .auth-cred > span { flex: 1; }
-    .auth-cred .icon {
-      width: 32px; height: 32px;
-      border-radius: 8px;
-      background: rgba(26,158,143,0.15);
-      border: 1px solid rgba(26,158,143,0.3);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 14px;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    .authority-quote {
-      background: rgba(13,27,42,0.5);
-      border-left: 3px solid var(--gold);
-      padding: 16px 20px;
-      border-radius: 0 8px 8px 0;
-      font-size: 15px;
-      color: var(--text-main);
-      font-style: italic;
-      line-height: 1.65;
-    }
-
-    /* ===== WHY LOW RISK ===== */
-    .risk-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-bottom: 28px;
-    }
-    @media (max-width: 480px) { .risk-grid { grid-template-columns: 1fr; } }
-    .risk-item {
-      background: rgba(21,35,56,0.4);
-      border: 1px solid var(--border);
-      padding: 18px;
-      border-radius: 10px;
-    }
-    .risk-icon { font-size: 22px; margin-bottom: 8px; }
-    .risk-label {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--white);
-      margin-bottom: 4px;
-    }
-    .risk-desc { font-size: 13px; color: var(--text-sub); line-height: 1.5; }
-    .risk-philosophy {
-      padding: 20px 24px;
-      border-left: 3px solid var(--gold);
-      background: rgba(201,168,76,0.06);
-      border-radius: 0 10px 10px 0;
-      font-size: 15px;
-      color: var(--text-main);
-      line-height: 1.65;
-      font-style: italic;
-    }
-    .risk-philosophy strong { color: var(--gold); font-style: normal; }
-
-    /* ===== PRICING LADDER ===== */
-    #pricing { padding: 72px 0; }
-    .ladder-intro {
-      font-size: 15px;
-      color: var(--text-sub);
-      margin-bottom: 32px;
-    }
-    .pricing-ladder {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .stage-card {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 20px 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      transition: border-color 0.2s;
-    }
-    .stage-card.active {
-      border-color: var(--gold);
-      background: linear-gradient(135deg, rgba(201,168,76,0.08), rgba(201,168,76,0.03));
-      box-shadow: var(--glow-gold);
-    }
-    .stage-card.dimmed { opacity: 0.5; }
-    .stage-left { flex: 1; }
-    .stage-number {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--text-dim);
-      margin-bottom: 4px;
-    }
-    .stage-name { font-size: 17px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
-    .stage-desc { font-size: 13px; color: var(--text-sub); }
-    .stage-right { text-align: right; flex-shrink: 0; }
-    @media (max-width: 600px) {
-      .stage-card { flex-direction: column; align-items: flex-start; gap: 8px; }
-      .stage-right { text-align: left; }
-    }
-    .stage-price {
-      font-family: var(--font-mono);
-      font-size: 20px;
-      font-weight: 700;
-      color: var(--white);
-    }
-    .stage-card.active .stage-price { color: var(--gold); font-size: 24px; }
-    .stage-status {
-      font-size: 12px;
-      font-family: var(--font-mono);
-      color: var(--text-dim);
-      margin-top: 4px;
-    }
-    .stage-card.active .stage-status {
-      color: var(--teal-bright);
-      font-weight: 600;
-    }
-    .stage-arrow {
-      text-align: center;
-      color: var(--text-dim);
-      font-size: 18px;
-      padding: 4px 0;
-    }
-    .ladder-note {
-      margin-top: 16px;
-      font-size: 14px;
-      color: var(--text-sub);
-      font-style: italic;
-    }
-    .ladder-note strong { color: var(--teal-bright); font-style: normal; }
-
-    /* ===== CTA MID ===== */
-    #cta-mid {
-      padding: 56px 0;
-      text-align: center;
-    }
-    .cta-box {
-      background: linear-gradient(135deg, rgba(30,51,82,0.6), rgba(21,35,56,0.8));
-      border: 1px solid var(--border-gold);
-      border-radius: var(--radius-lg);
-      padding: 40px 32px;
-    }
-    .cta-box h2 {
-      font-size: clamp(20px, 4vw, 28px);
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 8px;
-    }
-    .cta-box p {
-      font-size: 15px;
-      color: var(--text-sub);
-      margin-bottom: 28px;
-    }
-    .cta-button-wrap { max-width: 380px; margin: 0 auto; }
-
-    /* ===== FAQ ===== */
-    #faq { padding: 64px 0; }
-    .faq-list { display: flex; flex-direction: column; gap: 2px; }
-    .faq-item {
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      overflow: hidden;
-      transition: border-color 0.2s;
-    }
-    .faq-item.open { border-color: rgba(26,158,143,0.3); }
-    .faq-q {
-      width: 100%;
-      background: rgba(21,35,56,0.4);
-      padding: 18px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      cursor: pointer;
-      text-align: left;
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--text-main);
-      transition: background 0.2s;
-    }
-    .faq-q:hover { background: rgba(30,51,82,0.5); }
-    .faq-item.open .faq-q { background: rgba(26,158,143,0.08); }
-    .faq-chevron {
-      flex-shrink: 0;
-      width: 20px; height: 20px;
-      border-radius: 50%;
-      border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 10px;
-      color: var(--text-dim);
-      transition: transform 0.25s;
-    }
-    .faq-item.open .faq-chevron {
-      transform: rotate(180deg);
-      border-color: var(--teal);
-      color: var(--teal-bright);
-    }
-    .faq-a {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease, padding 0.3s;
-    }
-    .faq-item.open .faq-a { max-height: 600px; }
-    .faq-a-inner {
-      padding: 16px 20px 20px;
-      font-size: 14px;
-      color: var(--text-sub);
-      line-height: 1.65;
-      border-top: 1px solid var(--border);
-    }
-    .faq-a-inner strong { color: var(--text-main); }
-
-    /* ===== FINAL CTA ===== */
-    #cta-final {
-      padding: 80px 0;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    #cta-final::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at center bottom, rgba(201,168,76,0.1) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .final-scarcity {
-      display: inline-block;
-      line-height: 1.7;
-      max-width: 100%;
-      background: rgba(192,57,43,0.12);
-      border: 1px solid rgba(192,57,43,0.35);
-      padding: 8px 18px;
-      border-radius: 100px;
-      font-family: var(--font-mono);
-      font-size: 13px;
-      color: #E74C3C;
-      letter-spacing: 0.05em;
-      margin-bottom: 24px;
-    }
-    .final-scarcity .dot {
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 6px;
-      width: 6px; height: 6px;
-      border-radius: 50%;
-      background: #E74C3C;
-      animation: pulse 1.5s infinite;
-    }
-    .final-title {
-      font-size: clamp(24px, 5vw, 38px);
-      font-weight: 700;
-      color: var(--white);
-      line-height: 1.25;
-      margin-bottom: 12px;
-    }
-    .final-title em { color: var(--gold); font-style: normal; }
-    .final-sub {
-      font-size: 16px;
-      color: var(--text-sub);
-      max-width: 520px;
-      margin: 0 auto 36px;
-      line-height: 1.6;
-    }
-    .final-cta-wrap { max-width: 420px; margin: 0 auto; }
-    .final-trust {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-      margin-top: 20px;
-      align-items: center;
-    }
-    .final-trust-row {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .trust-chip {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 13px;
-      color: var(--text-sub);
-      font-family: var(--font-mono);
-    }
-    .trust-chip .t-check { color: var(--teal-bright); }
-
-    /* ===== STICKY MOBILE CTA ===== */
-    .sticky-cta {
-      position: fixed;
-      bottom: 0; left: 0; right: 0;
-      background: rgba(13,27,42,0.97);
-      border-top: 1px solid var(--border-gold);
-      padding: 12px 20px;
-      display: none;
-      z-index: 200;
-      backdrop-filter: blur(12px);
-    }
-    .sticky-cta-inner {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .sticky-info { flex: 1; }
-    .sticky-name { font-size: 13px; font-weight: 700; color: var(--white); }
-    .sticky-price { font-size: 12px; color: var(--gold); font-family: var(--font-mono); }
-    .sticky-btn {
-      background: linear-gradient(135deg, var(--gold), var(--gold-bright));
-      color: var(--navy);
-      padding: 11px 22px;
-      border-radius: 10px;
-      font-size: 15px;
-      font-weight: 700;
-      flex-shrink: 0;
-    }
-    @media (max-width: 640px) { .sticky-cta { display: block; } }
-
-    /* ===== FOOTER ===== */
-    footer {
-      padding: 32px 20px;
-      border-top: 1px solid var(--border);
-      text-align: center;
-    }
-    .footer-inner {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      font-size: 13px;
-      color: var(--text-dim);
-      line-height: 1.6;
-    }
-    .footer-inner a { color: var(--slate); }
-    .footer-inner a:hover { color: var(--teal-bright); }
-
-    /* ===== ANIMATIONS ===== */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .fade-up {
-      opacity: 0;
-      animation: fadeUp 0.6s ease forwards;
-    }
-    .fade-up[data-delay="1"] { animation-delay: 0.1s; }
-    .fade-up[data-delay="2"] { animation-delay: 0.2s; }
-    .fade-up[data-delay="3"] { animation-delay: 0.35s; }
-    .fade-up[data-delay="4"] { animation-delay: 0.5s; }
-    .fade-up[data-delay="5"] { animation-delay: 0.65s; }
-
-    /* ===== COUNTDOWN TIMER ===== */
-    .countdown-wrap {
-      margin-top: 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .countdown-label {
-      font-family: var(--font-mono);
-      font-size: 12px;
-      color: var(--text-dim);
-      letter-spacing: 0.08em;
-      text-align: center;
-    }
-    .countdown-label .price-up {
-      color: var(--gold);
-      font-weight: 600;
-    }
-    .countdown-timer {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-      justify-content: center;
-    }
-    .countdown-unit {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: rgba(21,35,56,0.6);
-      border: 1px solid var(--border-gold);
-      border-radius: 8px;
-      padding: 6px 10px;
-      min-width: 48px;
-    }
-    .countdown-num {
-      font-family: var(--font-mono);
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--gold);
-      line-height: 1;
-    }
-    .countdown-unit-label {
-      font-family: var(--font-mono);
-      font-size: 9px;
-      color: var(--text-dim);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-top: 3px;
-    }
-    .countdown-sep {
-      font-family: var(--font-mono);
-      font-size: 20px;
-      color: var(--text-dim);
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-    .countdown-expired {
-      font-family: var(--font-mono);
-      font-size: 13px;
-      color: #E74C3C;
-      font-weight: 600;
-    }
-
-    /* ===== BUNDLE COLLAPSIBLE ===== */
-    .bundle-toggle {
-      width: 100%;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      text-align: left;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin-top: 6px;
-    }
-    .bundle-toggle-text {
-      font-size: 13px;
-      color: var(--teal-bright);
-      font-family: var(--font-mono);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .bundle-toggle-chevron {
-      font-size: 10px;
-      color: var(--teal-bright);
-      transition: transform 0.2s;
-    }
-    .bundle-toggle.open .bundle-toggle-chevron { transform: rotate(180deg); }
-    .bundle-detail {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.35s ease;
-    }
-    .bundle-toggle.open + .bundle-detail { max-height: 800px; }
-    .bundle-detail-inner {
-      margin-top: 10px;
-      padding: 16px 18px;
-      background: rgba(21,35,56,0.5);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      font-size: 14px;
-      color: var(--text-sub);
-      line-height: 1.65;
-    }
-    .bundle-ebook-title {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 4px;
-    }
-    .bundle-ebook-desc {
-      font-size: 13px;
-      color: var(--text-sub);
-      margin-bottom: 10px;
-      line-height: 1.55;
-    }
-    .bundle-ebook-includes {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      margin-bottom: 14px;
-    }
-    .bundle-inc {
-      font-size: 13px;
-      color: var(--text-main);
-      display: flex;
-      gap: 6px;
-    }
-    .bundle-ebook-img-wrap {
-      width: calc(100% + 36px);
-      margin-left: -18px;
-      margin-right: -18px;
-      margin-bottom: 14px;
-      line-height: 0;
-      border-radius: 6px;
-      overflow: hidden;
-    }
-    .bundle-ebook-img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .bundle-price-line {
-      font-size: 13px;
-      color: var(--text-sub);
-      padding-top: 10px;
-      border-top: 1px solid var(--border);
-    }
-    .bundle-price-line strong { color: var(--gold); }
-    .bundle-sep-price { text-decoration: line-through; color: var(--text-dim); }
-    .bundle-save {
-      color: var(--teal-bright);
-      font-family: var(--font-mono);
-      font-size: 12px;
-    }
-
-    /* ===== PTM LITE COLLAPSIBLE in Stage Card ===== */
-    .stage-detail-toggle {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      margin-top: 6px;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--teal-bright);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .stage-detail-toggle .sdchev { transition: transform 0.2s; font-size: 9px; }
-    .stage-detail-toggle.open .sdchev { transform: rotate(180deg); }
-    .stage-detail-body {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease;
-    }
-    .stage-detail-toggle.open + .stage-detail-body { max-height: 200px; }
-    .stage-detail-inner {
-      margin-top: 10px;
-      padding: 12px 16px;
-      background: rgba(13,27,42,0.5);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: 13px;
-      color: var(--text-sub);
-      line-height: 1.6;
-    }
-    .stage-detail-inner strong { color: var(--text-main); }
-
-    /* ===== LIGHTBOX ===== */
-    .lightbox-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.88);
-      z-index: 500;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.2s ease;
-    }
-    .lightbox-overlay.open {
-      opacity: 1;
-      pointer-events: all;
-    }
-    .lightbox-img-wrap {
-      position: relative;
-      max-width: min(720px, 100%);
-      max-height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .lightbox-img-wrap img {
-      max-width: 100%;
-      max-height: 85vh;
-      border-radius: 10px;
-      box-shadow: 0 24px 80px rgba(0,0,0,0.6);
-      display: block;
-    }
-    .lightbox-close {
-      position: absolute;
-      top: -14px;
-      right: -14px;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: var(--navy-mid);
-      border: 1px solid var(--border);
-      color: var(--text-main);
-      font-size: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      line-height: 1;
-      transition: background 0.15s;
-    }
-    .lightbox-close:hover { background: var(--steel); }
-    .lightbox-caption {
-      position: absolute;
-      bottom: -28px;
-      left: 0; right: 0;
-      text-align: center;
-      font-size: 12px;
-      color: var(--text-dim);
-      font-family: var(--font-mono);
-      letter-spacing: 0.04em;
-    }
-    /* thumbnail cursor + zoom hint */
-    .bonus-thumb { cursor: zoom-in; position: relative; }
-    .bonus-thumb::after {
-      content: '⊕';
-      position: absolute;
-      bottom: 2px; right: 3px;
-      font-size: 11px;
-      color: var(--white);
-      opacity: 0.75;
-      line-height: 1;
-      text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-    }
-
-    /* ===== AUTHORITY PHOTO ===== */
-    .authority-profile {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      margin-bottom: 24px;
-    }
-    .authority-photo {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center top;
-      border: 2px solid var(--border-gold);
-      flex-shrink: 0;
-    }
-    .authority-profile-info { flex: 1; }
-
-    /* ===== BONUS ITEM WITH THUMBNAIL ===== */
-    .bonus-item--has-img {
-      display: grid;
-      grid-template-columns: 1fr auto auto;
-      grid-template-rows: auto;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: unset;
-    }
-    .bonus-item--has-img .bonus-left { grid-column: 1; grid-row: 1; }
-    .bonus-thumb {
-      grid-column: 2; grid-row: 1;
-      width: 64px;
-      height: 64px;
-      border-radius: 8px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      flex-shrink: 0;
-      align-self: center;
-    }
-    .bonus-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top center;
-      display: block;
-    }
-    /* document cover — portrait, show top portion */
-    .bonus-thumb--doc img { object-position: top center; }
-    /* white bg for file screenshots */
-    .bonus-thumb--white {
-      background: #fff;
-      padding: 4px;
-    }
-    .bonus-thumb--white img { object-fit: contain; }
-    .bonus-item--has-img .bonus-value { grid-column: 3; grid-row: 1; }
-    .bonus-file-list {
-      display: block;
-      margin-top: 4px;
-      font-size: 12px;
-      color: var(--text-dim);
-      line-height: 1.6;
-    }
-    .stage-detail-toggle {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      margin-top: 10px;
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-      font-family: var(--font-mono);
-      font-size: 11px;
-      color: var(--teal-bright);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .stage-detail-toggle .sdchev { transition: transform 0.25s; font-size: 9px; }
-    .stage-detail-toggle.open .sdchev { transform: rotate(180deg); }
-
-    /* Panel lives OUTSIDE stage-card so it can be full-width */
-    .ptm-panel {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.45s ease;
-    }
-    .ptm-panel.open { max-height: 1200px; }
-
-    .ptm-expand {
-      border: 1px solid var(--border);
-      border-top: none;
-      border-radius: 0 0 var(--radius) var(--radius);
-      overflow: hidden;
-      background: rgba(21,35,56,0.35);
-    }
-    .ptm-expand-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 16px;
-      padding: 18px 20px 14px;
-    }
-    .ptm-expand-title {
-      font-size: 16px;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 8px;
-    }
-    .ptm-bridge-line {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      flex-wrap: wrap;
-    }
-    .ptm-bridge-a {
-      font-size: 12px;
-      color: var(--text-sub);
-      background: rgba(26,158,143,0.1);
-      border: 1px solid rgba(26,158,143,0.25);
-      padding: 3px 10px;
-      border-radius: 100px;
-    }
-    .ptm-arrow { font-size: 13px; color: var(--teal-bright); font-weight: 700; }
-    .ptm-bridge-b {
-      font-size: 12px;
-      color: var(--gold);
-      background: rgba(201,168,76,0.1);
-      border: 1px solid rgba(201,168,76,0.25);
-      padding: 3px 10px;
-      border-radius: 100px;
-    }
-    .ptm-expand-price {
-      text-align: right;
-      flex-shrink: 0;
-    }
-    .ptm-price-new {
-      font-family: var(--font-mono);
-      font-size: 24px;
-      font-weight: 700;
-      color: var(--teal-bright);
-      line-height: 1;
-    }
-    .ptm-price-old {
-      font-family: var(--font-mono);
-      font-size: 12px;
-      color: var(--text-dim);
-      text-decoration: line-through;
-      margin-top: 3px;
-    }
-    .ptm-price-note {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      color: var(--text-dim);
-      letter-spacing: 0.05em;
-      margin-top: 2px;
-    }
-    /* Chart: full width, full image, no crop */
-    .ptm-chart-wrap {
-      width: 100%;
-      line-height: 0;
-    }
-    .ptm-chart-img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    .ptm-features {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      padding: 16px 20px 12px;
-    }
-    .ptm-features li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 14px;
-      color: var(--text-main);
-    }
-    .ptm-check {
-      color: var(--teal-bright);
-      font-weight: 700;
-      flex-shrink: 0;
-      margin-top: 1px;
-    }
-    .ptm-cta-note {
-      font-size: 12px;
-      font-family: var(--font-mono);
-      color: var(--text-dim);
-      letter-spacing: 0.04em;
-      padding: 0 20px 16px;
-    }
-    @media (max-width: 480px) {
-      .ptm-expand-header { flex-direction: column; gap: 10px; }
-      .ptm-expand-price { text-align: left; }
-    }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 600px) {
-      section { padding: 48px 0; }
-      .authority-card { padding: 24px; }
-      .cta-box { padding: 28px 20px; }
-      .ptm-header { flex-direction: column; gap: 10px; }
-      .ptm-price-col { text-align: left; }
-    }
-  </style>
+/* ===== Desktop and package polish ===== */
+.plan-license{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:11.5px;letter-spacing:.04em;padding:5px 12px;border-radius:100px;margin:0 0 12px}
+.lic-year{background:rgba(100,150,200,.1);border:1px solid var(--border);color:var(--text-sub)}
+.lic-bonus{background:rgba(26,158,143,.14);border:1px solid rgba(26,158,143,.45);color:var(--teal-bright)}
+.plan-anchor{font-size:13px;line-height:1.5;color:var(--text-sub);margin:-2px 0 14px}
+.plan-anchor .strike{text-decoration:line-through;color:var(--text-dim)}
+.plan-anchor .save{color:var(--teal-bright);font-weight:700}
+.plan-cta{margin-top:auto}
+.bonus-list{display:flex;flex-direction:column;gap:14px;margin-top:18px}
+.bonus-list .bonus-item{display:grid;grid-template-columns:minmax(0,1fr) 108px 72px;align-items:center;gap:16px;padding:18px;border:1px solid var(--border);border-radius:14px;background:rgba(21,35,56,.34)}
+.bonus-list .bonus-item.featured{border-color:rgba(26,158,143,.38);background:linear-gradient(135deg,rgba(26,158,143,.1),rgba(21,35,56,.34))}
+.bonus-left{min-width:0}
+.bonus-intro{margin:0 0 18px;padding:16px 18px;border:1px solid rgba(34,197,179,.34);border-radius:12px;background:rgba(34,197,179,.08);color:var(--text-sub);font-size:16px;line-height:1.7}
+.bonus-intro strong{color:var(--teal-bright)}
+.bonus-name{font-size:17px;font-weight:700;color:var(--white);line-height:1.35}
+.bonus-sub{font-size:14.5px;color:var(--text-sub);line-height:1.6;margin-top:6px}
+.bonus-file-list{color:var(--mist)}
+.bonus-tag{display:inline-block;margin-top:10px;padding:4px 10px;border-radius:8px;background:rgba(34,197,179,.12);color:var(--teal-bright);font-size:12px;font-weight:700}
+.bonus-thumb{width:108px;height:82px;border-radius:12px;overflow:hidden;border:1px solid var(--border);background:rgba(5,12,22,.42);display:flex;align-items:center;justify-content:center}
+.bonus-thumb img{width:100%;height:100%;object-fit:cover}
+.bonus-thumb--doc img{object-fit:contain;padding:6px}
+.bonus-thumb--white{background:#fff}
+.bonus-spacer{width:108px}
+.bonus-value{font-family:var(--font-mono);font-size:17px;color:var(--silver);text-align:right;white-space:nowrap}
+.package-summary{margin-top:24px;padding:18px 20px;border:1px solid var(--border-gold);border-radius:var(--radius);background:linear-gradient(135deg,rgba(201,168,76,.09),rgba(26,158,143,.05));text-align:center;color:var(--mist);font-size:15px;line-height:1.65}
+.package-summary strong{color:var(--gold-bright);font-family:var(--font-mono)}
+.package-summary .save{color:var(--teal-bright);font-weight:700}
+.chart-reader-card .visual-img{display:flex;align-items:center;justify-content:center;background:rgba(5,12,22,.42);padding:10px}
+.chart-reader-card .visual-img img{width:100%;height:auto;max-height:560px;object-fit:contain;margin:0 auto}
+@media(min-width:900px){
+  :root{--max-w:1060px}
+  .hero-actions{max-width:620px;display:grid;grid-template-columns:1fr 1fr}
+  .hero-actions .btn{display:flex;align-items:center;justify-content:center}
+  .plans{grid-template-columns:1fr;max-width:640px;margin-left:auto;margin-right:auto;align-items:stretch}
+  .plan{display:flex;flex-direction:column;min-height:100%}
+  .plan-featured{margin-top:12px}
+  .chart-reader-card{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:22px;align-items:center}
+  .chart-reader-card .visual-img{grid-row:1 / span 4;margin-bottom:0}
+}
+@media(min-width:1180px){
+  :root{--max-w:1120px}
+  .plans{grid-template-columns:1fr;max-width:640px;margin-left:auto;margin-right:auto}
+  .plan{padding:28px 26px}
+  .plan-price{font-size:38px}
+  .plan-name{font-size:19px}
+  .plan-featured::before{font-size:10.5px;padding:5px 16px}
+}
+@media(max-width:640px){
+  html,body{max-width:100%;overflow-x:hidden}
+  body>*{max-width:100vw}
+  .topbar,.hero,.section,.footer,.sticky{width:100vw;max-width:100vw}
+  .container{width:100vw!important;max-width:100vw!important;margin-left:0!important;margin-right:0!important;padding-left:18px!important;padding-right:18px!important;min-width:0}
+  .topbar-inner,.sticky-inner{width:100%;max-width:100%;min-width:0}
+  .topbar{overflow:hidden}
+  .topbar-logo{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .topbar-cta{flex-shrink:0}
+  .hero-cover,.content-card,.chat-note,.btn,.plan,.acc,.benefit,.class-card{width:calc(100vw - 36px)!important;max-width:calc(100vw - 36px)!important}
+  .hero-cover,.content-card,.visual-img,.ebook-img{max-width:100%;overflow:hidden}
+  .hero-cover img,.visual-img img,.ebook-img img{width:100%;height:auto}
+  .hero-actions,.btn,.plan-cta{width:100%}
+  .hero-title,.section-title,.visual-title,.plan-name,.class-name{overflow-wrap:anywhere}
+  .sticky-info{min-width:0}
+  .sticky-price{white-space:normal;line-height:1.35}
+  .plan-license{font-size:10.5px;align-items:flex-start;white-space:normal}
+  .plan-anchor{font-size:12.5px}
+  .bonus-list .bonus-item{grid-template-columns:1fr auto;gap:12px;padding:16px}
+  .bonus-spacer{display:none}
+  .bonus-thumb{grid-column:1 / -1;width:100%;height:auto;max-height:180px}
+  .bonus-thumb img{height:auto;max-height:180px;object-fit:contain}
+  .bonus-value{text-align:right;font-size:15px}
+  .chart-reader-card .visual-img{padding:6px}
+}
+</style>
 </head>
 <body>
 
-  <!-- TOP NAV -->
-  <nav class="topbar" role="navigation" aria-label="top navigation">
+<nav class="topbar">
+  <div class="topbar-inner">
     <div class="topbar-logo">AI Workflow Trader</div>
-    <a href="./bump-a/" class="topbar-cta cta-button" data-cfg-href="pl1">จองที่นั่ง — <span data-cfg="pl1-price">1,090</span> ฿</a>
-  </nav>
+    <a class="topbar-cta" href="#pricing">เลือกแพ็กเกจ</a>
+  </div>
+</nav>
 
-  <!-- ===== SECTION 1: HERO ===== -->
-  <section id="hero">
-    <div class="container">
-
-      <!-- Cover Image -->
-      <div class="hero-cover fade-up" data-delay="1">
-        <img src="assets/ai-workflow-trader-cover.png" alt="AI Workflow Trader Program — กรอบ 4 ระดับการใช้ AI ของเทรดเดอร์ยุคใหม่">
-      </div>
-
-      <div class="hero-proof fade-up" data-delay="1">
-        👥 รอบ <span data-cfg="phase-label">Early Bird</span> · มีผู้สมัครแล้ว <strong>90+ ราย</strong> · รับเพิ่มอีก <strong>30 ที่นั่ง</strong>
-      </div>
-
-      <!-- Pain Hook -->
-      <div class="hero-pain-hook fade-up" data-delay="2">
-        <span class="ph-setup">ใช้ ChatGPT / Gemini มาเป็นปี…</span>
-        <span class="ph-punch">แต่ผลเทรดยังเหมือนเดิม?</span>
-      </div>
-
-      <h1 class="hero-title fade-up" data-delay="2">
-        เทรดเดอร์ยุคใหม่<br>
-        ใช้ AI เป็น<span>เพื่อนคู่คิด</span>
-        <span style="display:block; color:var(--white); font-size:0.7em; font-weight:600; margin-top:8px;">ทุกขั้นตอนของการเทรด</span>
-      </h1>
-      <p class="hero-sub fade-up" data-delay="3">
-        AI ไม่ใช่หมอดู ไม่ใช่ Holy Grail —<br>
-        แต่เป็น <strong>“เพื่อนคู่คิด”</strong> ที่ช่วยให้คุณ <strong>วางแผน • ทบทวนมุมมองเทรด • ทบทวนการเทรด</strong> ได้อย่างเป็นระบบมากขึ้น<br><br>
-        เรียน <strong>Framework 4 ระดับ</strong> ที่เทรดเดอร์ใช้ได้จริง ใน 2 Live Sessions
-      </p>
-
-      <ul class="hero-trust fade-up" data-delay="3" aria-label="key features">
-        <li class="hero-trust-item">
-          <span class="check" aria-hidden="true">✓</span>
-          2 Live Sessions (5 + 12 ก.ค.) + Recording ดูซ้ำตลอดชีวิต
-        </li>
-        <li class="hero-trust-item">
-          <span class="check" aria-hidden="true">✓</span>
-          คลังเครื่องมือช่วยเทรด + โบนัสพิเศษ รวมมูลค่า 5,520 บาท
-        </li>
-        <li class="hero-trust-item">
-          <span class="check" aria-hidden="true">✓</span>
-          <span><span class="deadline-highlight"><span data-cfg="phase-label">Early Bird</span></span> เปิดรับอยู่ตอนนี้ — <span data-cfg="pl1-price">1,090</span> บาท · จำกัด <span data-cfg="seats">30</span> ที่นั่ง หรือถึง <span data-cfg="deadline">15 มิ.ย. 2026</span> · อันไหนถึงก่อน</span>
-        </li>
-      </ul>
-
-      <div class="hero-cta-group fade-up" data-delay="4">
-        <a href="./bump-a/" class="btn-primary cta-button" role="button" data-cfg-href="pl1">
-          สมัคร <span data-cfg="phase-label">Early Bird</span> — <span data-cfg="pl1-price">1,090</span> บาท
-        </a>
-        <a href="./bump-b/" class="btn-secondary cta-button" role="button" data-cfg-href="bundle">
-          Bundle กับ eBook — <span data-cfg="bundle-price">1,390</span> บาท
-        </a>
-
-        <!-- Bundle collapsible explanation -->
-        <button class="bundle-toggle" id="bundleToggle" aria-expanded="false">
-          <span class="bundle-toggle-text">eBook ในชุด Bundle มีอะไรบ้าง?</span>
-          <span class="bundle-toggle-chevron">▼</span>
-        </button>
-        <div class="bundle-detail" id="bundleDetail">
-          <div class="bundle-detail-inner">
-            <div class="bundle-ebook-row">
-              <div class="bundle-ebook-info">
-                <div class="bundle-ebook-title">📘 E-Book AI ช่วยลงทุน</div>
-                <div class="bundle-ebook-desc">คู่มือสำหรับนักลงทุนที่อยากใช้ AI ให้ได้ผลจริง ไม่ใช่แค่ทดลองเล่น</div>
-                <div class="bundle-ebook-includes">
-                  <span class="bundle-inc">✓ E-Book "อย่าใช้ AI ช่วยลงทุน ถ้ายังไม่อ่านเล่มนี้"</span>
-                  <span class="bundle-inc">✓ 32 ชุด Prompt Pack พร้อมใช้</span>
-                  <span class="bundle-inc">✓ Bonus E-Book Wall Street ฉบับเต็ม (แถมฟรี)</span>
-                </div>
-              </div>
-            </div>
-            <div class="bundle-ebook-img-wrap">
-              <img src="assets/ebook-x2.png" alt="E-Book AI ช่วยลงทุน + Wall Street" class="bundle-ebook-img" loading="lazy">
-            </div>
-            <div class="bundle-price-line">
-              ปกติ <span class="bundle-sep-price">490 บาท</span> · Bundle รวมกัน <strong><span data-cfg="bundle-price">1,390</span> บาท</strong> <span class="bundle-save">(ประหยัด 190 บาท)</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Countdown timer -->
-        <div class="countdown-wrap">
-          <div class="countdown-label">
-            🎁 <span class="deadline-highlight"><span data-cfg="phase-label">Early Bird</span> · ฿<span data-cfg="pl1-price">1,090</span></span><br>
-            ปิด <span data-cfg="deadline">15 มิ.ย. 2026</span> — ก่อนขึ้นรอบถัดไป
-          </div>
-          <div class="countdown-timer" id="heroCountdown" aria-label="countdown timer">
-            <div class="countdown-unit"><span class="countdown-num" id="cd-days">--</span><span class="countdown-unit-label">วัน</span></div>
-            <span class="countdown-sep">:</span>
-            <div class="countdown-unit"><span class="countdown-num" id="cd-hours">--</span><span class="countdown-unit-label">ชม.</span></div>
-            <span class="countdown-sep">:</span>
-            <div class="countdown-unit"><span class="countdown-num" id="cd-mins">--</span><span class="countdown-unit-label">นาที</span></div>
-            <span class="countdown-sep">:</span>
-            <div class="countdown-unit"><span class="countdown-num" id="cd-secs">--</span><span class="countdown-unit-label">วิ.</span></div>
-          </div>
-        </div>
-        <div class="hero-date">
-          🗓 Session 1: <strong>อาทิตย์ 5 ก.ค. 2026 — AI 101 for Beginners</strong><br>
-          Session 2: <strong>อาทิตย์ 12 ก.ค. 2026 — Workshop หลัก</strong><br>
-          ทั้ง 2 sessions เรียน 13:30–17:30 น.
-        </div>
-      </div>
-
+<section class="hero">
+  <div class="container">
+    <div class="hero-cover">
+      <img src="assets/ai-workflow-trader-cover.png" alt="AI Workflow Trader Program">
     </div>
-  </section>
+    <div class="hero-proof">👥 มีผู้สมัครแล้ว <strong>100+ ราย</strong></div>
+    <div class="hero-kicker">AI Workflow · PTM Lite · eBook</div>
+    <h1 class="hero-title">ใช้ AI เทรดให้เป็นระบบ<br>ไม่ใช่แค่มี <span>Prompt</span></h1>
+    <p class="hero-sub">
+      เริ่มจาก <strong>AI Workflow</strong> เพื่อวางระบบคิดและวิธีใช้ AI ก่อน แล้วค่อยต่อยอดด้วย <strong>PTM Lite</strong> สำหรับเห็นจังหวะบนกราฟ และ <strong>eBook x 2</strong> สำหรับคนที่อยากได้คู่มือเสริมอ่านประกอบ
+    </p>
+    <div class="hero-actions">
+      <a href="#pricing" class="btn btn-primary">ดู 3 แพ็กเกจสมัครเรียน</a>
+      <a href="https://lin.ee/Wp36lIA" target="_blank" rel="noopener" class="btn btn-secondary">ทัก LINE เพื่อเช็ก bonus พิเศษ</a>
+    </div>
+    <div class="chat-note">
+      ไม่แน่ใจว่าแพ็กไหนเหมาะกับคุณ? ทัก <a href="https://lin.ee/Wp36lIA" target="_blank" rel="noopener">LINE OA @516ipohw</a> เพื่อสอบถามโปรโมชั่นปัจจุบันและ bonus พิเศษเฉพาะรอบได้ครับ
+    </div>
+  </div>
+</section>
 
-  <div class="section-divider"></div>
+<div class="section-divider"></div>
 
-  <!-- ===== SECTION 2: PAIN + AGITATION ===== -->
-  <section id="pain">
-    <div class="container">
-      <div class="section-header">
-        <div class="label">ปัญหาที่คุณอาจเจออยู่</div>
-        <p class="pain-intro">คุณเคยรู้สึกแบบนี้ไหม?</p>
-      </div>
-
-      <ul class="pain-list" aria-label="common trader problems">
-        <li class="pain-item">
-          <span class="x" aria-hidden="true">✗</span>
-          ใช้ ChatGPT ถามตลาดทุกวัน — แต่ผลเทรดยังเหมือนเดิม ไม่รู้ว่า AI ควรใช้ยังไงกันแน่
-        </li>
-        <li class="pain-item">
-          <span class="x" aria-hidden="true">✗</span>
-          มี Trade Journal แต่ไม่เคยกลับมาดูซักที — ขาดทุนซ้ำซากในรูปแบบเดิม
-        </li>
-        <li class="pain-item">
-          <span class="x" aria-hidden="true">✗</span>
-          FOMO ทุกครั้งที่เห็นคนอื่นกำไร — กดซื้อตามโดยไม่มี trade plan
-        </li>
-        <li class="pain-item">
-          <span class="x" aria-hidden="true">✗</span>
-          เคยเรียนคอร์ส AI มาแล้ว — แต่เป็น generic prompt list ที่เอามาใช้กับการเทรดจริงไม่ได้
-        </li>
-        <li class="pain-item">
-          <span class="x" aria-hidden="true">✗</span>
-          รู้ว่าควรมี "ระบบ" แต่ไม่รู้จะเริ่มต้นจากตรงไหน — ทุกอย่างดูซับซ้อน
-        </li>
-      </ul>
-
-      <div class="pain-punch">
-        ทุกเดือนที่ผ่านไปโดยไม่มีกรอบความคิดที่ถูกต้อง <br>
-        คุณกำลัง <strong>จ่ายค่าเรียนตลาดในรูปของการขาดทุน</strong> — <br>
-        ซึ่งแพงกว่า <span data-cfg="pl1-price">1,090</span> บาทมากนัก
+<section class="section" id="workflow">
+  <div class="container">
+    <div class="session-head">
+      <span class="session-num">01</span>
+      <div>
+        <div class="session-kicker">ระบบคิด · เริ่มจาก Workflow</div>
+        <h2 class="session-title">AI Workflow Trader Program</h2>
       </div>
     </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- ===== SECTION 3: 4 LEVELS FRAMEWORK ===== -->
-  <section id="levels">
-    <div class="container">
-      <div class="section-header">
-        <div class="label">The Big Idea</div>
-        <h2 class="section-title">กรอบ 4 ระดับ<br>การใช้ AI ของเทรดเดอร์</h2>
-        <p class="section-desc">ไม่ใช่ทุก use case เท่ากัน — รู้ว่าคุณอยู่ระดับไหน คือก้าวแรกที่สำคัญที่สุด</p>
-      </div>
-
-      <blockquote class="instructor-quote">
-        "ผมไม่ใช่ผู้เชี่ยวชาญ AI ที่มาสอนเรื่องเทรด —<br>
-        ผมเป็นเทรดเดอร์ที่ใช้ AI และนี่คือสิ่งที่ผมใช้จริงทุกวัน"
-        <span class="instructor-sig">— อาจารย์ใหม่ · Investment Planner (IP) + Trader · 15+ ปีในตลาด</span>
-      </blockquote>
-
-      <div class="levels-stack" role="list">
-
-        <div class="level-card" data-level="1" role="listitem">
-          <div class="level-num" aria-label="level 1">1</div>
-          <div class="level-content">
-            <div class="level-tag">Level 1</div>
-            <div class="level-name">ผู้ช่วยทั่วไป</div>
-            <div class="level-desc">
-              สรุปข่าว, แปลบทวิเคราะห์, อธิบายศัพท์, ค้นข้อมูลตลาดแบบ real-time — ใช้แทน Google ได้เลย ไม่ต้องมีพื้นฐาน
-            </div>
-          </div>
-        </div>
-
-        <div class="level-card" data-level="2" role="listitem">
-          <div class="level-num" aria-label="level 2">2</div>
-          <div class="level-content">
-            <div class="level-tag">Level 2 — Sweet Spot ⭐</div>
-            <div class="level-name">เพื่อนคู่คิดของเทรดเดอร์</div>
-            <div class="level-desc">
-              ก่อนเปิดออเดอร์: ทบทวน trade plan, ทบทวนมุมมองเทรด, คำนวณ position sizing · หลังปิดออเดอร์: วิเคราะห์ trade journal เพื่อหาจุดอ่อนที่ตัวเองมองไม่เห็น — <strong style="color:var(--text-main)">นี่คือระดับที่เปลี่ยนผลการเทรดได้จริง</strong>
-            </div>
-            <span class="level-highlight">🔥 Core ของ Program</span>
-          </div>
-        </div>
-
-        <div class="level-card" data-level="3" role="listitem">
-          <div class="level-num" aria-label="level 3">3</div>
-          <div class="level-content">
-            <div class="level-tag">Level 3</div>
-            <div class="level-name">สร้างเครื่องมือใช้เอง</div>
-            <div class="level-desc">
-              เขียน Pine Script, EA, Telegram Bot โดยไม่ต้องมีความรู้เขียนโค้ด — ลงทุนเวลา แต่คุ้มถ้า commit
-            </div>
-          </div>
-        </div>
-
-        <div class="level-card" data-level="4" role="listitem">
-          <div class="level-num" aria-label="level 4">4</div>
-          <div class="level-content">
-            <div class="level-tag">Level 4</div>
-            <div class="level-name">Agentic AI / Dashboard</div>
-            <div class="level-desc">
-              Multi-Agent system, Trading dashboards, War Room — น่าสนใจ แต่ไม่จำเป็นสำหรับคนส่วนใหญ่ในตอนนี้
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="levels-key-msg">
-        🎯&nbsp; <em>"ไม่ต้องไปถึงระดับ 4 ก็เทรดดีขึ้นได้"</em><br>
-        ทำระดับ 2 ให้ดีก่อน — ผลลัพธ์จะมาเอง
-      </div>
-
+    <div class="section-head">
+      <span class="label">Core Program</span>
+      <h2 class="section-title">กรอบ 4 ระดับ <span>การใช้ AI ของเทรดเดอร์</span></h2>
+      <p class="section-desc">ไม่ใช่แค่แจก Prompt แต่สอนกระบวนการใช้ AI เป็นเพื่อนคู่คิด ตั้งแต่สรุปข้อมูล วางแผนเทรด เช็ก bias คำนวณความเสี่ยง ทบทวน journal และใช้ PTM Chart Reader ช่วยให้ AI อ่านกราฟจากข้อมูลสำคัญได้เป็นระบบขึ้น</p>
     </div>
-  </section>
 
-  <div class="section-divider"></div>
-
-  <!-- ===== SECTION 4: DIFFERENTIATOR ===== -->
-  <section id="diff">
-    <div class="container">
-      <div class="section-header">
-        <div class="label">ต่างจากคอร์ส AI ทั่วไปยังไง?</div>
-        <h2 class="section-title">Framework ของเทรดเดอร์<br>ไม่ใช่ Prompt List ทั่วไป</h2>
-      </div>
-
-      <div style="overflow-x:auto">
-        <table class="diff-table" role="table" aria-label="comparison table">
-          <thead>
-            <tr>
-              <th scope="col">มิติ</th>
-              <th scope="col">คอร์ส AI ทั่วไป</th>
-              <th scope="col">AI Workflow Trader</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Approach</td>
-              <td>สำหรับทุกคน เนื้อหา Generalist</td>
-              <td><span class="diff-checkmark">✓</span> ออกแบบเฉพาะสำหรับเทรดเดอร์</td>
-            </tr>
-            <tr>
-              <td>Output</td>
-              <td>Prompt list ที่ลอกใช้ได้ชั่วคราว</td>
-              <td><span class="diff-checkmark">✓</span> Framework ที่คิดและปรับเองได้ตลอด</td>
-            </tr>
-            <tr>
-              <td>Depth</td>
-              <td>Surface-level — ไม่รู้ว่าใช้ตอนไหน</td>
-              <td><span class="diff-checkmark">✓</span> 4 Levels ที่ scale ได้ตามทักษะ</td>
-            </tr>
-            <tr>
-              <td>Lasting</td>
-              <td>Tactic ที่ล้าสมัยตาม AI version</td>
-              <td><span class="diff-checkmark">✓</span> วิธีคิดที่ติดตัวตลอดชีวิต</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div style="margin-top:28px; padding:18px 20px; background:rgba(201,168,76,0.07); border:1px solid var(--border-gold); border-radius:10px; font-size:15px; color:var(--text-sub); line-height:1.65;">
-        <span style="color:var(--gold); font-weight:700;">"AI ที่ดีที่สุด ไม่ใช่ AI ที่ซับซ้อนที่สุด</span> — แต่คือ AI ที่ทำให้คุณเทรดอย่างเป็นระบบ และช่วยให้คุณเทรดดีขึ้นได้จริง"
-      </div>
-
+    <div class="content-card gold">
+      <div class="visual-img"><img src="assets/Trading_Workflow.png" alt="AI Trading Workflow ภาพใหญ่ที่เทรดเดอร์ควรมี"></div>
+      <div class="visual-tag">Core Workflow</div>
+      <div class="visual-title">AI Trading Workflow — ภาพใหญ่ที่เทรดเดอร์ควรมี</div>
+      <p class="visual-desc"><strong>AI Workflow ไม่ได้สอนให้ AI ฟันธงซื้อขายแทนคุณ</strong> แต่จัดกระบวนการให้ชัดว่า ก่อนเทรดต้องดู Market Context, วาง Trade Plan, คำนวณ Risk &amp; Position Sizing, เช็ก Bias และหลังเทรดต้อง Journal &amp; Review อย่างไร</p>
+      <div class="integrity"><strong>แกนสำคัญ:</strong> AI วิเคราะห์ได้ แต่คนต้องตัดสินใจ — ใช้ AI เป็นคู่คิดเพื่อให้การเทรดมีระบบมากขึ้น ไม่ใช่ใช้ AI เป็นผู้ตัดสินใจแทน</div>
     </div>
-  </section>
 
-  <div class="section-divider"></div>
+    <div class="benefits">
+      <div class="benefit"><div class="benefit-icon">🌐</div><div class="benefit-text"><strong>Market Context</strong> ใช้ AI ช่วยสรุปข่าว ภาพรวมตลาด และสภาพแวดล้อมก่อนเทรด</div></div>
+      <div class="benefit"><div class="benefit-icon">🎯</div><div class="benefit-text"><strong>Trade Plan</strong> ให้ AI ช่วยทบทวนแผนเข้า-ออก เงื่อนไข setup และจังหวะที่ควรหลีกเลี่ยง</div></div>
+      <div class="benefit"><div class="benefit-icon">🧮</div><div class="benefit-text"><strong>Risk &amp; Position Sizing</strong> คำนวณขนาดไม้ ความเสี่ยง และ Risk:Reward ให้ชัดก่อนกดออเดอร์</div></div>
+      <div class="benefit"><div class="benefit-icon">🧠</div><div class="benefit-text"><strong>Bias Check</strong> เช็กอคติ FOMO / revenge trade และทบทวนเหตุผลก่อนเข้าเทรด</div></div>
+      <div class="benefit"><div class="benefit-icon">📓</div><div class="benefit-text"><strong>Journal &amp; Review</strong> ให้ AI ช่วยหาข้อผิดพลาด pattern ซ้ำ และจุดที่ควรปรับปรุงหลังเทรด</div></div>
+      <div class="benefit"><div class="benefit-icon">🤝</div><div class="benefit-text"><strong>Human Decision</strong> AI เป็นผู้ช่วยวิเคราะห์ แต่การตัดสินใจและการรับความเสี่ยงยังเป็นของเทรดเดอร์</div></div>
+    </div>
 
-  <!-- ===== SECTION 5: WHAT YOU GET ===== -->
-  <section id="whatyouget">
-    <div class="container">
-      <div class="section-header">
-        <div class="label">สิ่งที่คุณจะได้รับ</div>
-        <h2 class="section-title">Curriculum + Bonus Stack</h2>
-        <p class="section-desc">2 Live Sessions · 13:30–17:30 น.<br>Session 1: 5 ก.ค. — AI 101 for Beginners<br>Session 2: 12 ก.ค. — Workshop หลัก (4 ชม.)</p>
+    <div class="sessions">
+      <div class="class-card">
+        <div class="class-step">Session 1 · Replay พร้อมดู</div>
+        <div class="class-date">5 ก.ค. 2026</div>
+        <div class="class-name">AI 101 for Beginners</div>
+        <div class="class-desc">ปูพื้นฐาน ChatGPT / Gemini / Claude สำหรับผู้เริ่มต้น สมัครแล้วดูย้อนหลังได้ทันที</div>
       </div>
-
-      <!-- Curriculum -->
-      <div class="curriculum-timeline" role="list" aria-label="course curriculum">
-
-        <!-- Live Session 1 header -->
-        <div class="hour-block" role="listitem" style="background:rgba(26,158,143,0.06); border-left:3px solid var(--teal); margin-bottom:4px;">
-          <div class="hour-content">
-            <div class="hour-title" style="color:var(--teal-bright);">🎓 Live Session 1 — AI 101 for Beginners · อาทิตย์ 5 ก.ค. 2026</div>
-            <div class="hour-desc">ปูพื้นฐาน ChatGPT / Gemini / Claude สำหรับผู้เริ่มต้น · ต่อยอดได้ทั้งการเทรด งาน และชีวิตประจำวัน</div>
-            <div class="hour-outcome">→ มูลค่า ฿690 · รวมอยู่ใน Program โดยไม่มีค่าใช้จ่ายเพิ่มเติม</div>
-          </div>
-        </div>
-
-        <!-- Live Session 2 header -->
-        <div class="hour-block" role="listitem" style="background:rgba(201,168,76,0.06); border-left:3px solid var(--gold); margin-bottom:4px;">
-          <div class="hour-content">
-            <div class="hour-title" style="color:var(--gold-bright);">⚡ Live Session 2 — AI Workflow Trader Program · อาทิตย์ 12 ก.ค. 2026</div>
-            <div class="hour-desc">Framework 4 ระดับ — ใช้ AI เป็นเพื่อนคู่คิดในทุกขั้นตอนของการเทรด ตั้งแต่ Level 1 (ผู้ช่วย) ถึง Level 4 (Agentic)</div>
-          </div>
-        </div>
-
-        <!-- Level 1-4 grouped under Session 2 -->
-        <div style="border-left:2px solid rgba(201,168,76,0.2); padding-left:10px; display:flex; flex-direction:column; gap:0;">
-          <div class="hour-block" role="listitem">
-            <div class="hour-content">
-              <div class="hour-title">Level 1 — AI ผู้ช่วยของเทรดเดอร์</div>
-              <div class="hour-desc">ปูรากฐาน — AI คืออะไรในมุมของเทรดเดอร์จริง และเริ่มใช้งานได้ตั้งแต่เซสชันแรก</div>
-              <div class="hour-outcome">→ จบแล้ว: ใช้ AI ค้นข้อมูล สรุปข่าว แปลบทวิเคราะห์ได้ทันที</div>
-            </div>
-          </div>
-          <div class="hour-block" role="listitem">
-            <div class="hour-content">
-              <div class="hour-title">Level 2 — เพื่อนคู่คิดของเทรดเดอร์ 🔥</div>
-              <div class="hour-desc">Deep-dive Level 2 — ถาม AI ก่อนกดเทรด, วิเคราะห์ trade journal หาจุดอ่อน, ทบทวนมุมมองเทรด, คำนวณ position sizing</div>
-              <div class="hour-outcome">→ จบแล้ว: มี workflow AI ที่ใช้ได้จริงทั้งก่อนและหลังการเทรด</div>
-            </div>
-          </div>
-          <div class="hour-block" role="listitem">
-            <div class="hour-content">
-              <div class="hour-title">Level 3 — สร้างเครื่องมือใช้เอง</div>
-              <div class="hour-desc">Overview + demo สร้างเครื่องมือโดยไม่ต้องเขียนโค้ด — Pine Script, EA, Telegram Bot</div>
-              <div class="hour-outcome">→ จบแล้ว: เห็นภาพชัดว่าสร้าง custom tool ได้ยังไง</div>
-            </div>
-          </div>
-          <div class="hour-block" role="listitem">
-            <div class="hour-content">
-              <div class="hour-title">Level 4 + Q&amp;A Session</div>
-              <div class="hour-desc">Overview Agentic AI สำหรับเทรดเดอร์ + War Room concept, ถาม-ตอบ live ลึก กับเคสจริงของผู้เรียน</div>
-              <div class="hour-outcome">→ จบแล้ว: เห็น roadmap ชัดเจนว่าจะพัฒนาต่อยังไง</div>
-            </div>
-          </div>
-        </div>
+      <div class="class-card main">
+        <div class="class-step">Session 2 · Live Workshop</div>
+        <div class="class-date">12 ก.ค. 2026</div>
+        <div class="class-name">AI Workflow Trader Workshop</div>
+        <div class="class-desc">ลงมือวาง workflow สำหรับการเทรดจริง พร้อม Q&A และ recording ดูซ้ำตลอดชีวิต</div>
       </div>
+    </div>
 
-      <!-- Bonuses -->
-      <div class="bonus-header">🎁 Bonus Stack</div>
-      <div style="margin:-8px 0 18px; padding:14px 18px; background:rgba(26,158,143,0.08); border:1px solid rgba(26,158,143,0.3); border-radius:10px; font-size:14px; color:var(--text-sub); line-height:1.65;">
-        <strong style="color:var(--teal-bright);">จาก feedback ของผู้สมัครรอบเปิดตัว:</strong> หลายคนอยากได้พื้นฐาน AI ก่อนเข้า Workshop หลัก — จึงเพิ่ม <strong style="color:var(--white);">Live Session 1: AI 101 for Beginners</strong> เป็น Session แรก (5 ก.ค.) รวมอยู่ใน Program ทุกรอบโดยไม่มีค่าใช้จ่ายเพิ่มเติม
+    <div class="subhead" style="margin-top:34px">Framework 4 ระดับ <span>ที่ต่อยอดได้จริง</span></div>
+
+    <div class="levels">
+      <details class="acc level">
+        <summary><span class="level-num">01</span><span class="level-head"><span class="level-name">Foundation · AI Assistant</span><span class="level-headline">ถาม-ตอบ สรุปข้อมูล อธิบายสิ่งที่ไม่เข้าใจ</span></span></summary>
+        <div class="level-detail">ใช้ AI เป็นผู้ช่วยพื้นฐาน เช่น สรุปข่าว แปลบทวิเคราะห์ อธิบายศัพท์ และทำความเข้าใจข้อมูลตลาด</div>
+      </details>
+      <details class="acc level core" open>
+        <summary><span class="level-num">02</span><span class="level-head"><span class="level-name">Integration · AI Trading Workflow</span><span class="level-headline">สแกนตลาด → วาง Trade Plan → ทบทวน Journal</span></span></summary>
+        <div class="level-detail">หัวใจของคอร์ส ใช้ AI เป็นกระบวนการต่อเนื่องก่อนและหลังเทรด ไม่ใช่ถาม AI เป็นครั้ง ๆ แบบไร้ระบบ</div>
+      </details>
+      <details class="acc level">
+        <summary><span class="level-num">03</span><span class="level-head"><span class="level-name">Optimization · AI Tool Builder</span><span class="level-headline">สร้าง template, checklist, Excel, dashboard ได้เอง</span></span></summary>
+        <div class="level-detail">ใช้ AI ช่วยสร้างเครื่องมือเล็ก ๆ ที่ช่วยให้การวิเคราะห์และการทบทวนการเทรดทำซ้ำได้ง่ายขึ้น</div>
+      </details>
+      <details class="acc level">
+        <summary><span class="level-num">04</span><span class="level-head"><span class="level-name">Autonomy · AI Trading System</span><span class="level-headline">เห็นภาพปลายทางของ AI + Trading System</span></span></summary>
+        <div class="level-detail">พาเห็นภาพระบบที่เชื่อมข้อมูล เครื่องมือ และ workflow เข้าด้วยกัน เพื่อรู้ว่าจะพัฒนาต่อไปทางไหน</div>
+      </details>
+    </div>
+
+    <div class="content-card gold chart-reader-card" style="margin-top:26px">
+      <div class="visual-img"><img src="assets/PTM_Chart_Reader_2.png" alt="PTM Chart Reader ตัวอย่างตารางข้อมูลสำคัญบนกราฟ"></div>
+      <div class="visual-tag">Bonus #6 · PTM Chart Reader</div>
+      <div class="visual-title">PTM Chart Reader — ให้ AI อ่าน “ตัวเลขสำคัญ” ไม่ใช่เดาจากภาพอย่างเดียว</div>
+      <p class="visual-desc">เวลาส่งกราฟให้ AI ดู ภาพแท่งเทียนอย่างเดียวอาจตีความได้จำกัด แต่ถ้ามีข้อมูล Trend, Structure, RSI, Stoch, ADX, MTF, Support/Resistance และ Key Levels ประกอบ AI จะช่วยสรุปบริบทกราฟได้เป็นระบบมากขึ้น</p>
+      <div class="integrity"><strong>ได้รับสิทธิ์ใช้งาน 1 ปี:</strong> สำหรับผู้สมัคร AI Workflow Trader Program เพื่อใช้ประกอบการอ่านกราฟและการคุยกับ AI ต่ออายุปีละ 290 บาท</div>
+    </div>
+
+    <div class="bonus">
+      <div class="bonus-label">🎁 Bonus Stack</div>
+      <div class="bonus-intro">
+        <strong>จาก feedback ของผู้สมัคร:</strong> หลายคนอยากได้พื้นฐาน AI ก่อนเข้า Workshop หลัก Program นี้จึงมี Session 1 replay, ไฟล์ blueprint, prompt pack, template, กลุ่ม support และ recording ให้ใช้ต่อหลังเรียนโดยไม่มีค่าใช้จ่ายเพิ่ม
       </div>
-      <div class="bonus-list" role="list" aria-label="course bonuses">
-        <div class="bonus-item bonus-item--has-img" role="listitem">
-          <div class="bonus-left">
-            <div class="bonus-name"><span class="bonus-emoji">📄</span>Bonus #1: AI Workflow Blueprint PDF</div>
-            <div class="bonus-sub">4 Levels framework แบบ visual, self-assessment, core prompts</div>
-            <span class="bonus-tag">ได้รับทันทีหลังสมัคร</span>
-          </div>
-          <div class="bonus-thumb bonus-thumb--doc" data-lightbox="assets/ai-workflow-cover.png" data-caption="Bonus #1: AI Workflow Blueprint PDF" role="button" tabindex="0" aria-label="ดูตัวอย่าง AI Workflow Blueprint PDF">
-            <img src="assets/ai-workflow-cover.png" alt="AI Workflow Blueprint PDF cover" loading="lazy">
-          </div>
-          <div class="bonus-value">฿590</div>
-        </div>
-        <div class="bonus-item bonus-item--has-img" role="listitem">
-          <div class="bonus-left">
-            <div class="bonus-name"><span class="bonus-emoji">🗂️</span>Bonus #2: Trader Prompt Pack</div>
-            <div class="bonus-sub">20 หัวข้อ × 2 รูปแบบ = 40 prompts พร้อมใช้<br>Pro Prompt (ละเอียด) + Quick Prompt (ตอบเร็ว) · Notion + PDF คู่มือ</div>
-            <span class="bonus-tag">ได้รับทันทีหลังสมัคร</span>
-          </div>
-          <div class="bonus-thumb" data-lightbox="assets/notion-cover-2.png" data-caption="Bonus #2: Trader Prompt Pack — 40 prompts จัดหมวดตาม 4 Levels" role="button" tabindex="0" aria-label="ดูตัวอย่าง Trader Prompt Pack">
-            <img src="assets/notion-cover-2.png" alt="Trader Prompt Pack — Notion list by level" loading="lazy">
-          </div>
-          <div class="bonus-value">฿690</div>
-        </div>
-        <div class="bonus-item bonus-item--has-img" role="listitem">
-          <div class="bonus-left">
-            <div class="bonus-name"><span class="bonus-emoji">📊</span>Bonus #3: Trading System Templates</div>
-            <div class="bonus-sub">5 ไฟล์ที่เทรดเดอร์นำไปใช้งานได้จริง<br>
-              <span class="bonus-file-list">แผนการลงทุนส่วนบุคคล · แผนก่อนเทรด · คำนวณ Risk &amp; Position Size · Trade Journal · สรุปผลประจำวัน</span>
-            </div>
-            <span class="bonus-tag">ได้รับทันทีหลังสมัคร</span>
-          </div>
-          <div class="bonus-thumb bonus-thumb--white" data-lightbox="assets/template-files.png" data-caption="Bonus #3: Trading System Templates — 5 ไฟล์ Excel พร้อมใช้" role="button" tabindex="0" aria-label="ดูตัวอย่าง Trading System Templates">
-            <img src="assets/template-files.png" alt="Trading System Templates — 5 Excel files" loading="lazy">
-          </div>
-          <div class="bonus-value">฿990</div>
-        </div>
-        <div class="bonus-item featured" role="listitem">
-          <div class="bonus-left">
-            <div class="bonus-name"><span class="bonus-emoji">💬</span>Bonus #4: Line Openchat Support Group</div>
-            <div class="bonus-sub">กลุ่มสนับสนุนตั้งแต่วันสมัคร — ส่ง link Zoom, reminder วันเรียน, แจ้ง bonus ใหม่ และตอบคำถามหลัง Workshop<br>เปิดถึง 31 ก.ค. 2026 เพื่อให้คุณได้ apply framework ในการเทรดจริง</div>
-            <span class="bonus-tag">ได้รับทันทีหลังสมัคร</span>
-          </div>
-          <div class="bonus-value">฿490</div>
-        </div>
+      <div class="bonus-list" role="list" aria-label="AI Workflow bonus stack">
         <div class="bonus-item" role="listitem">
           <div class="bonus-left">
-            <div class="bonus-name"><span class="bonus-emoji">🎙️</span>Bonus #5: Q&amp;A Session Recording</div>
-            <div class="bonus-sub">ดูซ้ำได้ตลอดชีวิต · เก็บคำถามและคำตอบจาก Live ทั้งหมด</div>
-            <span class="bonus-tag">ส่งหลังจบ Live · 12 ก.ค. 2026</span>
+            <div class="bonus-name">📄 Bonus #1: AI Workflow Blueprint PDF</div>
+            <div class="bonus-sub">4 Levels framework แบบ visual พร้อม self-assessment และ core prompts สำหรับใช้วางระบบคิดก่อนเริ่มเทรด</div>
+            <span class="bonus-tag">ได้รับทันทีหลังสมัคร</span>
           </div>
+          <div class="bonus-thumb bonus-thumb--doc"><img src="assets/ai-workflow-cover.png" alt="AI Workflow Blueprint PDF cover" loading="lazy"></div>
           <div class="bonus-value">฿590</div>
         </div>
+
+        <div class="bonus-item" role="listitem">
+          <div class="bonus-left">
+            <div class="bonus-name">🗂️ Bonus #2: Trader Prompt Pack</div>
+            <div class="bonus-sub">20 หัวข้อ × 2 รูปแบบ = 40 prompts พร้อมใช้<br>Pro Prompt แบบละเอียด + Quick Prompt แบบตอบเร็ว · Notion + PDF คู่มือ</div>
+            <span class="bonus-tag">ได้รับทันทีหลังสมัคร</span>
+          </div>
+          <div class="bonus-thumb"><img src="assets/notion-cover-2.png" alt="Trader Prompt Pack preview" loading="lazy"></div>
+          <div class="bonus-value">฿690</div>
+        </div>
+
+        <div class="bonus-item" role="listitem">
+          <div class="bonus-left">
+            <div class="bonus-name">📊 Bonus #3: Trading System Templates</div>
+            <div class="bonus-sub">5 ไฟล์ที่เทรดเดอร์นำไปใช้งานได้จริง<br><span class="bonus-file-list">แผนการลงทุนส่วนบุคคล · แผนก่อนเทรด · คำนวณ Risk &amp; Position Size · Trade Journal · สรุปผลประจำวัน</span></div>
+            <span class="bonus-tag">ได้รับทันทีหลังสมัคร</span>
+          </div>
+          <div class="bonus-thumb bonus-thumb--white"><img src="assets/template-files.png" alt="Trading System Templates preview" loading="lazy"></div>
+          <div class="bonus-value">฿990</div>
+        </div>
+
         <div class="bonus-item featured" role="listitem">
           <div class="bonus-left">
-            <div class="bonus-name"><span class="bonus-emoji">🔮</span>Bonus #6: Surprise Chart Analysis Tool</div>
-            <div class="bonus-sub">เครื่องมือลับช่วยวิเคราะห์กราฟ — ใช้คู่กับ Prompt Pack เพื่อให้ AI วิเคราะห์ได้แม่นขึ้น<br>รายละเอียดจะ reveal ในวัน Live · มอบเฉพาะผู้ที่เข้าเรียน Live สดเท่านั้น</div>
-            <span class="bonus-tag">🎁 เฉพาะผู้เข้า Live สด — 12 ก.ค. 2026</span>
+            <div class="bonus-name">💬 Bonus #4: Line OpenChat Support Group</div>
+            <div class="bonus-sub">กลุ่มสนับสนุนตั้งแต่วันสมัคร — ส่ง link Zoom, reminder วันเรียน, แจ้ง bonus ใหม่ และตอบคำถามหลัง Workshop เพื่อช่วยให้คุณ apply framework ในการเทรดจริง</div>
+            <span class="bonus-tag">ได้รับทันทีหลังสมัคร</span>
           </div>
+          <div class="bonus-spacer"></div>
           <div class="bonus-value">฿490</div>
         </div>
-      </div>
 
-      <!-- Value Summary -->
-      <div class="value-summary">
-        <div class="value-row">
-          <span class="label-text">2 Live Sessions + Recording ตลอดชีวิต (AI 101 ฿690 + Workshop ฿990)</span>
-          <span class="price">฿1,680</span>
+        <div class="bonus-item" role="listitem">
+          <div class="bonus-left">
+            <div class="bonus-name">🎙️ Bonus #5: Q&amp;A Session Recording</div>
+            <div class="bonus-sub">เก็บคำถามและคำตอบจาก Live ทั้งหมด เพื่อให้กลับมาทบทวน workflow, use case และข้อสงสัยสำคัญหลังเรียนได้</div>
+            <span class="bonus-tag">ส่งหลังจบ Live · 12 ก.ค. 2026</span>
+          </div>
+          <div class="bonus-spacer"></div>
+          <div class="bonus-value">฿590</div>
         </div>
-        <div class="value-row">
-          <span class="label-text">Bonus #1–6 รวม</span>
-          <span class="price">฿3,840</span>
-        </div>
-        <div class="value-row total">
-          <span class="label-text">มูลค่ารวมทั้งหมด</span>
-          <span class="price"><span class="strikethrough">฿5,520</span></span>
-        </div>
-        <div class="founding-price">฿<span class="founding-amount" data-cfg="pl1-price">1,090</span> <span class="founding-meta"><span data-cfg="phase-label">Early Bird</span> · ถึง <span data-cfg="deadline">15 มิ.ย. 2026</span></span></div>
-      </div>
 
+        <div class="bonus-item featured" role="listitem">
+          <div class="bonus-left">
+            <div class="bonus-name">📈 Bonus #6: PTM Chart Reader</div>
+            <div class="bonus-sub">เครื่องมือช่วยสรุปข้อมูลสำคัญบนกราฟให้อ่านง่ายขึ้น เช่น Trend, Momentum, Structure และ Key Levels เพื่อใช้ประกอบการวิเคราะห์ของเทรดเดอร์ และช่วยให้ AI ตีความกราฟได้เป็นระบบมากขึ้น</div>
+            <span class="bonus-tag">ใช้งาน 1 ปี · ต่ออายุปีละ 290 บาท</span>
+          </div>
+          <div class="bonus-spacer"></div>
+          <div class="bonus-value">฿990</div>
+        </div>
+      </div>
+      <div class="bonus-total">Bonus #1–6 รวมมูลค่า <strong>฿4,340</strong> · มูลค่ารวม Program กว่า <strong>฿6,000</strong></div>
     </div>
-  </section>
 
-  <!-- ===== SECTION 6: AUTHORITY ===== -->
-  <section id="authority">
-    <div class="container">
-      <div class="section-header">
-        <div class="label">ทำไมต้องเชื่ออาจารย์ใหม่?</div>
-        <h2 class="section-title">เทรดเดอร์ที่ใช้ AI —<br>ไม่ใช่ผู้เชี่ยวชาญ AI ที่สอนเรื่องเทรด</h2>
-      </div>
-
-      <div class="authority-card">
-        <div class="authority-profile">
-          <img src="assets/aj-mai.jpg" alt="อาจารย์ใหม่ ธนภัทร ธนิชานนท์" class="authority-photo">
-          <div class="authority-profile-info">
-            <div class="authority-name">อาจารย์ใหม่ (ธนภัทร ธนิชานนท์)</div>
-            <div class="authority-title">Investment Planner (IP License) · IC &amp; CFP Instructor · Trader</div>
-          </div>
-        </div>
-
-        <div class="authority-creds" role="list" aria-label="instructor credentials">
-          <div class="auth-cred" role="listitem">
-            <div class="icon" aria-hidden="true">🎓</div>
-            <span><strong>15+ ปี</strong> ในวงการการเงินการลงทุน · ใบอนุญาต IP (Investment Planner)</span>
-          </div>
-          <div class="auth-cred" role="listitem">
-            <div class="icon" aria-hidden="true">📚</div>
-            <span>สอนหลักสูตร IC, CFP ให้สถาบันการเงิน · <strong>นักเรียน IC 10,000+ คน</strong></span>
-          </div>
-          <div class="auth-cred" role="listitem">
-            <div class="icon" aria-hidden="true">📈</div>
-            <span>เทรดจริง: หุ้น · Options · Forex · Gold/CFD · ใช้ AI ในงานการเงินทุกวัน</span>
-          </div>
-          <div class="auth-cred" role="listitem">
-            <div class="icon" aria-hidden="true">👥</div>
-            <span>คอร์สส่วนตัว: PTM System <strong>80+ คน</strong> · นักล่าปันผล <strong>50+ คน</strong> · เทรดเดอร์ 8:30PM <strong>50+ คน</strong></span>
-          </div>
-          <div class="auth-cred" role="listitem">
-            <div class="icon" aria-hidden="true">🏛️</div>
-            <span><strong>มีกำหนดบรรยายใน มิ.ย. 2026</strong> — หลักสูตร "Advanced AI for Front/Back Office in Securities Business" ให้บริษัทหลักทรัพย์รายใหญ่</span>
-          </div>
-          <div class="auth-cred" role="listitem">
-            <div class="icon" aria-hidden="true">🔴</div>
-            <span>ACCM Live "เทรดเดอร์ยุคใหม่ ใช้ AI ยังไงให้กำไร" — 2,000+ views · 40+ shares</span>
-          </div>
-        </div>
-
-        <blockquote class="authority-quote">
-          "เทรดเดอร์ส่วนใหญ่ที่ขาดทุน ไม่ได้ขาดทุนเพราะไม่มีข้อมูล — <br>
-          แต่ขาดทุนเพราะไม่มีระบบและไม่มีวินัย <br>
-          AI ช่วยให้คุณคิดเป็นระบบมากขึ้นก่อนกดซื้อขาย"
-        </blockquote>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- ===== SECTION 7: WHY LOW RISK ===== -->
-  <section id="lowrisk">
-    <div class="container">
-      <div class="section-header">
-        <div class="label">ทำไมถึงปลอดภัยที่จะเริ่ม</div>
-        <h2 class="section-title">ทำไมการเริ่มต้นที่นี่<br>คือทางเลือกที่สมเหตุสมผล</h2>
-      </div>
-
-      <div class="risk-grid" role="list" aria-label="reasons to join">
-        <div class="risk-item" role="listitem">
-          <div class="risk-icon" aria-hidden="true">💰</div>
-          <div class="risk-label"><span data-cfg="pl1-price">1,090</span> บาท</div>
-          <div class="risk-desc">เท่ากับอาหาร 2-3 มื้อ — ถ้าได้ระบบคิดที่ดีขึ้นแม้แค่ trade เดียว คุ้มแล้ว</div>
-        </div>
-        <div class="risk-item" role="listitem">
-          <div class="risk-icon" aria-hidden="true">♾️</div>
-          <div class="risk-label">Recording ตลอดชีวิต</div>
-          <div class="risk-desc">ดูซ้ำได้ไม่จำกัด ไม่หมดอายุ — ค่าเฉลี่ยต่อครั้งถูกลงทุกครั้งที่ดู</div>
-        </div>
-        <div class="risk-item" role="listitem">
-          <div class="risk-icon" aria-hidden="true">📦</div>
-          <div class="risk-label">Bonus ได้รับทันที</div>
-          <div class="risk-desc">Bonus #1, 2, 3 ได้รับทันทีหลังสมัคร — เริ่มใช้ได้ก่อนวัน Live เลย</div>
-        </div>
-        <div class="risk-item" role="listitem">
-          <div class="risk-icon" aria-hidden="true">🌐</div>
-          <div class="risk-label">ใช้ได้ทุกตลาด</div>
-          <div class="risk-desc">Framework ไม่ผูกกับคู่ใดคู่หนึ่ง — Forex, หุ้น, Crypto, Gold ใช้ได้หมด</div>
-        </div>
-      </div>
-
-      <blockquote class="risk-philosophy">
-        "ผมไม่อยากให้คุณซื้อแค่เพราะ 'ถ้าไม่ดีคืนเงิน' — <br>
-        ผมอยากให้คุณซื้อเพราะ<strong> คุณรู้ว่ามันคุ้ม</strong>"
-      </blockquote>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- ===== CTA MID ===== -->
-  <section id="cta-mid">
-    <div class="container">
-      <div class="cta-box">
-        <h2>พร้อมเริ่มต้นแล้วหรือยัง?</h2>
-        <p><span data-cfg="phase-label">Early Bird</span> · <span data-cfg="pl1-price">1,090</span> บาท · จำกัด <span data-cfg="seats">30</span> ที่นั่ง · 2 Live Sessions: 5 + 12 ก.ค. 2026</p>
-        <div class="cta-button-wrap">
-          <a href="./bump-a/" class="btn-primary cta-button" role="button" data-cfg-href="pl1">สมัคร <span data-cfg="phase-label">Early Bird</span> — <span data-cfg="pl1-price">1,090</span> บาท</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- ===== SECTION 8: 3-STAGE PRICING LADDER ===== -->
-  <section id="pricing">
-    <div class="container">
-      <div class="section-header">
-        <div class="label">เส้นทางการเรียนรู้</div>
-        <h2 class="section-title">เริ่มจาก Workflow ก่อน แล้วค่อยต่อยอดด้วยเครื่องมือ</h2>
-        <p class="section-desc ladder-intro">
-          เหมือนสร้างบ้าน — ต้องวางฐานรากก่อน ถึงจะตั้งผนังได้ · เริ่มที่ framework วิธีคิด แล้วค่อยเพิ่มเครื่องมือ
-        </p>
-      </div>
-
-      <div class="pricing-ladder" role="list" aria-label="pricing stages">
-
-        <div class="stage-card dimmed" role="listitem" aria-label="Stage 3">
-          <div class="stage-left">
-            <div class="stage-number">Stage 3 — ปลายทาง</div>
-            <div class="stage-name">PTM Full Course</div>
-            <div class="stage-desc">ระบบเทรดเต็ม — สำหรับเทรดเดอร์ที่จริงจัง</div>
-          </div>
-          <div class="stage-right">
-            <div class="stage-price">฿4,900</div>
-            <div class="stage-status">สอบถามเพิ่มเติมได้</div>
-          </div>
-        </div>
-
-        <div class="stage-arrow" aria-hidden="true">↓</div>
-
-        <div class="stage-card" role="listitem" aria-label="Stage 2 - PTM Lite">
-          <div class="stage-left">
-            <div class="stage-number">Stage 2 — เครื่องมือ</div>
-            <div class="stage-name">PTM Lite Indicator + คู่มือ</div>
-            <div class="stage-desc">Indicator ที่ออกแบบมาเพื่อเทรดเดอร์ที่อยากได้ระบบเรียบง่าย ใช้งานได้จริง</div>
-            <button class="stage-detail-toggle" id="ptmLiteToggle" aria-expanded="false">
-              ดูรายละเอียด PTM Lite <span class="sdchev">▼</span>
-            </button>
-          </div>
-          <div class="stage-right">
-            <div class="stage-price">฿1,290 → <span style="color:var(--teal-bright)">฿990</span></div>
-            <div class="stage-status">สมัครเพิ่มได้ตอน checkout ในราคาพิเศษ</div>
-          </div>
-        </div>
-        <!-- PTM Lite expanded panel — ขยายเต็มความกว้าง นอก stage-card -->
-        <div class="ptm-panel" id="ptmLiteDetail">
-          <div class="ptm-expand">
-            <!-- Title + price row -->
-            <div class="ptm-expand-header">
-              <div>
-                <div class="ptm-expand-title">PTM Lite Indicator + คู่มือ + Zoom สด</div>
-                <div class="ptm-bridge-line">
-                  <span class="ptm-bridge-a">AI Workflow สอนวิธีคิด</span>
-                  <span class="ptm-arrow">→</span>
-                  <span class="ptm-bridge-b">PTM Lite ให้ระบบพร้อมใช้</span>
-                </div>
-              </div>
-              <div class="ptm-expand-price">
-                <div class="ptm-price-new">฿990</div>
-                <div class="ptm-price-old">฿1,290</div>
-                <div class="ptm-price-note">เฉพาะตอน checkout</div>
-              </div>
-            </div>
-            <!-- Chart image — full width, no crop -->
-            <div class="ptm-chart-wrap">
-              <img src="assets/ptm-lite-gold.png" alt="PTM Lite Gold chart — EMA Ribbon Trend Change" class="ptm-chart-img" loading="lazy">
-            </div>
-            <!-- Features -->
-            <ul class="ptm-features">
-              <li><span class="ptm-check">✓</span> PTM Lite Indicator (TradingView, ใช้งาน 1 ปี · ต่ออายุได้)</li>
-              <li><span class="ptm-check">✓</span> คู่มือ + Mini Ebook สอน HA จากศูนย์</li>
-              <li><span class="ptm-check">✓</span> Zoom สอนสดรอบแรก · 19 ก.ค. 2026 + Q&amp;A (record ดูซ้ำได้ไม่จำกัด) — เฉพาะผู้สมัคร PTM Lite</li>
-            </ul>
-            <div class="ptm-cta-note">เพิ่มในออเดอร์ได้ตอน checkout — ไม่บังคับ</div>
-          </div>
-        </div>
-
-        <div class="stage-arrow" aria-hidden="true">↓</div>
-
-        <div class="stage-card active" role="listitem" aria-label="Stage 1 - Start here">
-          <div class="stage-left">
-            <div class="stage-number">Stage 1 — ✨ เริ่มที่นี่</div>
-            <div class="stage-name">AI Workflow Trader Program</div>
-            <div class="stage-desc">Framework วิธีคิด — ที่ทำให้ทุกเครื่องมือที่ใช้ต่อจากนี้มีความหมาย</div>
-          </div>
-          <div class="stage-right">
-            <div class="stage-price">฿<span data-cfg="pl1-price">1,090</span></div>
-            <div class="stage-status">เปิดรับสมัครอยู่ตอนนี้ →</div>
-          </div>
-        </div>
-
-      </div>
-
-      <p class="ladder-note"><strong>เริ่มที่ Stage 1 ก่อน</strong> — ถ้าใช่ ค่อยขึ้นต่อ ไม่มีแรงกดดัน</p>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- ===== SECTION 9: FAQ ===== -->
-  <section id="faq">
-    <div class="container">
-      <div class="section-header">
-        <div class="label">คำถามที่พบบ่อย</div>
-        <h2 class="section-title">FAQ</h2>
-      </div>
-
-      <div class="faq-list" role="list">
-
-        <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false">
-            ผมไม่เคยใช้ AI เลย เรียนได้ไหม?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              ได้เลย — เราออกแบบ <strong>Live Session 1 (AI 101 for Beginners · 5 ก.ค.) ไว้รองรับ</strong>โดยเฉพาะ ปูพื้นฐาน ChatGPT / Gemini / Claude ตั้งแต่เริ่มต้น ก่อนเข้า Session 2 Workshop หลัก (12 ก.ค.) ไม่ต้องมีพื้นฐานใดเลย แค่มีมือถือหรือคอมก็พอ
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false">
-            ใช้กับ Forex / หุ้น / Crypto / Gold ได้ไหม?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              ใช้ได้ทุกตลาด — <strong>เพราะ AI Workflow Trader สอน framework การคิด ไม่ใช่สัญญาณซื้อขาย</strong> ไม่ว่าคุณจะเทรดคู่ไหน ตลาดไหน กรอบความคิดนี้ใช้ได้หมด
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false">
-            ต้องเสียค่า ChatGPT Plus / Claude เพิ่มไหม?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              <strong>ไม่จำเป็น</strong> — สำหรับ Level 1-2 (core ของ Program) ใช้ free tier ของ ChatGPT หรือ Claude ทำงานได้ครบ ไม่มีค่าใช้จ่ายเพิ่มเติม<br><br>
-              <strong>ถ้ามีงบ paid plan (~$20/เดือน)</strong> จะช่วยให้คุณทำได้มากขึ้น: response เร็วและคุณภาพดีกว่า, ใช้ได้ไม่ติด quota, เข้าถึง model ใหม่ๆ และฟีเจอร์ขั้นสูง (เช่น file upload, custom GPT/Project, deep research) ซึ่งมีประโยชน์มากใน Level 3-4<br><br>
-              <strong>คำแนะนำ:</strong> เริ่มจาก free tier ก่อน — เมื่อเริ่มชนข้อจำกัด หรือพร้อมขยับไป Level สูงขึ้น ค่อยอัปเกรดทีหลังก็ได้
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false">
-            ดู Recording ย้อนหลังได้นานแค่ไหน?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              <strong>ตลอดชีวิต</strong> — ดูซ้ำได้ไม่จำกัดครั้ง ไม่หมดอายุ ไม่มีค่า subscription
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false">
-            PTM Lite ที่เพิ่มได้ตอน checkout คืออะไร?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              PTM Lite คือ <strong>Indicator ที่ออกแบบมาเพื่อเทรดเดอร์ที่อยากได้ระบบเรียบง่าย ใช้งานได้จริง</strong> พร้อมคู่มือ — เป็น Stage 2 ของระบบ ซื้อแยกปกติ 1,290 บาท แต่สมัครเพิ่มได้ตอน checkout ในราคาพิเศษ 990 บาท ไม่บังคับซื้อ
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false">
-            ถ้าเข้า Live ไม่ได้จะเป็นยังไง?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              ดู <strong>Recording ย้อนหลังได้ตลอดชีวิต</strong> — ไม่พลาดเนื้อหาหลัก<br><br>
-              <strong>Bonus ที่ได้รับ:</strong><br>
-              · Bonus #1-4 ได้รับทันทีหลังสมัคร (ใช้เตรียมตัวก่อน Live ได้)<br>
-              · Bonus #5 (Q&amp;A Recording) ส่งให้ทาง email หลังจบคลาส<br><br>
-              <strong>ข้อยกเว้น:</strong> Bonus #6 (Surprise Chart Analysis Tool) มอบเฉพาะผู้ที่เข้าเรียน Live สดในวันที่ 12 ก.ค. 2026 เท่านั้น — ถ้าทราบล่วงหน้าว่าเข้าสดไม่ได้ สามารถเข้ากลุ่ม Line Openchat เพื่อสอบถามและรับข่าวสารได้
-            </div>
-          </div>
-        </div>
-
-        <div class="faq-item" role="listitem">
-          <button class="faq-q" aria-expanded="false">
-            ลูกค้าเก่า / นักเรียน PTM ปัจจุบัน มีสิทธิพิเศษไหม?
-            <span class="faq-chevron" aria-hidden="true">▼</span>
-          </button>
-          <div class="faq-a">
-            <div class="faq-a-inner">
-              มีสิทธิพิเศษเฉพาะกลุ่ม สำหรับลูกค้าเก่า ebook และนักเรียน PTM ปัจจุบัน — กรุณาทักทาง <strong>Line OA พิมพ์ "สิทธิพิเศษ"</strong> เพื่อสอบถามรายละเอียด
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- ===== SECTION 9.5: PHASE PRICING ===== -->
-  <section id="tiers">
-    <div class="container">
-      <div class="section-header">
-        <div class="label">ราคาขึ้นตามรอบ — รับจำนวนจำกัด</div>
-        <h2 class="section-title">ได้ของเหมือนกันทุกคน — ยิ่งสมัครเร็ว ยิ่งได้ราคาดี</h2>
-        <div style="display:inline-block;line-height:1.6;max-width:100%;margin:14px 0 10px;padding:7px 18px;border-radius:100px;background:rgba(34,197,179,0.12);border:1px solid rgba(34,197,179,0.4);color:var(--teal-bright);font-weight:600;font-size:15px;">
-          👥 มีผู้สมัครแล้ว <span style="color:var(--white);">90+ ราย</span> ในรอบเปิดตัว
-        </div>
-        <p class="section-desc">ทุกคนได้ 2 Live Sessions, Recording และ Bonus ครบเหมือนกัน</p>
-      </div>
-
-      <div class="tier-grid" id="phaseGrid">
-        <!-- JS renders phase cards -->
-      </div>
-
-      <div class="ladder-note" style="margin-top:24px; padding:16px 18px; text-align:center; font-size:14px; color:var(--text-sub); background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:10px;">
-        <strong style="color:var(--white);">ทุกรอบได้เหมือนกัน</strong> — ต่างเฉพาะราคาตามช่วงที่สมัคร<br>
-        <span style="display:inline-block;margin-top:8px;color:var(--teal-bright);">✓ 2 Live Sessions + Recording ตลอดชีวิต &nbsp;·&nbsp; ✓ Bonus #1–5 ครบทุกตัว</span>
-      </div>
-
-      <p class="ladder-note" style="margin-top:12px; text-align:center; font-size:13px; color:var(--text-sub); padding:14px 18px; background:rgba(201,168,76,0.07); border:1px solid var(--border-gold); border-radius:10px;">
-        🔮 <strong style="color:var(--gold-bright);">Bonus #6 (Surprise Chart Analysis Tool)</strong> — มอบเฉพาะผู้ที่เข้าเรียน Live สดในวันที่ 12 ก.ค. 2026<br>ผู้สมัครทุกรอบที่เข้าเรียนสดได้รับเหมือนกัน
-      </p>
-
-      <p class="ladder-note" style="margin-top:12px; text-align:center; font-size:13px; color:var(--text-sub); padding:14px 18px; background:rgba(26,158,143,0.07); border:1px solid rgba(26,158,143,0.3); border-radius:10px;">
-        🎓 <strong style="color:var(--teal-bright);">Live Session 1 — AI 101 for Beginners</strong> — เป็น Session แรก (5 ก.ค.) รวมอยู่ใน Program ทุกรอบ<br>ปูพื้นฐาน AI ที่ต่อยอดได้ทั้งการเทรด งาน และชีวิตประจำวัน
-      </p>
-
-    </div>
-  </section>
-
-  <div class="section-divider"></div>
-
-  <!-- ===== SECTION 10: FINAL CTA ===== -->
-  <section id="cta-final">
-    <div class="container" style="text-align:center">
-
-      <div class="final-scarcity">
-        <span class="dot" aria-hidden="true"></span>
-        <span class="deadline-highlight"><span data-cfg="phase-label">Early Bird</span> · ฿<span data-cfg="pl1-price">1,090</span> · ถึง <span data-cfg="deadline">15 มิ.ย. 2026</span></span> — จำกัด <span data-cfg="seats">30</span> ที่นั่ง · อันไหนถึงก่อน
-      </div>
-
-      <h2 class="final-title">
-        เทรดเดอร์ที่ใช้ AI เป็น<br>
-        จะ<em>ได้เปรียบ</em>คนที่ใช้ AI ไม่เป็น
-      </h2>
-
-      <p class="final-sub">
-        สมัคร <span data-cfg="phase-label">Early Bird</span> — ได้ทั้ง framework, bonus stack มูลค่า 5,520 บาท<br>
-        พร้อม 2 Live Sessions (AI 101 + Workshop หลัก)<br>
-        ในราคาเพียง <span data-cfg="pl1-price">1,090</span> บาท
-      </p>
-
-      <div class="final-cta-wrap">
-        <a href="./bump-a/" class="btn-primary cta-button" role="button" style="font-size:19px; padding:20px 32px;" data-cfg-href="pl1">
-          สมัคร <span data-cfg="phase-label">Early Bird</span> — <span data-cfg="pl1-price">1,090</span> บาท
-        </a>
-        <a href="./bump-b/" class="btn-secondary cta-button" role="button" style="margin-top:12px;" data-cfg-href="bundle">
-          Bundle กับ eBook — <span data-cfg="bundle-price">1,390</span> บาท
-        </a>
-      </div>
-
-      <div class="final-trust" style="margin-top:28px">
-        <div class="final-trust-row">
-          <span class="trust-chip"><span class="t-check">✓</span> Stripe Payment ปลอดภัย</span>
-          <span class="trust-chip"><span class="t-check">✓</span> บัตรเครดิต / PromptPay</span>
-          <span class="trust-chip"><span class="t-check">✓</span> Resource Center ทันที</span>
-        </div>
-        <div class="final-trust-row" style="margin-top:6px">
-          <span class="trust-chip"><span class="t-check">✓</span> Recording ตลอดชีวิต</span>
-          <span class="trust-chip"><span class="t-check">✓</span> Live: 5 + 12 ก.ค. 2026</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <div class="footer-inner">
-      <p>AI Workflow Trader Program · รอบเปิดตัว 2026</p>
-      <p style="margin-top:6px">
-        สอบถามเพิ่มเติม: <a href="https://lin.ee/Wp36lIA" target="_blank" rel="noopener">Line OA @516ipohw</a> · อาจารย์ใหม่ · Investment Planner & Trader
-      </p>
-      <p style="margin-top:12px; font-size:12px; opacity:0.6;">
-        Program นี้สอน framework การใช้ AI สำหรับการวิเคราะห์และวางแผน ไม่ใช่สัญญาณซื้อขาย<br>
-        ผลตอบแทนในอดีตไม่การันตีผลในอนาคต การเทรดมีความเสี่ยง
-      </p>
-    </div>
-  </footer>
-
-  <!-- ===== LIGHTBOX ===== -->
-  <div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="ดูรูปขนาดใหญ่">
-    <div class="lightbox-img-wrap">
-      <button class="lightbox-close" id="lightboxClose" aria-label="ปิด">✕</button>
-      <img id="lightboxImg" src="" alt="">
-      <div class="lightbox-caption" id="lightboxCaption"></div>
+    <div class="package-summary">
+      Package 01 · AI Workflow Only<br>
+      สมัครตอนนี้ มูลค่า <strong>฿1,290</strong>
     </div>
   </div>
+</section>
 
-  <!-- ===== STICKY MOBILE CTA ===== -->
-  <div class="sticky-cta" role="complementary" aria-label="sticky checkout bar">
-    <div class="sticky-cta-inner">
-      <div class="sticky-info">
-        <div class="sticky-name">AI Workflow Trader Program</div>
-        <div class="sticky-price">฿<span data-cfg="pl1-price">1,090</span> · <span data-cfg="phase-label">Early Bird</span> · ถึง <span data-cfg="deadline">15 มิ.ย.</span> · Live: 5 + 12 ก.ค.</div>
+<div class="section-divider"></div>
+
+<section class="section" id="ptm-lite">
+  <div class="container">
+    <div class="session-head">
+      <span class="session-num">02</span>
+      <div>
+        <div class="session-kicker">เครื่องมือ · เห็นจังหวะบนกราฟ</div>
+        <h2 class="session-title">PTM Lite Indicator</h2>
       </div>
-      <a href="./bump-a/" class="sticky-btn cta-button" role="button" data-cfg-href="pl1">จองเลย</a>
+    </div>
+    <div class="section-head">
+      <span class="label">Optional Tool</span>
+      <h2 class="section-title">เมื่อมี Workflow แล้ว เครื่องมือจะช่วยให้ <span>เห็นตลาดชัดขึ้น</span></h2>
+      <p class="section-desc">PTM Lite ไม่ได้แทนการตัดสินใจ แต่ช่วยให้คุณเห็นทิศทาง โครงสร้างเทรนด์ และจังหวะที่ควรกลับมาดูบนกราฟได้ง่ายขึ้น ก่อนนำไปเช็กต่อด้วย AI Workflow</p>
+    </div>
+
+    <div class="content-card">
+      <div class="visual-img"><img src="assets/ptm-01-anatomy.png" alt="PTM Lite ช่วยให้เห็นอะไรบนกราฟ"></div>
+      <div class="caption">HA Background · EMA Ribbon · Buy/Sell Label · Info Panel · Alert</div>
+      <div class="integrity"><strong>PTM Lite ไม่ได้มีแค่ป้าย Buy/Sell</strong> แต่ช่วยให้คุณเห็นทิศทางตลาด โครงสร้างเทรนด์ จุดที่ควรกลับมาดู และตั้ง Alert ได้ในกราฟเดียว</div>
+    </div>
+
+    <div class="benefits">
+      <div class="benefit"><div class="benefit-icon">🎨</div><div class="benefit-text"><strong>พื้นหลังบอกเทรนด์</strong> HA Background ฟ้า = ขาขึ้น · แดง = ขาลง อ่านทิศตลาดได้เร็วขึ้น</div></div>
+      <div class="benefit"><div class="benefit-icon">🌈</div><div class="benefit-text"><strong>EMA Ribbon</strong> เห็นโครงสร้างเทรนด์ทั้งระยะสั้นและระยะยาวในกราฟเดียว</div></div>
+      <div class="benefit"><div class="benefit-icon">📍</div><div class="benefit-text"><strong>Buy / Sell Label</strong> ช่วยระบุจุดที่ควรกลับมาประเมิน ไม่ใช่คำสั่งให้กดตามทันที</div></div>
+      <div class="benefit"><div class="benefit-icon">🔔</div><div class="benefit-text"><strong>Alert</strong> ตั้งแจ้งเตือนได้ ไม่ต้องเฝ้าจอตลอดเวลา</div></div>
+    </div>
+
+    <div class="visual-stack">
+      <div class="content-card gold">
+        <div class="visual-img"><img src="assets/ptm-02-good-trend-vs-sideway.png" alt="Good Trend vs Sideway"></div>
+        <div class="visual-tag">Trend Filter</div>
+        <div class="visual-title">Good Trend vs Sideway</div>
+        <p class="visual-desc">ช่วยแยก <strong>กราฟที่น่าเทรด</strong> ออกจากช่วงตลาดที่ควรระวัง เพื่อไม่ให้กดทุกสัญญาณโดยไม่ดูบริบท</p>
+      </div>
+      <div class="content-card">
+        <div class="visual-img"><img src="assets/ptm-03-entry-checklist.png" alt="Entry Checklist ก่อนเข้าเทรด"></div>
+        <div class="visual-tag">Trade Plan</div>
+        <div class="visual-title">Entry Checklist ก่อนเข้าเทรด</div>
+        <p class="visual-desc">เช็กทิศทางตลาด, EMA Alignment, Entry Signal, SL/TP และ Risk:Reward ก่อนตัดสินใจเข้าเทรด</p>
+      </div>
+      <div class="content-card gold">
+        <div class="visual-img"><img src="assets/ptm-04-ai-workflow.png" alt="PTM Lite x AI Workflow"></div>
+        <div class="visual-tag">System Flow</div>
+        <div class="visual-title">PTM Lite × AI Workflow</div>
+        <p class="visual-desc"><strong>PTM Lite</strong> ช่วยให้เห็นจังหวะบนกราฟ ส่วน <strong>AI Workflow</strong> ช่วยเช็กแผน ความเสี่ยง และทบทวนผลหลังเทรดอย่างเป็นระบบ</p>
+      </div>
+    </div>
+
+    <div class="package-summary">
+      PTM Lite Indicator มูลค่า <strong>฿1,290</strong><br>
+      สมัครพร้อม AI Workflow เหลือ <strong>฿2,180</strong> <span class="save">(ประหยัด ฿400)</span>
     </div>
   </div>
+</section>
 
-  <script src="config.js"></script>
-  <!-- ===== JAVASCRIPT ===== -->
-  <script>
-    // ── Lightbox ───────────────────────────────────────────
-    (function() {
-      const overlay  = document.getElementById('lightbox');
-      const lbImg    = document.getElementById('lightboxImg');
-      const lbCap    = document.getElementById('lightboxCaption');
-      const lbClose  = document.getElementById('lightboxClose');
+<div class="section-divider"></div>
 
-      function openLightbox(src, caption) {
-        lbImg.src = src;
-        lbImg.alt = caption || '';
-        lbCap.textContent = caption || '';
-        overlay.classList.add('open');
-        document.body.style.overflow = 'hidden';
-      }
-      function closeLightbox() {
-        overlay.classList.remove('open');
-        document.body.style.overflow = '';
-        // clear src after transition
-        setTimeout(() => { lbImg.src = ''; }, 220);
-      }
-
-      // Click on any thumbnail
-      document.querySelectorAll('[data-lightbox]').forEach(el => {
-        el.addEventListener('click', () => {
-          openLightbox(el.dataset.lightbox, el.dataset.caption);
-        });
-        // Keyboard support
-        el.addEventListener('keydown', e => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            openLightbox(el.dataset.lightbox, el.dataset.caption);
-          }
-        });
-      });
-
-      // Close buttons
-      lbClose.addEventListener('click', closeLightbox);
-      overlay.addEventListener('click', e => {
-        if (e.target === overlay) closeLightbox();
-      });
-      document.addEventListener('keydown', e => {
-        if (e.key === 'Escape') closeLightbox();
-      });
-    })();
-
-    // ── FAQ Accordion ──────────────────────────────────────
-    document.querySelectorAll('.faq-q').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const item = btn.closest('.faq-item');
-        const isOpen = item.classList.contains('open');
-        document.querySelectorAll('.faq-item').forEach(i => {
-          i.classList.remove('open');
-          i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
-        });
-        if (!isOpen) {
-          item.classList.add('open');
-          btn.setAttribute('aria-expanded', 'true');
-        }
-      });
-    });
-
-    // ── Bundle eBook collapsible ──────────────────────────
-    const bundleToggle = document.getElementById('bundleToggle');
-    const bundleDetail = document.getElementById('bundleDetail');
-    if (bundleToggle && bundleDetail) {
-      bundleToggle.addEventListener('click', () => {
-        const isOpen = bundleToggle.classList.contains('open');
-        bundleToggle.classList.toggle('open', !isOpen);
-        bundleToggle.setAttribute('aria-expanded', String(!isOpen));
-      });
-    }
-
-    // ── PTM Lite collapsible ──────────────────────────────
-    const ptmToggle = document.getElementById('ptmLiteToggle');
-    const ptmPanel  = document.getElementById('ptmLiteDetail');
-    if (ptmToggle && ptmPanel) {
-      ptmToggle.addEventListener('click', () => {
-        const isOpen = ptmToggle.classList.contains('open');
-        ptmToggle.classList.toggle('open', !isOpen);
-        ptmPanel.classList.toggle('open', !isOpen);
-        ptmToggle.setAttribute('aria-expanded', String(!isOpen));
-      });
-    }
-
-    // ── Countdown Timer ──────────────────────────────────────
-    function runCountdown() {
-      // deadline จาก config.js (activePhase)
-      const deadline = new Date(PHASE.deadlineISO);
-
-      function update() {
-        const now = new Date();
-        const diff = deadline - now;
-
-        const elDays  = document.getElementById('cd-days');
-        const elHours = document.getElementById('cd-hours');
-        const elMins  = document.getElementById('cd-mins');
-        const elSecs  = document.getElementById('cd-secs');
-        const wrap    = document.getElementById('heroCountdown');
-
-        if (!elDays) return;
-
-        if (diff <= 0) {
-          // หมดเวลา — แสดงข้อความรอบถัดไป
-          if (wrap) {
-            wrap.innerHTML = '<span class="countdown-expired">⚠️ รอบ ' + PHASE.label + ' สิ้นสุดแล้ว — รอบถัดไปกำลังจะมา</span>';
-          }
-          return;
-        }
-
-        const days  = Math.floor(diff / 86400000);
-        const hours = Math.floor((diff % 86400000) / 3600000);
-        const mins  = Math.floor((diff % 3600000) / 60000);
-        const secs  = Math.floor((diff % 60000) / 1000);
-
-        elDays.textContent  = String(days).padStart(2, '0');
-        elHours.textContent = String(hours).padStart(2, '0');
-        elMins.textContent  = String(mins).padStart(2, '0');
-        elSecs.textContent  = String(secs).padStart(2, '0');
-      }
-
-      update();
-      setInterval(update, 1000);
-    }
-    runCountdown();
-
-    // ── Apply Pricing Config ───────────────────────────────────
-    function applyConfig() {
-      const p = PHASE;
-      const pl1Fmt    = fmtPrice(p.pl1);
-      const bundleFmt = fmtPrice(p.bundle);
-
-      // Prices
-      document.querySelectorAll('[data-cfg="pl1-price"]').forEach(el  => { el.textContent = pl1Fmt; });
-      document.querySelectorAll('[data-cfg="bundle-price"]').forEach(el => { el.textContent = bundleFmt; });
-      document.querySelectorAll('[data-cfg="deadline"]').forEach(el   => { el.textContent = p.deadlineText; });
-      document.querySelectorAll('[data-cfg="seats"]').forEach(el      => { el.textContent = p.seats; });
-      document.querySelectorAll('[data-cfg="phase-label"]').forEach(el => { el.textContent = p.label; });
-      document.querySelectorAll('[data-cfg="ptm-pl1-total"]').forEach(el  => { el.textContent = fmtPrice(p.pl1 + PTM_ADDON); });
-      document.querySelectorAll('[data-cfg="ptm-bnd-total"]').forEach(el  => { el.textContent = fmtPrice(p.bundle + PTM_ADDON); });
-
-      // Button hrefs
-      document.querySelectorAll('[data-cfg-href="pl1"]').forEach(el    => { el.href = p.pl1Url; });
-      document.querySelectorAll('[data-cfg-href="bundle"]').forEach(el => { el.href = p.bundleUrl; });
-
-      // FB pixel — update ViewContent value
-      window.__cfgPl1    = p.pl1;
-      window.__cfgBundle = p.bundle;
-    }
-    applyConfig();
-
-    // ── Render Phase Cards ─────────────────────────────────────
-    (function renderPhaseCards() {
-      const grid = document.getElementById('phaseGrid');
-      if (!grid) return;
-
-      const phaseOrder = ['earlyBird', 'standard', 'lastCall'];
-      const activeIdx = phaseOrder.indexOf(ACTIVE_PHASE);
-
-      phaseOrder.forEach((key, i) => {
-        if (i < activeIdx) return;   // ซ่อนรอบที่ปิดไปแล้ว — ไม่ให้คนเห็นราคาเก่าที่ถูกกว่า
-        const ph   = PHASES[key];
-        const isActive = i === activeIdx;
-        const isPast   = i < activeIdx;
-        const isLast   = i === phaseOrder.length - 1;
-        const card = document.createElement('div');
-        card.className = 'tier-card' + (isActive ? ' tier-active' : (isPast ? ' tier-sold-out' : ' tier-future'));
-
-        let statusName;
-        if (isActive)    statusName = 'เปิดรับสมัครอยู่ตอนนี้';
-        else if (isPast) statusName = 'ปิดแล้ว';
-        else             statusName = isLast ? 'รอบสุดท้าย' : 'รอบถัดไป';
-
-        let priceSuffix;
-        if (isActive)    priceSuffix = 'รอบปัจจุบัน';
-        else if (isPast) priceSuffix = 'รอบที่ปิดไปแล้ว';
-        else             priceSuffix = 'รอบถัดไป · ราคาขึ้น';
-
-        let deadlineNote;
-        if (isPast)                   deadlineNote = 'รอบนี้ปิดรับแล้ว';
-        else if (key === 'earlyBird') deadlineNote = `รับ ~${ph.seats} ที่นั่ง หรือถึง ${ph.deadlineText}`;
-        else if (key === 'standard')  deadlineNote = `ถึง ${ph.deadlineText} หรือเต็มก่อน`;
-        else                          deadlineNote = `ปิดรับก่อน Live · ${ph.deadlineText}`;
-
-        let deadlineLine;
-        if (isActive)    deadlineLine = `⏰ ปิดรับ ${ph.deadlineText} · ก่อนขึ้นรอบถัดไป`;
-        else if (isPast) deadlineLine = `✓ ปิดรับแล้ว`;
-        else             deadlineLine = `⏰ เปิดหลังรอบปัจจุบันปิด`;
-
-        card.innerHTML = `
-      <div class="tier-label">${ph.label}</div>
-      <div class="tier-name">${statusName}</div>
-      <div class="tier-price-row" style="flex-direction:column;align-items:flex-start;gap:2px;">
-        <span class="tier-price">฿${fmtPrice(ph.pl1)}</span>
-        <span class="tier-price-suffix">${priceSuffix}</span>
+<section class="section" id="ebook">
+  <div class="container">
+    <div class="session-head">
+      <span class="session-num">03</span>
+      <div>
+        <div class="session-kicker">คู่มือเสริม · สำหรับชุดครบ</div>
+        <h2 class="session-title">eBook x 2 + Investor Prompt Pack</h2>
       </div>
-      <div class="tier-cap">${deadlineNote}</div>
-      <div class="tier-deadline">${deadlineLine}</div>
-    `;
-        grid.appendChild(card);
-      });
-    })();
+    </div>
+    <div class="content-card">
+      <div class="ebook-grid">
+        <div class="ebook-copy">
+          <h3>คู่มือสำหรับคนที่อยากใช้ AI กับการลงทุนให้เป็นระบบมากขึ้น</h3>
+          <p>เหมาะกับคนที่อยากได้คู่มืออ่านประกอบนอกเหนือจากคอร์ส และอยากมี Prompt Pack สำหรับสายลงทุนไว้ใช้งานต่อ</p>
+          <ul class="ebook-list">
+            <li>E-Book “อย่าใช้ AI ช่วยลงทุน ถ้ายังไม่อ่านเล่มนี้”</li>
+            <li>32 ชุด Prompt Pack สำหรับนักลงทุน</li>
+            <li class="free">Bonus E-Book “Wall Street รออยู่ฯ” ฉบับเต็ม</li>
+          </ul>
+        </div>
+        <div class="ebook-img"><img src="assets/ebook-x2.png" alt="eBook AI ช่วยลงทุน + Wall Street"></div>
+      </div>
+    </div>
 
-    // ── FB Pixel: ViewContent ──────────────────────────────
-    document.addEventListener('DOMContentLoaded', () => {
-      const hero = document.querySelector('#hero');
-      if (hero && typeof fbq === 'function') {
-        const heroObserver = new IntersectionObserver((entries) => {
-          if (entries[0].isIntersecting) {
-            fbq('track', 'ViewContent', {
-              content_name: 'AI Workflow Trader Program',
-              content_ids: ['ai_workflow_only'],
-              content_type: 'product',
-              content_category: 'course',
-              value: window.__cfgPl1 || PHASE.pl1,
-              currency: 'THB'
-            });
-            heroObserver.disconnect();
-          }
-        }, { threshold: 0.5 });
-        heroObserver.observe(hero);
-      }
-    });
+    <div class="package-summary">
+      eBook x 2 + Investor Prompt Pack ปกติ <strong>฿490</strong><br>
+      รวมอยู่ในชุดครบ <strong>฿2,480</strong> <span class="save">(ประหยัด ฿590)</span>
+    </div>
+  </div>
+</section>
 
-    // ── FB Pixel: InitiateCheckout ─────────────────────────
-    // ปุ่มที่ไป bump-b (Bundle) → PHASE.bundle / ปุ่มอื่นๆ (bump-a) → PHASE.pl1
-    document.querySelectorAll('.cta-button').forEach(btn => {
-      btn.addEventListener('click', () => {
-        if (typeof fbq !== 'function') return;
-        const href = btn.getAttribute('href') || '';
-        const isBundle = href.includes('bump-b');
-        const value = isBundle ? PHASE.bundle : PHASE.pl1;
-        const contentId = isBundle ? 'ai_workflow_bundle' : 'ai_workflow_only';
-        const contentName = isBundle
-          ? 'AI Workflow Trader + eBook Bundle'
-          : 'AI Workflow Trader Program';
-        fbq('track', 'InitiateCheckout', {
-          value: value,
-          currency: 'THB',
-          content_ids: [contentId],
-          content_type: 'product',
-          content_name: contentName
-        });
-      });
-    });
+<div class="section-divider"></div>
 
-    // ── Smooth scroll ──────────────────────────────────────
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', e => {
-        const id = a.getAttribute('href');
-        if (id && id.length > 1) {
-          const target = document.querySelector(id);
-          if (target) {
-            e.preventDefault();
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        }
-      });
-    });
-  </script>
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="section-head" style="text-align:center">
+      <span class="label">เลือกแพ็กเกจ</span>
+      <h2 class="section-title">เลือกตามวิธีเรียนของคุณ</h2>
+      <p class="section-desc" style="margin-left:auto;margin-right:auto">AI Workflow Program มี Session 1 replay, Session 2 Live, Recording ตลอดชีวิต และ Bonus #1–6 ครบ ส่วนแพ็กที่มี PTM Lite จะแสดงระยะเวลาใช้งาน indicator ชัดเจน</p>
+    </div>
+
+    <div class="plans">
+      <div class="plan">
+        <div class="plan-name">Package 01 · AI Workflow Only</div>
+        <div class="plan-price-row"><span class="plan-price">฿1,290</span><span class="plan-unit">เริ่มจาก framework ก่อน</span></div>
+        <span class="plan-license lic-bonus">⏱ PTM Chart Reader ใช้งาน 1 ปี · ต่ออายุปีละ 290 บาท</span>
+        <div class="plan-note">เหมาะกับคนที่อยากเริ่มจากระบบคิดและ workflow การใช้ AI ก่อน</div>
+        <ul class="plan-list">
+          <li>AI Workflow Trader Program</li>
+          <li>Session 1 replay + Session 2 Live</li>
+          <li>Recording ตลอดชีวิต + Bonus #1–6</li>
+          <li class="add">PTM Chart Reader สำหรับใช้ประกอบการอ่านกราฟกับ AI</li>
+        </ul>
+        <a href="https://buy.stripe.com/00wbJ16gT83kbrKfge5EY0t" class="plan-cta cta-outline" onclick="fbq('track','InitiateCheckout',{value:1290,currency:'THB',content_ids:['ai_workflow_only'],content_type:'product',content_name:'AI Workflow Only'})">เลือก Workflow Only — ฿1,290</a>
+      </div>
+
+      <div class="plan plan-featured">
+        <div class="plan-name">Package 02 · AI Workflow <span class="plus">+ PTM Lite</span></div>
+        <div class="plan-price-row"><span class="plan-price">฿2,180</span><span class="plan-unit">ระบบคิด + เครื่องมือ</span></div>
+        <span class="plan-license lic-year">⏱ PTM Lite ใช้งาน 1 ปี · ต่ออายุ 490/ปี</span>
+        <div class="plan-anchor"><span class="strike">ซื้อแยก ฿2,580</span> · <span class="save">ประหยัด ฿400</span></div>
+        <div class="plan-note">เหมาะกับคนที่อยากได้ทั้ง workflow และเครื่องมือช่วยดูกราฟอย่างเป็นระบบ</div>
+        <ul class="plan-list">
+          <li>ทุกอย่างใน Workflow Only</li>
+          <li class="add">PTM Lite Indicator ใช้งาน 1 ปี</li>
+          <li class="add">คู่มือและสิทธิ์เข้า Zoom สอนใช้งาน PTM Lite</li>
+        </ul>
+        <a href="https://buy.stripe.com/6oU14n8p1dnE1Ra5FE5EY0k" class="plan-cta cta-gold" onclick="fbq('track','InitiateCheckout',{value:2180,currency:'THB',content_ids:['ai_workflow_ptm_lite'],content_type:'product',content_name:'AI Workflow + PTM Lite'})">เลือกแพ็กคู่ — ฿2,180</a>
+      </div>
+
+      <div class="plan">
+        <div class="plan-name">Package 03 · AI Workflow <span class="plus">+ PTM Lite + eBook x 2</span></div>
+        <div class="plan-price-row"><span class="plan-price">฿2,480</span><span class="plan-unit">ชุดครบ</span></div>
+        <span class="plan-license lic-year">⏱ PTM Lite ใช้งาน 1 ปี · ต่ออายุ 490/ปี</span>
+        <div class="plan-anchor"><span class="strike">ซื้อแยก ฿3,070</span> · <span class="save">ประหยัด ฿590</span></div>
+        <div class="plan-note">เหมาะกับคนที่อยากได้ครบทั้ง framework, เครื่องมือ และคู่มือเสริมสำหรับนักลงทุน</div>
+        <ul class="plan-list">
+          <li>ทุกอย่างในแพ็กคู่</li>
+          <li class="add">eBook “อย่าใช้ AI ช่วยลงทุนฯ”</li>
+          <li class="add">Bonus eBook Wall Street + Investor Prompt Pack</li>
+        </ul>
+        <a href="https://buy.stripe.com/bJe00jgVxabs9jC9VU5EY0l" class="plan-cta cta-outline" onclick="fbq('track','InitiateCheckout',{value:2480,currency:'THB',content_ids:['ai_workflow_ptm_lite_ebook'],content_type:'product',content_name:'AI Workflow + PTM Lite + eBook'})">เลือกชุดครบ — ฿2,480</a>
+      </div>
+    </div>
+
+    <div class="chat-note" style="max-width:640px;margin:22px auto 0;text-align:center">
+      ต้องการสอบถามโปรหรือ bonus พิเศษประจำรอบ? ทัก <a href="https://lin.ee/Wp36lIA" target="_blank" rel="noopener">LINE OA @516ipohw</a> ได้ครับ
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section class="section">
+  <div class="container">
+    <div class="instructor">
+      <img class="instructor-photo" src="assets/aj-mai.jpg" alt="อ.ใหม่ ธนภัทร ธนิชานนท์">
+      <div class="instructor-txt">
+        <strong>อ.ใหม่ ธนภัทร ธนิชานนท์</strong>
+        วิทยากรการเงินการลงทุน + เทรดเดอร์ ประสบการณ์ 15+ ปี ผู้สอนหลักสูตร IC / CFP และผู้ออกแบบระบบ PTM
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-head" style="text-align:center">
+      <span class="label">FAQ</span>
+      <h2 class="section-title">คำถามที่พบบ่อย</h2>
+    </div>
+    <div class="faq">
+      <details class="acc" open>
+        <summary>ไม่เคยใช้ AI เลย เรียนได้ไหม?</summary>
+        <div class="faq-a">ได้ครับ Session 1: AI 101 for Beginners มี replay ให้ดูทันทีหลังสมัคร เพื่อปูพื้นฐานก่อนเข้า Workshop หลัก</div>
+      </details>
+      <details class="acc">
+        <summary>PTM Lite เป็นระบบกดตาม Buy/Sell ได้เลยไหม?</summary>
+        <div class="faq-a">ไม่ใช่ครับ PTM Lite เป็นเครื่องมือช่วยอ่านเทรนด์และบริบทของกราฟ ไม่ใช่คำสั่งซื้อขายอัตโนมัติ การตัดสินใจยังต้องดูแผน ความเสี่ยง และบริบทตลาดเสมอ</div>
+      </details>
+      <details class="acc">
+        <summary>ถ้าเลือก Workflow Only แล้วอยากเพิ่ม PTM Lite ภายหลังได้ไหม?</summary>
+        <div class="faq-a">ได้ครับ สามารถทัก LINE เพื่อขออัปเกรดหรือเช็กโปร add-on ได้ โดยโปรพิเศษอาจแตกต่างตามรอบแคมเปญ</div>
+      </details>
+      <details class="acc">
+        <summary>ดู Recording ย้อนหลังได้นานแค่ไหน?</summary>
+        <div class="faq-a">AI Workflow Recording ดูซ้ำได้ตลอดชีวิต ส่วน PTM Lite ใช้งานตามระยะเวลาของแพ็กที่ระบุ เช่น 1 ปี หรือโปรพิเศษเฉพาะบางรอบ</div>
+      </details>
+      <details class="acc">
+        <summary>ชำระเงินได้ทางไหนบ้าง?</summary>
+        <div class="faq-a">ชำระผ่าน Stripe ได้ทั้งบัตรเครดิต/เดบิตและ PromptPay หากต้องการโอนตรงหรือสอบถามแพ็กที่เหมาะสม ทัก LINE OA @516ipohw ได้ครับ</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>AI Workflow Trader Program · อ.ใหม่ ธนภัทร ธนิชานนท์</p>
+  <p style="margin-top:6px">สอบถามเพิ่มเติม: <a href="https://lin.ee/Wp36lIA" target="_blank" rel="noopener">LINE OA @516ipohw</a></p>
+  <p style="margin-top:12px;font-size:12px;opacity:.72">Program นี้สอน framework การใช้ AI สำหรับการวิเคราะห์และวางแผน ไม่ใช่สัญญาณซื้อขาย ผลตอบแทนในอดีตไม่การันตีผลในอนาคต การเทรดมีความเสี่ยง</p>
+</footer>
+
+<div class="sticky">
+  <div class="sticky-inner">
+    <div class="sticky-info">
+      <div class="sticky-name">AI Workflow Trader</div>
+      <div class="sticky-price">เริ่มต้น ฿1,290 · มี 3 แพ็ก</div>
+    </div>
+    <a class="sticky-btn" href="#pricing">เลือกแพ็ก</a>
+  </div>
+</div>
 
 </body>
 </html>
